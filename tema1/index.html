@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Random weather</h1>
+
+<form action="/index.html">
+    <label for="query">Search:</label>
+    <input type="text" id="query" name="query"><br><br>
+    <input type="submit" value="Go!">
+</form>
+
+<p>Click the "Go!" button and get the weather in a random location based on your search</p>
+<br><br>
+<!-- logs -->
+<table>
+</table>
+<br><br>
+<a href="/metrics">Metrics</a>
+</body>
+</html>

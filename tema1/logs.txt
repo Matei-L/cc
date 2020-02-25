@@ -1,0 +1,779 @@
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.31349849700927734|New+Delhi|0.4773111343383789|Clear sky|0.5993516445159912|1.3901612758636475
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.34182095527648926|Seattle|0.5055093765258789|Scattered clouds|0.6021890640258789|1.449519395828247
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.3002150058746338|Redmond|0.5147778987884521|Clear sky|0.5991864204406738|1.4141793251037598
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.2737722396850586|New+York|0.39191675186157227|Overcast clouds|0.6300201416015625|1.2957091331481934
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2956676483154297|SeaTac|0.39577364921569824|Scattered clouds|0.6409752368927002|1.3324165344238281
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.2960243225097656|York|0.3646392822265625|Overcast clouds|0.6683104038238525|1.3289740085601807
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.38604140281677246|VIC|0.39381980895996094|Overcast clouds|0.5871763229370117|1.3670375347137451
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.35857415199279785|London|0.3313617706298828|Scattered clouds|0.6887059211730957|1.3786418437957764
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.2787632942199707|Chippenham|0.419417142868042|Scattered clouds|0.6805016994476318|1.3786821365356445
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.38408446311950684|New+Delhi|0.39880990982055664|Clear sky|0.609792947769165|1.3926873207092285
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.37911295890808105|Las+Vegas|0.39957642555236816|Clear sky|0.6357054710388184|1.4143948554992676
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.39351391792297363|Seattle|0.38039588928222656|Scattered clouds|0.6729710102081299|1.44688081741333
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.3955345153808594|New+York|0.35478639602661133|Overcast clouds|0.6885042190551758|1.4388251304626465
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.393052339553833|Bengaluru|0.44660449028015137|Scattered clouds|0.6510391235351562|1.4906959533691406
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.4411001205444336|London|0.3606526851654053|Scattered clouds|0.6760196685791016|1.4777724742889404
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.4075736999511719|Park+City|0.40215444564819336|Overcast clouds|0.6620299816131592|1.4717581272125244
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.3878345489501953|Castle+Rock|0.4289083480834961|Clear sky|0.6595702171325684|1.4763131141662598
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.38883113861083984|Tiwanaku|0.42226719856262207|Scattered clouds|0.6607394218444824|1.4718377590179443
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.38269591331481934|Amazon+River|0.37022972106933594|No data available for this city|0.704946756362915|1.4578723907470703
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.4101262092590332|Beaverton|0.3616786003112793|Few clouds|0.6979668140411377|1.4697716236114502
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.3987693786621094|New+York|0.4498939514160156|Overcast clouds|0.6470730304718018|1.4957363605499268
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.39481616020202637|Castle+Rock|0.4459080696105957|Clear sky|0.6746635437011719|1.515387773513794
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.38852882385253906|Cape+Town|0.41425347328186035|Clear sky|0.6907024383544922|1.4934847354888916
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.3521864414215088|Seattle|0.4645979404449463|Scattered clouds|0.671689510345459|1.488473892211914
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.40960121154785156|VIC|0.3702881336212158|Overcast clouds|0.7245662212371826|1.50445556640625
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.44443535804748535|Bengaluru|0.4242105484008789|Scattered clouds|0.6697216033935547|1.538367509841919
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.4091811180114746|Paris|0.3746497631072998|Overcast clouds|0.7123720645904541|1.4962029457092285
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.36012911796569824|Strasbourg|0.4725759029388428|Light rain|0.6794562339782715|1.5121612548828125
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.24342989921569824|Rovaniemi|0.34165430068969727|Overcast clouds|0.5873632431030273|1.1724474430084229
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.24794554710388184|Bangkok|0.3283112049102783|Scattered clouds|0.5765624046325684|1.1528191566467285
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.25624728202819824|Pumanque|0.38225340843200684|No data available for this city|0.5746891498565674|1.2131898403167725
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2622494697570801|Portland|0.3177480697631836|Scattered clouds|0.6203114986419678|1.2003090381622314
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.35015439987182617|Poznań|0.3322618007659912|Scattered clouds|0.5795743465423584|1.2619905471801758
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2551002502441406|Portland|0.3263058662414551|Scattered clouds|0.5836021900177002|1.165008306503296
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.30624842643737793|Bengaluru|0.31335949897766113|Scattered clouds|0.5976183414459229|1.217226266860962
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2943305969238281|Appleton|0.36777710914611816|Overcast clouds|0.61220383644104|1.2743115425109863
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.28199172019958496|Dover|0.3210165500640869|Scattered clouds|0.5963377952575684|1.1993460655212402
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.29314160346984863|Paris|0.34824657440185547|Overcast clouds|0.59348464012146|1.234872817993164
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.31893253326416016|Iași|0.3577449321746826|Scattered clouds|0.5671541690826416|1.2438316345214844
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.30987119674682617|Amazon+River|0.36975908279418945|No data available for this city|0.5816123485565186|1.2612426280975342
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.3469867706298828|Paris|0.32961177825927734|Overcast clouds|0.5756478309631348|1.252246379852295
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.275238037109375|Los+Angeles|0.3697361946105957|Overcast clouds|0.5856542587280273|1.230628490447998
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.2914402484893799|Riotord|0.35555052757263184|Overcast clouds|0.5912840366363525|1.2382748126983643
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.3123795986175537|Bac+Ninh+Province|0.35162997245788574|No data available for this city|0.5888872146606445|1.252896785736084
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.35096216201782227|ON|0.33553528785705566|Overcast clouds|0.5779743194580078|1.2644717693328857
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.3270282745361328|Portland|0.35248327255249023|Scattered clouds|0.5919575691223145|1.2714691162109375
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.3105170726776123|Hamburg|0.39301109313964844|Overcast clouds|0.5848855972290039|1.2884137630462646
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.28768157958984375|New+York|0.39301443099975586|Overcast clouds|0.5803673267364502|1.2610633373260498
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.32436347007751465|Appleton|0.34450769424438477|Overcast clouds|0.5978922843933105|1.26676344871521
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.3360557556152344|Chharodi|0.36244750022888184|No data available for this city|0.6138896942138672|1.3123929500579834
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.27667760848999023|New+York|0.3890688419342041|Overcast clouds|0.5955305099487305|1.2612769603729248
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.35649847984313965|Mumbai|0.3800525665283203|Few clouds|0.5805873870849609|1.317138433456421
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.30777478218078613|State+of+Amazonas|0.3835608959197998|No data available for this city|0.5999429225921631|1.291278600692749
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2246532440185547|Seattle|0.34302186965942383|Scattered clouds|0.584367036819458|1.1520421504974365
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.251786470413208|New+Orleans|0.34703850746154785|Scattered clouds|0.6108722686767578|1.2096972465515137
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.261028528213501|New+York|0.302199125289917|Overcast clouds|0.6245331764221191|1.187760829925537
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2337324619293213|SeaTac|0.361452579498291|Scattered clouds|0.590625524520874|1.1858105659484863
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.23090028762817383|Mumbai|0.317840576171875|Few clouds|0.5849847793579102|1.133725643157959
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.2534003257751465|ON|0.3774580955505371|Overcast clouds|0.6449809074401855|1.2758393287658691
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.24669671058654785|Cape+Town|0.3270273208618164|Clear sky|0.6456656455993652|1.2193896770477295
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.24968814849853516|Berlin|0.3415060043334961|Light rain|0.6382839679718018|1.229478120803833
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.23551511764526367|London|0.3120887279510498|Scattered clouds|0.6374258995056152|1.1850297451019287
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.248077392578125|Žižkov|0.31821203231811523|No data available for this city|0.5971946716308594|1.1634840965270996
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.24657273292541504|Hamburg|0.3172037601470947|Overcast clouds|0.5932061672210693|1.156982660293579
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.25560641288757324|New+York|0.3421039581298828|Overcast clouds|0.5662930011749268|1.1640033721923828
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.243178129196167|New+York|0.32712507247924805|Overcast clouds|0.6241490840911865|1.1944522857666016
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.22944045066833496|Berlin|0.3361201286315918|Light rain|0.5883395671844482|1.153900146484375
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.33250927925109863|Hyderabad|0.342130184173584|Few clouds|0.5848088264465332|1.2594482898712158
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.32453465461730957|Poznań|0.33016276359558105|Scattered clouds|0.5897431373596191|1.2444405555725098
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.32619309425354004|Cupertino|0.3423275947570801|Clear sky|0.5861034393310547|1.2546241283416748
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.3175644874572754|Berlin|0.36916351318359375|Light rain|0.5711438655853271|1.2578718662261963
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.36593198776245117|Orlando|0.3222849369049072|Clear sky|0.6141235828399658|1.3023405075073242
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.36968445777893066|Singapore|0.34624171257019043|Overcast clouds|0.6046278476715088|1.3205540180206299
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.34147047996520996|Dover|0.3641486167907715|Scattered clouds|0.5966320037841797|1.3022511005401611
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.3494422435760498|Redmond|0.34423327445983887|Clear sky|0.6077380180358887|1.3014135360717773
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.30856871604919434|Seattle|0.3481290340423584|Scattered clouds|0.6247944831848145|1.2814922332763672
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2844412326812744|Mumbai|0.3880314826965332|Few clouds|0.6186962127685547|1.2911689281463623
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.30788207054138184|London|0.400895357131958|Scattered clouds|0.5801601409912109|1.2889375686645508
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.22611308097839355|Morrisville|0.31590938568115234|Overcast clouds|0.6429681777954102|1.184990644454956
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.22946476936340332|Scottsdale|0.31760692596435547|Few clouds|0.5895817279815674|1.1366534233093262
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2345583438873291|New+Delhi|0.34656453132629395|Clear sky|0.5848984718322754|1.1660213470458984
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.26429128646850586|Seattle|0.33281517028808594|Scattered clouds|0.5812277793884277|1.1783342361450195
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.31682515144348145|Pumanque|0.3321564197540283|No data available for this city|0.6001980304718018|1.2491796016693115
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.2676560878753662|New+Delhi|0.36965465545654297|Clear sky|0.6154825687408447|1.252793312072754
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.22846293449401855|Kolkata|0.329526424407959|Light rain|0.6135923862457275|1.171581745147705
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.2681691646575928|Versailles|0.33611559867858887|Overcast clouds|0.6380584239959717|1.2423431873321533
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2602694034576416|Cupertino|0.38307976722717285|Clear sky|0.6326596736907959|1.2760088443756104
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.25592684745788574|Lahore|0.3429136276245117|Few clouds|0.5944128036499023|1.1932532787322998
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2839505672454834|Houston|0.3301835060119629|Overcast clouds|0.6245231628417969|1.2386572360992432
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.2899446487426758|Houston|0.35488390922546387|Overcast clouds|0.6038782596588135|1.2487068176269531
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.3338947296142578|Jalisco|0.3342146873474121|Few clouds|0.6415023803710938|1.3096117973327637
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.2789652347564697|Paris|0.35300302505493164|Overcast clouds|0.6294093132019043|1.2613775730133057
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2506885528564453|Barcelona|0.3325984477996826|Overcast clouds|0.5759038925170898|1.1591908931732178
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.25562429428100586|Munich|0.3215606212615967|Overcast clouds|0.590930700302124|1.1681156158447266
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.26226019859313965|Chicago|0.3381524085998535|Overcast clouds|0.5523421764373779|1.152754783630371
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.28446125984191895|Bengaluru|0.32720947265625|Scattered clouds|0.5985066890716553|1.2101774215698242
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.25671863555908203|Dübendorf|0.34441137313842773|Overcast clouds|0.6194562911987305|1.2205862998962402
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.29932498931884766|Hpa-An|0.326979398727417|Overcast clouds|0.6179475784301758|1.2442519664764404
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.25458812713623047|Seattle|0.35538172721862793|Scattered clouds|0.6351423263549805|1.2451121807098389
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.3631620407104492|Redmond|0.32413625717163086|Clear sky|0.5758697986602783|1.2631680965423584
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.34006309509277344|Houston|0.3451111316680908|Overcast clouds|0.5785512924194336|1.2637255191802979
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.34653425216674805|Hyderabad|0.3569765090942383|Few clouds|0.5635523796081543|1.2670631408691406
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.3374292850494385|NSW|0.34238719940185547|No data available for this city|0.5831663608551025|1.2629828453063965
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2294631004333496|Cupertino|0.2965710163116455|Clear sky|0.5714030265808105|1.0974371433258057
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.22870302200317383|Morrisville|0.37186646461486816|Overcast clouds|0.5922894477844238|1.1928589344024658
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.22858500480651855|Cupertino|0.32457733154296875|Clear sky|0.5839462280273438|1.137108564376831
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.23204493522644043|Hamburg|0.31684207916259766|Overcast clouds|0.599022388458252|1.14790940284729
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.21600723266601562|Singapore|0.3294062614440918|Overcast clouds|0.5813577175140381|1.1267712116241455
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.22128629684448242|Paris|0.35924673080444336|Overcast clouds|0.6103618144989014|1.1908948421478271
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.23789501190185547|San+Francisco|0.32729053497314453|Overcast clouds|0.5948646068572998|1.1600501537322998
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.23602747917175293|Poznań|0.3213615417480469|Scattered clouds|0.6147997379302979|1.1721887588500977
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2319166660308838|Pumanque|0.3322713375091553|No data available for this city|0.5998795032501221|1.1640675067901611
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.24497604370117188|Seattle|0.3408336639404297|Scattered clouds|0.5701634883880615|1.155973196029663
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.23204517364501953|New+Delhi|0.33588528633117676|Clear sky|0.5902996063232422|1.1582300662994385
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.23768115043640137|Morrisville|0.33224058151245117|Overcast clouds|0.589339017868042|1.1592607498168945
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2395181655883789|Dubai|0.3533670902252197|Scattered clouds|0.5952892303466797|1.1881744861602783
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.22737717628479004|Dubai|0.37922024726867676|Scattered clouds|0.5649163722991943|1.1715137958526611
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.23175716400146484|Beaverton|0.35243797302246094|Few clouds|0.5739035606384277|1.1580986976623535
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.319124698638916|Seattle|0.3242769241333008|Scattered clouds|0.5768125057220459|1.2202141284942627
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2569918632507324|Cupertino|0.3203597068786621|Clear sky|0.5547502040863037|1.1321017742156982
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2677001953125|New+Orleans|0.3222823143005371|Scattered clouds|0.5937051773071289|1.183687686920166
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2607414722442627|Houston|0.30228424072265625|Overcast clouds|0.6182889938354492|1.1813147068023682
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.3300974369049072|Bengaluru|0.320218563079834|Scattered clouds|0.6242837905883789|1.2745997905731201
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.23504996299743652|Seattle|0.3003053665161133|Scattered clouds|0.6103744506835938|1.1457297801971436
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2510349750518799|New+York|0.3233513832092285|Overcast clouds|0.606515645980835|1.1809020042419434
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.2483220100402832|NSW|0.3490128517150879|No data available for this city|0.5794162750244141|1.1767511367797852
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.2504141330718994|New+York|0.350968599319458|Overcast clouds|0.5709347724914551|1.1723175048828125
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.2553598880767822|Bijeljina|0.34100914001464844|Overcast clouds|0.5959253311157227|1.1922943592071533
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.21847128868103027|Amazon+River|0.31867384910583496|No data available for this city|0.602285623550415|1.1394307613372803
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2250211238861084|New+Delhi|0.33105897903442383|Clear sky|0.5891034603118896|1.1451835632324219
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.24204540252685547|Bengaluru|0.31387782096862793|Scattered clouds|0.5839807987213135|1.1399040222167969
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.22699332237243652|Shipley|0.31584715843200684|Overcast clouds|0.5810222625732422|1.1238627433776855
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.23106002807617188|Bengaluru|0.3319234848022461|Scattered clouds|0.6027190685272217|1.1657025814056396
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.24659156799316406|Castle+Rock|0.3345756530761719|Clear sky|0.5717296600341797|1.1528968811035156
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2290194034576416|Portland|0.36388373374938965|Scattered clouds|0.580265998840332|1.1731691360473633
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.22286772727966309|State+of+Amazonas|0.31655025482177734|No data available for this city|0.5902070999145508|1.1296250820159912
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.3251051902770996|HP2|0.3094513416290283|No data available for this city|0.572516918182373|1.207073450088501
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.2556190490722656|New+Delhi|0.3443114757537842|Clear sky|0.6071386337280273|1.2070691585540771
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.23998093605041504|Singapore|0.32004332542419434|Overcast clouds|0.5709872245788574|1.1310114860534668
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.25290870666503906|Gatesville|0.3233480453491211|Light rain|0.5729081630706787|1.1491649150848389
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.23199796676635742|Hyderabad|0.3352811336517334|Few clouds|0.580951452255249|1.1482305526733398
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.22803401947021484|Coimbatore|0.30805015563964844|Scattered clouds|0.6021215915679932|1.1382057666778564
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.22002840042114258|Singapore|0.3280372619628906|Overcast clouds|0.6151614189147949|1.1632270812988281
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.2389202117919922|London|0.31321167945861816|Scattered clouds|0.5825576782226562|1.1346895694732666
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.25122952461242676|Dubai|0.31257033348083496|Scattered clouds|0.5817704200744629|1.1455702781677246
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.24994993209838867|Cupertino|0.3173410892486572|Clear sky|0.5723786354064941|1.13966965675354
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.24451828002929688|Oxford|0.3452634811401367|Scattered clouds|0.5733110904693604|1.163092851638794
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2322390079498291|Bengaluru|0.304746150970459|Scattered clouds|0.5852863788604736|1.1222715377807617
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.24689960479736328|Dover|0.33245086669921875|Scattered clouds|0.5752167701721191|1.1545672416687012
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.34272146224975586|Los+Angeles|0.31041455268859863|Overcast clouds|0.5712769031524658|1.2244129180908203
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2698333263397217|Appleton|0.3274655342102051|Overcast clouds|0.5806474685668945|1.1779463291168213
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.33056116104125977|SeaTac|0.3162956237792969|Scattered clouds|0.5837979316711426|1.2306547164916992
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2967956066131592|Seattle|0.36712098121643066|Scattered clouds|0.5539946556091309|1.2179112434387207
+samsung|failed|failed|failed|failed|failed|failed|failed
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.22759294509887695|Canyon+Lake|0.39959716796875|Clear sky|0.5623738765716553|1.1895639896392822
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.21576166152954102|Paris|0.3110382556915283|Overcast clouds|0.5868797302246094|1.1136796474456787
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.23311686515808105|RS|0.3184535503387451|No data available for this city|0.5837850570678711|1.1353554725646973
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.22817158699035645|Cathedral+City|0.3669009208679199|Clear sky|0.5741961002349854|1.1692686080932617
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.22097563743591309|Metro+Manila|0.33364081382751465|Few clouds|0.5819637775421143|1.136580228805542
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.22191095352172852|Mumbai|0.311870813369751|Few clouds|0.5554821491241455|1.089263916015625
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.2239055633544922|Chertsey|0.30330371856689453|Few clouds|0.5730235576629639|1.1002328395843506
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.21698474884033203|Dubai|0.3317568302154541|Scattered clouds|0.5829775333404541|1.1317191123962402
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.22133350372314453|Bengaluru|0.3735697269439697|Scattered clouds|0.5692164897918701|1.1641197204589844
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.22198987007141113|Mumbai|0.31060123443603516|Few clouds|0.5865201950073242|1.1191112995147705
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.20968151092529297|NSW|0.29828548431396484|No data available for this city|0.593090295791626|1.1010572910308838
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.21764779090881348|White+Plains|0.29876279830932617|Overcast clouds|0.6005651950836182|1.1169757843017578
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.2293257713317871|Redmond|0.4122920036315918|Clear sky|0.5782017707824707|1.2198195457458496
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.32021617889404297|Chertsey|0.31279468536376953|Few clouds|0.5947132110595703|1.2277240753173828
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.22272706031799316|Bangkok|0.3237614631652832|Scattered clouds|0.5977513790130615|1.144239902496338
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.32073545455932617|Singapore|0.3124239444732666|Overcast clouds|0.576622724533081|1.2097821235656738
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2438185214996338|Portland|0.286480188369751|Scattered clouds|0.5776300430297852|1.10792875289917
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.22674822807312012|Seattle|0.3112640380859375|Scattered clouds|0.5648064613342285|1.1028187274932861
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.23477649688720703|Bengaluru|0.3680546283721924|Scattered clouds|0.577796459197998|1.1806275844573975
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2358415126800537|Seattle|0.35344505310058594|Scattered clouds|0.596398115158081|1.1856846809387207
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.22021269798278809|Hyderabad|0.2872288227081299|Few clouds|0.5983912944793701|1.105832815170288
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.21776962280273438|Noida|0.313030481338501|Clear sky|0.5523362159729004|1.0831363201141357
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.2218165397644043|York|0.31500911712646484|Overcast clouds|0.5752725601196289|1.112098217010498
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.21988606452941895|New+York|0.3080124855041504|Overcast clouds|0.5982270240783691|1.1261255741119385
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.22431707382202148|ON|0.3273661136627197|Overcast clouds|0.5675935745239258|1.119276762008667
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.2115316390991211|Metro+Manila|0.3164479732513428|Few clouds|0.5829319953918457|1.1109116077423096
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.24642252922058105|Gatesville|0.3547515869140625|Light rain|0.5918710231781006|1.1930451393127441
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.23071980476379395|Kolkata|0.30989766120910645|Light rain|0.5623311996459961|1.1029486656188965
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.2536444664001465|New+York|0.3048853874206543|Overcast clouds|0.5813007354736328|1.1398305892944336
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.21168732643127441|NSW|0.3317453861236572|No data available for this city|0.5716121196746826|1.1150448322296143
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.23103952407836914|Chisinau|0.3355987071990967|Scattered clouds|0.5566654205322266|1.1233036518096924
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.22112131118774414|Cape+Town|0.3157832622528076|Clear sky|0.5714223384857178|1.1083269119262695
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.23386764526367188|Paris|0.31783103942871094|Overcast clouds|0.58237624168396|1.1340749263763428
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.2411191463470459|Paris|0.3096487522125244|Overcast clouds|0.5831372737884521|1.1339051723480225
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.23600554466247559|Noida|0.3066537380218506|Clear sky|0.5761692523956299|1.118828535079956
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.23299908638000488|Cathedral+Cove|0.3365442752838135|Scattered clouds|0.5781171321868896|1.147660493850708
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2974393367767334|Barcelona|0.3374924659729004|Overcast clouds|0.5821046829223633|1.217036485671997
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.20923209190368652|London|0.3087127208709717|Scattered clouds|0.5900657176971436|1.1080105304718018
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.22483396530151367|Singapore|0.3031282424926758|Overcast clouds|0.5778748989105225|1.105837106704712
+amazon|failed|failed|failed|failed|failed|failed|failed
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.21578335762023926|NSW|0.3268003463745117|No data available for this city|0.5925276279449463|1.1351113319396973
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.23578643798828125|Bengaluru|0.3028714656829834|Scattered clouds|0.5875205993652344|1.126178503036499
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.20982742309570312|Bengaluru|0.3505973815917969|Scattered clouds|0.5895867347717285|1.1500115394592285
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2174546718597412|Seattle|0.3430459499359131|Scattered clouds|0.5557060241699219|1.1162066459655762
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.3288869857788086|RS|0.32291412353515625|No data available for this city|0.5697734355926514|1.2215745449066162
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.22588181495666504|Canyon+Lake|0.31274914741516113|Clear sky|0.5688199996948242|1.1074509620666504
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.23495721817016602|Mumbai|0.31011033058166504|Few clouds|0.5658538341522217|1.1109213829040527
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2961270809173584|London|0.31824707984924316|Scattered clouds|0.5788106918334961|1.1931848526000977
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.29513120651245117|Bangkok|0.3391871452331543|Scattered clouds|0.5674374103546143|1.2017557621002197
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.2247157096862793|Amazon+River|0.35628175735473633|No data available for this city|0.5966737270355225|1.177671194076538
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.2245168685913086|Hpa-An|0.30917859077453613|Overcast clouds|0.5742213726043701|1.1079168319702148
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.24887704849243164|Bengaluru|0.31595349311828613|Scattered clouds|0.6001520156860352|1.164982557296753
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.22493815422058105|Appleton|0.3016932010650635|Overcast clouds|0.5821657180786133|1.1087970733642578
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.21793508529663086|Cupertino|0.3102285861968994|Clear sky|0.5836181640625|1.1117818355560303
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.2443852424621582|New+York|0.321026086807251|Overcast clouds|0.5853772163391113|1.1507885456085205
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2275090217590332|Pumanque|0.295703649520874|No data available for this city|0.5923001766204834|1.1155128479003906
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.21973299980163574|ON|0.29902029037475586|Overcast clouds|0.5881705284118652|1.1069238185882568
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.23569130897521973|New+Delhi|0.3157186508178711|Clear sky|0.5840041637420654|1.1354141235351562
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.21322870254516602|Houston|0.2950575351715088|Overcast clouds|0.5865931510925293|1.094879388809204
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.21623611450195312|Bengaluru|0.32452821731567383|Scattered clouds|0.5900332927703857|1.1307976245880127
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.21838927268981934|Bangkok|0.3056638240814209|Scattered clouds|0.5899195671081543|1.1139726638793945
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2224407196044922|SeaTac|0.31459879875183105|Scattered clouds|0.575958251953125|1.1129977703094482
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.23211407661437988|Amsterdam|0.33495497703552246|Scattered clouds|0.5788788795471191|1.1459479331970215
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.22345709800720215|Oxford|0.3401203155517578|Scattered clouds|0.5807065963745117|1.1442840099334717
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2259073257446289|New+Delhi|0.31937170028686523|Clear sky|0.5796236991882324|1.1249027252197266
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.23238015174865723|State+of+Amazonas|0.3066582679748535|No data available for this city|0.6400835514068604|1.179121971130371
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.22090840339660645|Gateshead|0.34032201766967773|Few clouds|0.5765666961669922|1.1377971172332764
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.22553730010986328|Redmond|0.29955601692199707|Clear sky|0.5700769424438477|1.095170259475708
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.23023056983947754|Portland|0.3077964782714844|Scattered clouds|0.5632376670837402|1.1012647151947021
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.22546815872192383|San+Francisco|0.30866289138793945|Overcast clouds|0.5665121078491211|1.1006431579589844
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.23321962356567383|Kolkata|0.3253500461578369|Light rain|0.5824565887451172|1.141026258468628
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.33260607719421387|Strasbourg|0.31276941299438477|Light rain|0.6050171852111816|1.2503926753997803
+museum|failed|failed|failed|failed|failed|failed|failed
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2264878749847412|Philadelphia|0.3277428150177002|Scattered clouds|0.5725405216217041|1.1267712116241455
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.22110819816589355|Iași|0.3443491458892822|Scattered clouds|0.5669693946838379|1.1324267387390137
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.23538684844970703|RS|0.3147921562194824|No data available for this city|0.5995168685913086|1.149695873260498
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.22969579696655273|Paris|0.3406820297241211|Overcast clouds|0.5827620029449463|1.1531398296356201
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.22398757934570312|Bengaluru|0.3057839870452881|Scattered clouds|0.5776276588439941|1.1073992252349854
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.2420482635498047|Hpa-An|0.32355308532714844|Overcast clouds|0.6040711402893066|1.1696724891662598
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.23086261749267578|London|0.32308077812194824|Scattered clouds|0.5687851905822754|1.1227285861968994
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.22594285011291504|New+Delhi|0.3240797519683838|Clear sky|0.5903217792510986|1.1403443813323975
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.22277569770812988|Kolkata|0.3299229145050049|Light rain|0.61897873878479|1.1716773509979248
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2199084758758545|New+York|0.34334707260131836|Overcast clouds|0.5899391174316406|1.1531946659088135
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.23214387893676758|Scottsdale|0.33234405517578125|Few clouds|0.6149089336395264|1.1793968677520752
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.226823091506958|Newport+Beach|0.321169376373291|Scattered clouds|0.5794253349304199|1.127417802810669
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.21587276458740234|New+Delhi|0.3480823040008545|Clear sky|0.5704941749572754|1.1344492435455322
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.28837037086486816|Shipley|0.3365442752838135|Overcast clouds|0.6190574169158936|1.2439720630645752
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.22990179061889648|London|0.3217501640319824|Scattered clouds|0.5990536212921143|1.1507055759429932
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.236649751663208|Orlando|0.3135042190551758|Clear sky|0.5834124088287354|1.1335663795471191
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.22999954223632812|Kolkata|0.3850705623626709|Light rain|0.6199393272399902|1.2350094318389893
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.23786163330078125|Park+City|0.3284573554992676|Overcast clouds|0.5794293880462646|1.1457483768463135
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.2438201904296875|Cape+Town|0.3314495086669922|Clear sky|0.5880885124206543|1.163358211517334
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.23986363410949707|Cathedral+City|0.3204789161682129|Clear sky|0.6152105331420898|1.1755530834197998
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.23826169967651367|New+York|0.30735135078430176|Overcast clouds|0.5537023544311523|1.0993154048919678
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.22830438613891602|Philadelphia|0.309328556060791|Scattered clouds|0.5882284641265869|1.125861406326294
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.2353041172027588|Dover|0.34308767318725586|Scattered clouds|0.6035833358764648|1.1819751262664795
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.21831464767456055|HP2|0.32430362701416016|No data available for this city|0.5896179676055908|1.1322362422943115
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.23105072975158691|Dover|0.3232400417327881|Scattered clouds|0.5747606754302979|1.1290514469146729
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.24967098236083984|New+Delhi|0.35811328887939453|Clear sky|0.5649623870849609|1.1727466583251953
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+new|failed|failed|failed|failed|failed|failed|failed
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.4274916648864746|State+of+Amazonas|1.094249963760376|No data available for this city|1.1772878170013428|2.6990294456481934
+amazon|failed|failed|failed|failed|failed|failed|failed
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.3045327663421631|Seattle|0.34320569038391113|Clear sky|0.682518720626831|1.3302571773529053
+|failed|failed|failed|failed|failed|failed|failed
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.4255557060241699|Seattle|3.447742462158203|Clear sky|0.6637811660766602|4.537079334259033
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2984781265258789|London|0.298189640045166|Scattered clouds|0.6878011226654053|1.2844688892364502
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.4220139980316162|Singapore|0.27919960021972656|Light rain|0.6071290969848633|1.308342695236206
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.42698097229003906|Bengaluru|0.2752091884613037|Scattered clouds|0.617250919342041|1.3194410800933838
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.29584527015686035|Redmond|0.300778865814209|Clear sky|0.7238295078277588|1.3204536437988281
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.42899465560913086|London|0.3186678886413574|Scattered clouds|0.6158993244171143|1.3635618686676025
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.2768263816833496|Hpa+Yar+Gyi|0.3640170097351074|No data available for this city|0.5906624794006348|1.2315058708190918
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.296464204788208|Bengaluru|0.30939817428588867|Scattered clouds|0.635063648223877|1.2409260272979736
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.3747076988220215|Kolkata|0.2532224655151367|Overcast clouds|0.6665432453155518|1.29447340965271
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.2944667339324951|New+Delhi|0.32535362243652344|Clear sky|0.6825003623962402|1.3023207187652588
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.32646751403808594|State+of+São+Paulo|0.3005247116088867|No data available for this city|0.6542978286743164|1.281290054321289
+gardens|failed|failed|failed|failed|failed|failed|failed
+dechatlon|failed|failed|failed|failed|failed|failed|failed
+cathedral|failed|failed|failed|failed|failed|failed|failed
+ocean|failed|failed|failed|failed|failed|failed|failed
+nivea|failed|failed|failed|failed|failed|failed|failed
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.3276517391204834|Seattle|3.1819920539855957|Clear sky|0.5836217403411865|4.093265533447266
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.25326037406921387|Canyon+Lake|3.083040952682495|Clear sky|0.6258749961853027|3.9621763229370117
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.3138697147369385|Kyiv|3.0151541233062744|Overcast clouds|0.6231095790863037|3.9521334171295166
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.3855578899383545|Philadelphia|2.9915220737457275|Scattered clouds|0.6518299579620361|4.028909921646118
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.3120899200439453|RS|3.0770156383514404|No data available for this city|0.6743955612182617|4.0635011196136475
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.25219154357910156|Chertsey|0.30318450927734375|Few clouds|0.6341800689697266|1.1895561218261719
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.3018331527709961|Bengaluru|0.3296780586242676|Scattered clouds|0.6451280117034912|1.2766392230987549
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.28415799140930176|Seattle|0.25653982162475586|Clear sky|0.6774904727935791|1.2181882858276367
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.29916882514953613|Redmond|0.2994258403778076|Clear sky|0.6858985424041748|1.2844932079315186
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.3428478240966797|San+Francisco|0.32016777992248535|Overcast clouds|0.6889715194702148|1.3519871234893799
+gardens|failed|failed|failed|failed|failed|failed|failed
+hotel|failed|failed|failed|failed|failed|failed|failed
+palace|failed|failed|failed|failed|failed|failed|failed
+palace|failed|failed|failed|failed|failed|failed|failed
+hostel|failed|failed|failed|failed|failed|failed|failed
+gate|failed|failed|failed|failed|failed|failed|failed
+riot|failed|failed|failed|failed|failed|failed|failed
+maxcode|failed|failed|failed|failed|failed|failed|failed
+dechatlon|failed|failed|failed|failed|failed|failed|failed
+church|failed|failed|failed|failed|failed|failed|failed
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.308119535446167|Park+City|0.2957804203033447|Overcast clouds|0.6468303203582764|1.250730276107788
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.28399062156677246|Oxford|0.2947249412536621|Scattered clouds|0.7162296772003174|1.294945240020752
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.25498199462890625|London|0.31893420219421387|Few clouds|0.718254566192627|1.292170763015747
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.3590395450592041|London|0.3576023578643799|Few clouds|0.617487907409668|1.334129810333252
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.2766120433807373|VIC|0.3263249397277832|Overcast clouds|0.7581822872161865|1.361119270324707
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.2728736400604248|Seattle|0.7206718921661377|Clear sky|0.5819540023803711|1.5754995346069336
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.24963617324829102|Poznań|0.690269947052002|Scattered clouds|0.61905837059021|1.558964490890503
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.2408900260925293|Seattle|0.6980180740356445|Clear sky|0.626021146774292|1.5649292469024658
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2396252155303955|Orlando|0.7311055660247803|Clear sky|0.6440079212188721|1.6147387027740479
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.2182939052581787|Strasbourg|0.682661771774292|Overcast clouds|0.7327322959899902|1.633687973022461
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.3237113952636719|Seattle|2.89831280708313|Clear sky|0.5860373973846436|3.8080615997314453
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.23513412475585938|London|3.1035680770874023|Few clouds|0.6006700992584229|3.9393723011016846
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.25055599212646484|VIC|2.9216041564941406|Overcast clouds|0.6190438270568848|3.7912039756774902
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.36461544036865234|New+York|2.9122581481933594|Overcast clouds|0.6710588932037354|3.947932481765747
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.2638132572174072|Sarai+Rohilla|3.023024320602417|No data available for this city|0.6780474185943604|3.9648849964141846
+amazon|failed|failed|failed|failed|failed|failed|failed
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.3173246383666992|Amazon+River|0.9956381320953369|No data available for this city|0.6240451335906982|1.9370079040527344
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.43181943893432617|State+of+Amazonas|0.4824197292327881|No data available for this city|0.6020910739898682|1.5163302421569824
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.3215217590332031|Hyderabad|0.4511406421661377|Few clouds|0.6269543170928955|1.3996167182922363
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.4048023223876953|Barcelona|0.7143468856811523|Scattered clouds|0.6127057075500488|1.7318549156188965
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.49591875076293945|Morrisville|0.797950029373169|Overcast clouds|0.7171130180358887|2.010981798171997
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.39379310607910156|Barcelona|1.100508451461792|Scattered clouds|0.6724989414215088|2.1668004989624023
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.4989442825317383|Žižkov|1.0560846328735352|No data available for this city|0.6258933544158936|2.180922269821167
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.4929320812225342|Hamburg|1.0479376316070557|Scattered clouds|0.6809442043304443|2.221813917160034
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.3184471130371094|Noida|0.3785097599029541|Clear sky|0.6223762035369873|1.3193330764770508
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.29839611053466797|Morrisville|0.2803916931152344|Overcast clouds|0.6438479423522949|1.2226357460021973
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.28702545166015625|Riotord|0.30996179580688477|Overcast clouds|0.680927038192749|1.27791428565979
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.28008604049682617|Houston|0.35982728004455566|Overcast clouds|0.6866979598999023|1.3266112804412842
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.298858642578125|Singapore|0.39084434509277344|Light rain|0.6010158061981201|1.2907187938690186
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2952115535736084|Bengaluru|0.28333306312561035|Overcast clouds|0.6755902767181396|1.2541348934173584
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.28888392448425293|ON|0.34375739097595215|Overcast clouds|0.6843886375427246|1.3170299530029297
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.26966428756713867|Castle+Rock|0.2619822025299072|Few clouds|0.6972248554229736|1.2288713455200195
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2542886734008789|Philadelphia|0.3451099395751953|Moderate rain|0.7774796485900879|1.376878261566162
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.3310534954071045|Chisinau|0.2840287685394287|Scattered clouds|0.725271463394165|1.3403537273406982
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.33200597763061523|Žižkov|0.29288148880004883|No data available for this city|0.590216875076294|1.215104341506958
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.28000783920288086|Lahore|0.2680056095123291|Few clouds|0.6279425621032715|1.1759560108184814
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.32271599769592285|Lahore|0.2698798179626465|Few clouds|0.6052131652832031|1.1978089809417725
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.27707600593566895|Oceanside|0.2795677185058594|Overcast clouds|0.6199212074279785|1.1765649318695068
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.30513715744018555|Seattle|0.23822259902954102|Clear sky|0.6418111324310303|1.1851708889007568
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2682781219482422|Philadelphia|0.20543670654296875|Moderate rain|0.7302181720733643|1.2039330005645752
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2655787467956543|Barcelona|0.3193817138671875|Scattered clouds|0.6007301807403564|1.1856906414031982
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.38037967681884766|Versailles|0.37323856353759766|Light rain|0.6321372985839844|1.3857555389404297
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.4287538528442383|Philadelphia|0.26593875885009766|Moderate rain|0.6480517387390137|1.3427443504333496
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.4067976474761963|Paris|0.25196027755737305|Scattered clouds|0.6862199306488037|1.344977855682373
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.29499173164367676|New+York|0.29659008979797363|Overcast clouds|0.6199517250061035|1.211533546447754
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.3558487892150879|London|0.41298818588256836|Few clouds|0.6129262447357178|1.381763219833374
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.262850284576416|Bengaluru|0.2850821018218994|Overcast clouds|0.6041116714477539|1.1520440578460693
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.2698242664337158|Dover|0.3000931739807129|Few clouds|0.6687285900115967|1.2386460304260254
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.29511547088623047|Hyderabad|0.33956265449523926|Few clouds|0.6363561153411865|1.2710342407226562
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.26964521408081055|New+York|0.3126661777496338|Overcast clouds|0.6302852630615234|1.2125966548919678
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.28148961067199707|Mumbai|0.31208038330078125|Clear sky|0.6238842010498047|1.217454195022583
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2643625736236572|New+York|0.2710423469543457|Overcast clouds|0.5980274677276611|1.133432388305664
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2554960250854492|Kolkata|0.2509162425994873|Overcast clouds|0.6084175109863281|1.1148297786712646
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.30016160011291504|Redmond|0.3424108028411865|Clear sky|0.673210620880127|1.3157830238342285
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.26491737365722656|Bengaluru|0.34137892723083496|Overcast clouds|0.5869054794311523|1.1932017803192139
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.3678567409515381|London|0.16463661193847656|Few clouds|0.6643507480621338|1.1968441009521484
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.28493165969848633|Iași|0.1985158920288086|Few clouds|0.6354210376739502|1.1188685894012451
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2961609363555908|Bengaluru|0.32247328758239746|Overcast clouds|0.6136722564697266|1.2323064804077148
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.3502542972564697|York|0.4196772575378418|Overcast clouds|0.6687753200531006|1.438706874847412
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.31737804412841797|Oxford|0.29085755348205566|Scattered clouds|0.5921163558959961|1.2003519535064697
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.35502052307128906|RS|0.20847368240356445|No data available for this city|0.6249518394470215|1.188446044921875
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.22169160842895508|Berlin|0.30153584480285645|Scattered clouds|0.6982760429382324|1.221503496170044
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.22841143608093262|Philadelphia|0.3176450729370117|Moderate rain|0.6035881042480469|1.1496446132659912
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.25860023498535156|Miami+Beach|0.1994633674621582|Scattered clouds|0.6267647743225098|1.0848283767700195
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.2320389747619629|York|0.24931955337524414|Overcast clouds|0.6305751800537109|1.111933708190918
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.24533724784851074|New+York|0.2393810749053955|Overcast clouds|0.606604814529419|1.0913231372833252
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.25150132179260254|Iași|0.3037910461425781|Few clouds|0.6091911792755127|1.1644835472106934
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.338820219039917|Noida|0.22180962562561035|Clear sky|0.6205751895904541|1.1812050342559814
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.32461977005004883|Versailles|0.3320770263671875|Light rain|0.6314878463745117|1.288184642791748
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2812626361846924|Seattle|0.3472158908843994|Clear sky|0.6128880977630615|1.2413666248321533
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.3141608238220215|London|0.3651893138885498|Few clouds|0.6148793697357178|1.294229507446289
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2652909755706787|New+Delhi|0.42403268814086914|Clear sky|0.6119213104248047|1.3012449741363525
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.3861269950866699|Miami+Beach|0.35505127906799316|Scattered clouds|0.6260483264923096|1.3672266006469727
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.4190480709075928|SeaTac|0.33812689781188965|Clear sky|0.6240224838256836|1.381197452545166
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.4669196605682373|London|0.2762892246246338|Few clouds|0.6290459632873535|1.3722548484802246
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.3422355651855469|Shipley|0.2802767753601074|Overcast clouds|0.644007682800293|1.2665200233459473
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.43301939964294434|Paris|0.36999940872192383|Scattered clouds|0.593170166015625|1.3961889743804932
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.4230227470397949|New+York|0.2642951011657715|Overcast clouds|0.5971598625183105|1.284477710723877
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.3981049060821533|Bengaluru|0.32512640953063965|Overcast clouds|0.6819713115692139|1.4052026271820068
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.45694446563720703|Cape+Town|0.33809685707092285|Clear sky|0.646028995513916|1.441070318222046
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.4589500427246094|Hyderabad|0.33212924003601074|Few clouds|0.6589670181274414|1.4500463008880615
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.38015151023864746|Paris|0.26730990409851074|Scattered clouds|0.6519861221313477|1.2994475364685059
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.5037786960601807|London|0.305225133895874|Few clouds|0.6250452995300293|1.434049129486084
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.41006994247436523|Province+of+Livorno|0.24938416481018066|No data available for this city|0.6549553871154785|1.3144094944000244
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.46990966796875|Delhi|0.320143461227417|Clear sky|0.6460292339324951|1.436082363128662
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.4788858890533447|Las+Vegas|0.304187536239624|Clear sky|0.6839289665222168|1.4670023918151855
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.41306042671203613|Amsterdam|0.3331592082977295|Scattered clouds|0.653972864151001|1.4001924991607666
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.47490549087524414|New+York|0.3480978012084961|Overcast clouds|0.603111743927002|1.4261150360107422
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.43500328063964844|Rumbach+Sebestyén+Street|0.4278254508972168|No data available for this city|0.624089241027832|1.4869179725646973
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.4479353427886963|Seattle|0.3730027675628662|Clear sky|0.6191022396087646|1.4400403499603271
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.400066614151001|Mountain+View|0.4248631000518799|Scattered clouds|0.6350908279418945|1.4600205421447754
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.35222363471984863|Bengaluru|0.5016968250274658|Overcast clouds|0.5921425819396973|1.4460630416870117
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.3352680206298828|Penang|0.39894866943359375|Overcast clouds|0.6221005916595459|1.3563172817230225
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.36916542053222656|Scottsdale|0.43184733390808105|Clear sky|0.6749517917633057|1.4759645462036133
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.4170668125152588|San+Francisco|0.4258894920349121|Overcast clouds|0.6379930973052979|1.4809494018554688
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.47990894317626953|Oxford|0.46772003173828125|Scattered clouds|0.6141152381896973|1.561744213104248
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.40807223320007324|Pumanque|0.489682674407959|No data available for this city|0.6689691543579102|1.5667240619659424
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.43501734733581543|Bengaluru|0.3570709228515625|Overcast clouds|0.6599657535552979|1.4520540237426758
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.486919641494751|London|0.33807969093322754|Few clouds|0.6699268817901611|1.4949262142181396
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.4449777603149414|New+York|0.42789602279663086|Overcast clouds|0.6479837894439697|1.520857572555542
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.45893359184265137|Dover|0.4557805061340332|Few clouds|0.638052225112915|1.5527663230895996
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.38613295555114746|London|0.44484424591064453|Few clouds|0.7088572978973389|1.5398344993591309
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.373136043548584|Cupertino|0.4507942199707031|Clear sky|0.7108578681945801|1.5347881317138672
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.3631899356842041|Cathedral+City|0.3819901943206787|Clear sky|0.6869220733642578|1.4321022033691406
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.3121650218963623|New+York|0.38912510871887207|Overcast clouds|0.8903787136077881|1.5916688442230225
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.3552219867706299|Newport+Beach|0.4119291305541992|Few clouds|0.6619517803192139|1.429102897644043
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.38610386848449707|Dübendorf|0.365062952041626|Light rain|0.6988503932952881|1.4500172138214111
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.44896578788757324|Redmond|0.4478027820587158|Clear sky|0.725818395614624|1.622586965560913
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.4719393253326416|Singapore|0.4667654037475586|Light rain|0.6140658855438232|1.5527706146240234
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.23360657691955566|Strasbourg|0.19148850440979004|Overcast clouds|0.6492648124694824|1.0743598937988281
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.22858881950378418|Apple+Valley|0.257312536239624|Overcast clouds|0.6133620738983154|1.0992634296417236
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.26130104064941406|Singapore|0.18949341773986816|Light rain|0.6163530349731445|1.0671474933624268
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.28918981552124023|Las+Vegas|0.17253875732421875|Clear sky|0.640561580657959|1.102290153503418
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.2892270088195801|Miami+Beach|0.17553091049194336|Scattered clouds|0.6445884704589844|1.1093463897705078
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.3191814422607422|Province+of+Livorno|0.1934823989868164|No data available for this city|0.6535296440124512|1.1661934852600098
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.2732694149017334|Morrisville|0.2682833671569824|Overcast clouds|0.590695858001709|1.1322486400604248
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.3493006229400635|Chaitén|0.23836231231689453|Overcast clouds|0.6774630546569824|1.2651259899139404
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.2912561893463135|Lahore|0.27227210998535156|Few clouds|0.5877320766448975|1.1512603759765625
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2622997760772705|Kolkata|0.28024935722351074|Overcast clouds|0.6186199188232422|1.1611690521240234
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.2593066692352295|Dover|0.2682826519012451|Few clouds|0.6315867900848389|1.1591761112213135
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.3839731216430664|SeaTac|0.21343064308166504|Clear sky|0.5977046489715576|1.195108413696289
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.28324294090270996|Coimbatore|0.17852354049682617|Scattered clouds|0.6345963478088379|1.096362829208374
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.33809709548950195|ON|0.1934816837310791|Overcast clouds|0.6305875778198242|1.1621663570404053
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.4079110622406006|Singapore|0.15658116340637207|Light rain|0.661505937576294|1.2259981632232666
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2952122688293457|Philadelphia|0.28922581672668457|Moderate rain|0.6555216312408447|1.239959716796875
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.26628637313842773|Philadelphia|0.26828479766845703|Moderate rain|0.646543025970459|1.1811141967773438
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.40990686416625977|Coimbatore|0.19747138023376465|Scattered clouds|0.6086456775665283|1.2160239219665527
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.28922295570373535|York|0.26130127906799316|Overcast clouds|0.6425573825836182|1.1930816173553467
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.393932580947876|New+Orleans|0.20844244956970215|Light rain|0.6146349906921387|1.2170100212097168
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.3590421676635742|Cupertino|0.1625678539276123|Clear sky|0.6006655693054199|1.1222755908966064
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.3211205005645752|London|0.26329565048217773|Few clouds|0.6116385459899902|1.1960546970367432
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.37699365615844727|Berlin|0.2702772617340088|Scattered clouds|0.6136343479156494|1.2609052658081055
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.3171532154083252|Seattle|0.23637080192565918|Clear sky|0.5986716747283936|1.152195692062378
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.3091740608215332|Chicago|0.19747042655944824|Scattered clouds|0.6226100921630859|1.1292545795440674
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.33508992195129395|Bengaluru|0.1934809684753418|Overcast clouds|0.6295897960662842|1.15816068649292
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.32114267349243164|Mountain+View|0.20943999290466309|Scattered clouds|0.6136324405670166|1.1442151069641113
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.3649930953979492|Kyiv|0.26130223274230957|Overcast clouds|0.6315948963165283|1.257890224456787
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.383974552154541|Dover|0.31316232681274414|Few clouds|0.6176221370697021|1.3147590160369873
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.3201444149017334|Mumbai|0.16954565048217773|Clear sky|0.6575157642364502|1.1472058296203613
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.37798261642456055|RS|0.21941375732421875|No data available for this city|0.6894311904907227|1.286827564239502
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.3331108093261719|New+York|0.3031880855560303|Overcast clouds|0.6086480617523193|1.2449469566345215
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.34607553482055664|Los+Angeles|0.21043777465820312|Clear sky|0.6884334087371826|1.2449467182159424
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.416858434677124|SeaTac|0.18056058883666992|Clear sky|0.6425116062164307|1.2399306297302246
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.3181488513946533|Bengaluru|0.2962071895599365|Overcast clouds|0.6256012916564941|1.239957332611084
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.2932164669036865|Bac+Ninh+Province|0.3031907081604004|No data available for this city|0.6485402584075928|1.2449474334716797
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.3361015319824219|Berlin|0.28324341773986816|Scattered clouds|0.6495380401611328|1.2688829898834229
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.38197922706604004|Los+Angeles|0.24933505058288574|Clear sky|0.5936877727508545|1.2250020503997803
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.42685914039611816|London|0.18650269508361816|Few clouds|0.6724765300750732|1.2858383655548096
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.43783092498779297|New+York|0.5886986255645752|Overcast clouds|0.6073768138885498|1.633906364440918
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.25060224533081055|Orlando|0.1845073699951172|Few clouds|0.6801831722259521|1.1152927875518799
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.2386341094970703|Hyderabad|0.17453360557556152|Few clouds|0.6781864166259766|1.0913541316986084
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.25359559059143066|Munich|0.17852354049682617|Overcast clouds|0.597402811050415|1.0295219421386719
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.26625895500183105|London|0.20844292640686035|Few clouds|0.593414306640625|1.0681161880493164
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.3091392517089844|Kolkata|0.17253422737121582|Overcast clouds|0.6213696002960205|1.1030430793762207
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.2563130855560303|Dübendorf|0.20545125007629395|Light rain|0.6432793140411377|1.105043649673462
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2782566547393799|Seattle|0.2154231071472168|Clear sky|0.6213405132293701|1.1150202751159668
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.28124570846557617|Bangkok|0.18351006507873535|Clear sky|0.643317699432373|1.1080734729766846
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.28324389457702637|Redmond|0.17054390907287598|Clear sky|0.6791868209838867|1.132974624633789
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.337099552154541|Chisinau|0.29122138023376465|Scattered clouds|0.6063797473907471|1.2347006797790527
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.27426648139953613|Hyderabad|0.20046472549438477|Few clouds|0.6492660045623779|1.1239972114562988
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.30714845657348633|New+York|0.2593076229095459|Overcast clouds|0.6063802242279053|1.1728363037109375
+amazon|failed|failed|failed|failed|failed|failed|failed
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2842411994934082|Bengaluru|0.1685488224029541|Overcast clouds|0.6722469329833984|1.1250369548797607
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.28324103355407715|Chharodi|0.15757966041564941|No data available for this city|0.6961393356323242|1.1369600296020508
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.26328253746032715|New+York|0.2583038806915283|Overcast clouds|0.676206111907959|1.1977925300598145
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.3231353759765625|Bengaluru|0.18650007247924805|Overcast clouds|0.7091045379638672|1.2187399864196777
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.37200474739074707|Cathedral+City|0.14760565757751465|Clear sky|0.6183481216430664|1.1379585266113281
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.38197803497314453|London|0.16456055641174316|Few clouds|0.6313140392303467|1.1778526306152344
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.28224611282348633|Singapore|0.1655573844909668|Light rain|0.6432805061340332|1.0910840034484863
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.27526116371154785|Los+Angeles|0.16755199432373047|Clear sky|0.6931474208831787|1.135960578918457
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.2922196388244629|ON|0.1605701446533203|Overcast clouds|0.653254508972168|1.1060442924499512
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.3420870304107666|Newport+Beach|0.15059781074523926|Few clouds|0.6412866115570068|1.1339714527130127
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.34407925605773926|Orlando|0.18849635124206543|Few clouds|0.5994312763214111|1.1320068836212158
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.2792513370513916|Jalisco|0.19946765899658203|Clear sky|0.7290520668029785|1.2077710628509521
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.3151569366455078|Portland|0.18849658966064453|Overcast clouds|0.7719376087188721|1.2755911350250244
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.28025007247924805|Kolkata|0.17054319381713867|Overcast clouds|0.6023907661437988|1.0531840324401855
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.2991962432861328|Bangkok|0.26628851890563965|Clear sky|0.6532590389251709|1.2187438011169434
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2563142776489258|Cupertino|0.1765294075012207|Clear sky|0.6343035697937012|1.0671472549438477
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.25929737091064453|Los+Angeles|0.2603302001953125|Clear sky|0.6402628421783447|1.1598904132843018
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.2982025146484375|Bengaluru|0.18251276016235352|Overcast clouds|0.6293172836303711|1.110032558441162
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.3061802387237549|NSW|0.17752552032470703|No data available for this city|0.6552510261535645|1.1389567852020264
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.26928091049194336|Canyon+Lake|0.2922186851501465|Clear sky|0.6931848526000977|1.2546844482421875
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2752647399902344|New+Orleans|0.3091733455657959|Light rain|0.6722054481506348|1.256643533706665
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.3011960983276367|London|0.16954541206359863|Few clouds|0.6453027725219727|1.116044282913208
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.27426600456237793|New+York|0.2593064308166504|Overcast clouds|0.6143591403961182|1.1479315757751465
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.29720258712768555|Cupertino|0.18151473999023438|Clear sky|0.6323511600494385|1.1110684871673584
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.2852363586425781|Chharodi|0.18650078773498535|No data available for this city|0.6442797183990479|1.1160168647766113
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.38497352600097656|Seattle|0.15957331657409668|Clear sky|0.6412866115570068|1.18583345413208
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.22739267349243164|Dover|0.27127552032470703|Few clouds|0.5954089164733887|1.0940771102905273
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.24135494232177734|New+York|0.14561128616333008|Overcast clouds|0.6732022762298584|1.0601685047149658
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2563149929046631|Philadelphia|0.16058039665222168|Moderate rain|0.6721928119659424|1.0890882015228271
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.2463514804840088|Iași|0.18250155448913574|Few clouds|0.6383213996887207|1.0671744346618652
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.30120086669921875|NSW|0.2084355354309082|No data available for this city|0.6116688251495361|1.121305227279663
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.29525113105773926|ON|0.24031758308410645|Overcast clouds|0.6156585216522217|1.1512272357940674
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.30814695358276367|London|0.2593085765838623|Few clouds|0.6056828498840332|1.1731383800506592
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.27725815773010254|London|0.1685504913330078|Few clouds|0.6136636734008789|1.0594723224639893
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.29918670654296875|Newport+Beach|0.14860296249389648|Few clouds|0.6006999015808105|1.0484895706176758
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.28619933128356934|Cape+Town|0.3251311779022217|Clear sky|0.6166555881500244|1.2279860973358154
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.26928067207336426|Noida|0.34408044815063477|Clear sky|0.6745009422302246|1.2878620624542236
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.32712554931640625|Žižkov|0.16356229782104492|No data available for this city|0.6306178569793701|1.1213057041168213
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.27725720405578613|London|0.23736572265625|Few clouds|0.6376011371612549|1.152224063873291
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.32413148880004883|Hyderabad|0.14760684967041016|Few clouds|0.6276257038116455|1.0993640422821045
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.28623318672180176|Ocean+City|0.18849563598632812|Scattered clouds|0.7004694938659668|1.1751983165740967
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.33510541915893555|Mumbai|0.17154169082641602|Clear sky|0.6076798439025879|1.1143269538879395
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.3141601085662842|Tiwanaku|0.15658259391784668|Scattered clouds|0.6814830303192139|1.1522257328033447
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.3141167163848877|Dover|0.26130199432373047|Few clouds|0.6056859493255615|1.1811046600341797
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.34408140182495117|White+Plains|0.18051648139953613|Overcast clouds|0.6495673656463623|1.1741652488708496
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.2872312068939209|Beaverton|0.26030492782592773|Few clouds|0.686469316482544|1.2340054512023926
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.35206151008605957|Chaitén|0.19946599006652832|Overcast clouds|0.6445827484130859|1.1961102485656738
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.351062536239624|Seattle|0.1715407371520996|Clear sky|0.6685278415679932|1.1911311149597168
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.360015869140625|Chisinau|0.17452192306518555|Scattered clouds|0.6286232471466064|1.163161039352417
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.35705018043518066|Kolkata|0.17253446578979492|Overcast clouds|0.6655254364013672|1.1951100826263428
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.34906601905822754|Berlin|0.21941423416137695|Scattered clouds|0.6366016864776611|1.2050819396972656
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.32907938957214355|Bengaluru|0.1874985694885254|Overcast clouds|0.6326146125793457|1.1491925716400146
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.43184423446655273|San+Francisco|0.20744562149047852|Overcast clouds|0.5817747116088867|1.221064567565918
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.41788387298583984|Tiwanaku|0.23038315773010254|Scattered clouds|0.638596773147583|1.2868638038635254
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.3470726013183594|Canyon+Lake|0.2154250144958496|Clear sky|0.6455771923065186|1.2080748081207275
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.40990304946899414|Barcelona|0.21047711372375488|Scattered clouds|0.6395556926727295|1.2599358558654785
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.4218459129333496|RS|0.21445393562316895|No data available for this city|0.6545276641845703|1.2908275127410889
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.3999288082122803|New+Delhi|0.2293872833251953|Clear sky|0.6824798583984375|1.311795949935913
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.41288232803344727|Dover|0.23337483406066895|Few clouds|0.6635301113128662|1.3097872734069824
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.48370838165283203|New+York|0.21442556381225586|Overcast clouds|0.6346070766448975|1.3327410221099854
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.4478037357330322|New+Delhi|0.30518436431884766|Clear sky|0.5997004508972168|1.3526885509490967
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.43184661865234375|York|0.23936128616333008|Overcast clouds|0.6575474739074707|1.3287553787231445
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.4268183708190918|Mumbai|0.213456392288208|Clear sky|0.6525330543518066|1.2928078174591064
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.45378565788269043|Barcelona|0.22140836715698242|Scattered clouds|0.6944482326507568|1.3696422576904297
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.4218711853027344|Rovaniemi|0.23836374282836914|Scattered clouds|0.6754970550537109|1.3357319831848145
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.4328434467315674|Chertsey|0.2383584976196289|Scattered clouds|0.7054173946380615|1.3766193389892578
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.25531697273254395|Beaverton|0.18480920791625977|Few clouds|0.5844452381134033|1.024571418762207
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.26758766174316406|Appleton|0.17453360557556152|Overcast clouds|0.610368013381958|1.0524892807006836
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.23664522171020508|Dubai|0.1745319366455078|Scattered clouds|0.6662197113037109|1.0773968696594238
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.2855510711669922|Dublin|0.2592964172363281|Scattered clouds|0.6343066692352295|1.1791541576385498
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.24035906791687012|Chharodi|0.17353415489196777|No data available for this city|0.6303267478942871|1.044219970703125
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2543220520019531|Singapore|0.15059542655944824|Light rain|0.6293199062347412|1.0342373847961426
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.27227210998535156|Poznań|0.14461445808410645|Scattered clouds|0.6811802387237549|1.098066806793213
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.23936223983764648|Oxford|0.1466050148010254|Scattered clouds|0.6133608818054199|0.9993281364440918
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.2732679843902588|White+Plains|0.19946742057800293|Overcast clouds|0.5794508457183838|1.0521862506866455
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.30518293380737305|Redmond|0.1456127166748047|Clear sky|0.6462721824645996|1.0970678329467773
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.24036264419555664|Hyderabad|0.20146632194519043|Few clouds|0.586442232131958|1.028271198272705
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.2513277530670166|Mountain+View|0.21342921257019043|Scattered clouds|0.5684797763824463|1.0332367420196533
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.23636698722839355|Dover|0.23337626457214355|Few clouds|0.5744664669036865|1.0442097187042236
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.24933314323425293|Castleford|0.2204117774963379|Overcast clouds|0.622337818145752|1.0920827388763428
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.24733924865722656|Strasbourg|0.17553019523620605|Overcast clouds|0.5974054336547852|1.0202748775482178
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.26928138732910156|Dubai|0.18450713157653809|Scattered clouds|0.5993990898132324|1.053187608718872
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.262296199798584|Kolkata|0.1765279769897461|Overcast clouds|0.614361047744751|1.053185224533081
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.2872335910797119|Houston|0.15159368515014648|Overcast clouds|0.6043860912322998|1.0432133674621582
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2333390712738037|Bengaluru|0.32712554931640625|Overcast clouds|0.5734701156616211|1.133934736251831
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.25232410430908203|Seattle|0.1625657081604004|Clear sky|0.5954101085662842|1.0102999210357666
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.2622983455657959|Gatesville|0.17752528190612793|Light rain|0.6462726593017578|1.0860962867736816
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.33310818672180176|VIC|0.19747233390808105|Overcast clouds|0.5844395160675049|1.1150200366973877
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.35902953147888184|San+Francisco|0.13663482666015625|Overcast clouds|0.5954122543334961|1.0910766124725342
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.33610010147094727|Munich|0.18450689315795898|Overcast clouds|0.6213395595550537|1.14194655418396
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.3341073989868164|Bac+Ninh+Province|0.14162158966064453|No data available for this city|0.5884404182434082|1.0641694068908691
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.32610154151916504|Sarai+Rohilla|0.15059876441955566|No data available for this city|0.6183474063873291|1.0950477123260498
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.276261568069458|Cupertino|0.1685495376586914|Clear sky|0.5774579048156738|1.0222690105438232
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.28623509407043457|Chaitén|0.15558385848999023|Overcast clouds|0.5704753398895264|1.0122942924499512
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.26928067207336426|NSW|0.14162111282348633|No data available for this city|0.566486120223999|0.9773879051208496
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.34906697273254395|Sofia|0.29720640182495117|Clear sky|0.6722025871276855|1.3184759616851807
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.2822449207305908|Mumbai|0.15957283973693848|Clear sky|0.5934145450592041|1.0352323055267334
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.270277738571167|Kolkata|0.15957283973693848|Overcast clouds|0.5974037647247314|1.027254343032837
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.28324413299560547|Redmond|0.1545863151550293|Clear sky|0.5744638442993164|1.0122942924499512
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.2952108383178711|Hyderabad|0.1685492992401123|Few clouds|0.5864324569702148|1.0501925945281982
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.30518531799316406|Penang|0.17852258682250977|Overcast clouds|0.5874297618865967|1.0711376667022705
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.28324317932128906|Hyderabad|0.17453455924987793|Few clouds|0.5914287567138672|1.0492064952850342
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.3580281734466553|Los+Angeles|0.15458464622497559|Clear sky|0.5704755783081055|1.0830883979797363
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.2692735195159912|Hyderabad|0.15259337425231934|Few clouds|0.5964057445526123|1.0182726383209229
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.3071787357330322|ON|0.18051743507385254|Overcast clouds|0.5954089164733887|1.0831050872802734
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.3829765319824219|Cathedral+Cove|0.15658164024353027|Scattered clouds|0.5824432373046875|1.1220014095306396
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.29122138023376465|Seattle|0.25531744956970215|Clear sky|0.5854361057281494|1.1319749355316162
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.22739577293395996|New+York|0.13863754272460938|Overcast clouds|0.613349199295044|0.9793825149536133
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.223402738571167|Redmond|0.12666058540344238|Clear sky|0.6083741188049316|0.958437442779541
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.22240400314331055|London|0.1456284523010254|Few clouds|0.6332895755767822|1.0013220310211182
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.2313709259033203|Metro+Manila|0.15259099006652832|Overcast clouds|0.6253738403320312|1.0093357563018799
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.2184159755706787|Bengaluru|0.17752480506896973|Overcast clouds|0.6053862571716309|1.0013270378112793
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.31316161155700684|New+Delhi|0.16157269477844238|Clear sky|0.6333041191101074|1.1080384254455566
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.3370983600616455|New+Delhi|0.17553067207336426|Clear sky|0.6183478832244873|1.130976915359497
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.2323596477508545|Las+Vegas|0.15957403182983398|Clear sky|0.6183505058288574|1.010284185409546
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.234375|Coimbatore|0.1715402603149414|Scattered clouds|0.6013939380645752|1.0073091983795166
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.23038268089294434|Canyon+Lake|0.16057133674621582|Clear sky|0.5804753303527832|0.9714293479919434
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.24135661125183105|Jalisco|0.20245695114135742|Clear sky|0.6084041595458984|1.052217721939087
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.23836183547973633|Chaitén|0.14960002899169922|Overcast clouds|0.574467658996582|0.9624295234680176
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.27426671981811523|Seattle|0.1685621738433838|Clear sky|0.6482546329498291|1.0910835266113281
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.22539615631103516|London|0.16755223274230957|Few clouds|0.6003949642181396|0.9933433532714844
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.22838807106018066|New+York|0.17054438591003418|Overcast clouds|0.6153573989868164|1.0142898559570312
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.229386568069458|York|0.2014608383178711|Overcast clouds|0.5685088634490967|0.9993562698364258
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.26130247116088867|New+York|0.17054414749145508|Overcast clouds|0.5914196968078613|1.023266315460205
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.2513279914855957|ON|0.19448089599609375|Overcast clouds|0.6133596897125244|1.0591685771942139
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.31116580963134766|Scottsdale|0.17453432083129883|Clear sky|0.5944104194641113|1.0801105499267578
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.2652895450592041|Paris|0.13065147399902344|Scattered clouds|0.5914192199707031|0.9873602390289307
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.24133872985839844|Chertsey|0.1954784393310547|Scattered clouds|0.589423656463623|1.0262408256530762
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2772557735443115|SeaTac|0.17054510116577148|Clear sky|0.6203405857086182|1.0681414604187012
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.2672896385192871|New+Orleans|0.18450284004211426|Light rain|0.6283209323883057|1.080113410949707
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2682816982269287|Pumanque|0.1715412139892578|No data available for this city|0.6392920017242432|1.0791149139404297
+nivea|failed|failed|failed|failed|failed|failed|failed
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.25232601165771484|Seattle|0.1575789451599121|Clear sky|0.5804483890533447|0.9903533458709717
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.23038482666015625|Portland|0.15259313583374023|Overcast clouds|0.5784523487091064|0.9614303112030029
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.2533230781555176|New+York|0.15658140182495117|Overcast clouds|0.5854356288909912|0.99534010887146
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.24534368515014648|Hpa-An|0.15459060668945312|Overcast clouds|0.6542482376098633|1.054182529449463
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.2483358383178711|Strasbourg|0.2533226013183594|Overcast clouds|0.5894248485565186|1.091083288192749
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.28822970390319824|SeaTac|0.1436171531677246|Clear sky|0.5595057010650635|0.9913525581359863
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.27426624298095703|Miami+Beach|0.14960050582885742|Scattered clouds|0.5724697113037109|0.9963364601135254
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.265291690826416|London|0.15358996391296387|Few clouds|0.6093711853027344|1.0282528400421143
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.29620933532714844|Seattle|0.13064980506896973|Clear sky|0.5854356288909912|1.0122947692871094
+cathedral|['Cathedral+Cove', 'Paris', 'Barcelona', 'Cathedral+City', 'Strasbourg']|0.3510627746582031|Cathedral+Cove|0.15059685707092285|Scattered clouds|0.6153550148010254|1.1170146465301514
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.3400850296020508|Mumbai|0.1406240463256836|Clear sky|0.6382970809936523|1.1190061569213867
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.34308433532714844|Bengaluru|0.12765765190124512|Overcast clouds|0.6013932228088379|1.0721352100372314
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.270277738571167|Dubai|0.1326444149017334|Scattered clouds|0.6163525581359863|1.0192747116088867
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.315157413482666|Sarai+Rohilla|0.1436164379119873|No data available for this city|0.6771891117095947|1.135962963104248
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.28025102615356445|London|0.2293994426727295|Few clouds|0.5973911285400391|1.107041597366333
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.248337984085083|Park+City|0.154585599899292|Overcast clouds|0.6602356433868408|1.0631592273712158
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.215423583984375|State+of+Amazonas|0.14960002899169922|No data available for this city|0.6153583526611328|0.980381965637207
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.2593069076538086|Las+Vegas|0.16755342483520508|Clear sky|0.5545175075531006|0.9813778400421143
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.23532915115356445|Bengaluru|0.12067675590515137|Overcast clouds|0.6682138442993164|1.0242197513580322
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.23337340354919434|New+York|0.15658092498779297|Overcast clouds|0.605381965637207|0.9953362941741943
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2513275146484375|Cupertino|0.15558505058288574|Clear sky|0.608374834060669|1.0152873992919922
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.24331903457641602|Hpa+Yar+Gyi|0.16156864166259766|No data available for this city|0.600395679473877|1.0052833557128906
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.2433462142944336|Sarai+Rohilla|0.14561080932617188|No data available for this city|0.634305477142334|1.0232625007629395
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.2573108673095703|Hyderabad|0.15957856178283691|Few clouds|0.6153569221496582|1.0322463512420654
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2662632465362549|London|0.16455888748168945|Few clouds|0.5954086780548096|1.026230812072754
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2652900218963623|London|0.15857505798339844|Few clouds|0.6083757877349854|1.032240867614746
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.23836445808410645|Oxford|0.1765279769897461|Scattered clouds|0.5924177169799805|1.007310152053833
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.2203826904296875|Chicago|0.15658211708068848|Scattered clouds|0.599398136138916|0.976362943649292
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.22539806365966797|NSW|0.1685500144958496|No data available for this city|0.6023900508880615|0.9963381290435791
+hostel|['Munich', 'Sofia', 'Rumbach+Sebestyén+Street', 'Rovaniemi', 'Žižkov']|0.3400886058807373|Žižkov|0.14162254333496094|No data available for this city|0.5944116115570068|1.076122760772705
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.2952089309692383|London|0.17154145240783691|Few clouds|0.5734729766845703|1.0402233600616455
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.23237895965576172|Chaitén|0.1685500144958496|Overcast clouds|0.5744912624359131|0.9754202365875244
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2533235549926758|Barcelona|0.17553067207336426|Scattered clouds|0.5595316886901855|0.9883859157562256
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.2642941474914551|Seattle|0.14959979057312012|Clear sky|0.5704760551452637|0.9843699932098389
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.24634099006652832|Mumbai|0.179520845413208|Clear sky|0.5984272956848145|1.0242891311645508
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.23537039756774902|Noida|0.1735367774963379|Clear sky|0.5964069366455078|1.0053141117095947
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.25232529640197754|New+York|0.16755223274230957|Overcast clouds|0.5894246101379395|1.0093021392822266
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.2513272762298584|State+of+São+Paulo|0.19547820091247559|No data available for this city|0.6183867454528809|1.0651922225952148
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.2543206214904785|New+Delhi|0.17553043365478516|Clear sky|0.6103689670562744|1.040220022201538
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.22739219665527344|Hyderabad|0.15957379341125488|Few clouds|0.5734665393829346|0.9604325294494629
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.25831007957458496|New+Delhi|0.1575794219970703|Clear sky|0.6113653182983398|1.0272548198699951
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.24235272407531738|New+Delhi|0.18650102615356445|Clear sky|0.6303164958953857|1.0591702461242676
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.23936033248901367|Province+of+Livorno|0.1266622543334961|No data available for this city|0.6183462142944336|0.9843688011169434
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.23038506507873535|Singapore|0.13663458824157715|Light rain|0.5964057445526123|0.9634253978729248
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2433485984802246|Seattle|0.12765789031982422|Clear sky|0.6143589019775391|0.9853653907775879
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.22838902473449707|London|0.14760589599609375|Few clouds|0.6183466911315918|0.9943416118621826
+nivea|['Berlin', 'Hamburg', 'Chharodi', 'Mumbai', 'Poznań']|0.273270845413208|Berlin|0.2543196678161621|Scattered clouds|0.6053822040557861|1.1329727172851562
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.27526187896728516|New+York|0.15059709548950195|Overcast clouds|0.5724713802337646|0.9983303546905518
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.27725863456726074|New+York|0.1545877456665039|Overcast clouds|0.5804533958435059|1.0122997760772705
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2652914524078369|Chaitén|0.15558314323425293|Overcast clouds|0.6093716621398926|1.0302462577819824
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.34707164764404297|Park+City|0.1376326084136963|Overcast clouds|0.6043848991394043|1.0890891551971436
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.336101770401001|Kolkata|0.14561104774475098|Overcast clouds|0.605381965637207|1.087094783782959
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.2822456359863281|Hyderabad|0.14261937141418457|Few clouds|0.6023890972137451|1.0272541046142578
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.28523778915405273|Castleford|0.15857601165771484|Overcast clouds|0.6372973918914795|1.081111192703247
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.26030445098876953|Seattle|0.24235200881958008|Clear sky|0.6193435192108154|1.121999979019165
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.24234986305236816|Newport+Beach|0.1515960693359375|Few clouds|0.6233334541320801|1.0172793865203857
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.22539782524108887|Chaitén|0.14162135124206543|Overcast clouds|0.5944106578826904|0.9614298343658447
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.24733829498291016|Noida|0.18650150299072266|Clear sky|0.6233348846435547|1.0571746826171875
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.22739219665527344|Los+Angeles|0.14660882949829102|Clear sky|0.6353011131286621|1.0093021392822266
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.23738431930541992|Gatesville|0.15357112884521484|Light rain|0.6283202171325684|1.0192756652832031
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.24434638023376465|NSW|0.18949365615844727|No data available for this city|0.5934138298034668|1.0272538661956787
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.2543196678161621|Seattle|0.1795196533203125|Clear sky|0.6153554916381836|1.0491948127746582
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.24533915519714355|Mumbai|0.20245790481567383|Clear sky|0.617365837097168|1.0651628971099854
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.2762610912322998|Bengaluru|0.1934823989868164|Overcast clouds|0.6103699207305908|1.080113410949707
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.26130056381225586|London|0.21442699432373047|Few clouds|0.6343050003051758|1.110032558441162
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.2573120594024658|Kyiv|0.17253899574279785|Overcast clouds|0.6253292560577393|1.055180311203003
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2563140392303467|Tiwanaku|0.16655588150024414|Scattered clouds|0.62034010887146|1.0432100296020508
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.26130127906799316|NSW|0.18351364135742188|No data available for this city|0.6482672691345215|1.0930821895599365
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.2702944278717041|Canyonlands+National+Park|0.1745164394378662|No data available for this city|0.6821768283843994|1.1269876956939697
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.23636817932128906|New+York|0.17453408241271973|Overcast clouds|0.6602351665496826|1.0711374282836914
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.2343463897705078|Gatesville|0.14760732650756836|Light rain|0.6203408241271973|1.0022945404052734
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.3141331672668457|New+Delhi|0.20644855499267578|Clear sky|0.6033892631530762|1.1239709854125977
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.32811737060546875|Kyiv|0.20545125007629395|Overcast clouds|0.622337818145752|1.1559064388275146
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.28024983406066895|Kolkata|0.21542572975158691|Overcast clouds|0.5824429988861084|1.0781185626983643
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.2672855854034424|Las+Vegas|0.24235177040100098|Clear sky|0.5864331722259521|1.0960705280303955
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.29620885848999023|Bengaluru|0.1984694004058838|Overcast clouds|0.5994002819061279|1.094078540802002
+gate|['Mumbai', 'Bangkok', 'Gateshead', 'Metro+Manila', 'Gatesville']|0.2952096462249756|Gatesville|0.17154192924499512|Light rain|0.6033885478973389|1.0701401233673096
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.286196231842041|London|0.2154245376586914|Few clouds|0.6223382949829102|1.1239590644836426
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.31812310218811035|Bengaluru|0.19049310684204102|Overcast clouds|0.6273493766784668|1.1359655857086182
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.2762613296508789|Ocean+City|0.14959979057312012|Scattered clouds|0.6103684902191162|1.0362296104431152
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.30717968940734863|Bengaluru|0.19447946548461914|Overcast clouds|0.6063814163208008|1.1080405712127686
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.29122304916381836|Castleford|0.19248461723327637|Overcast clouds|0.6213390827178955|1.1050467491149902
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.26628828048706055|Mumbai|0.17253875732421875|Clear sky|0.6303150653839111|1.0691421031951904
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.2403562068939209|London|0.15259218215942383|Few clouds|0.5894255638122559|0.9823739528656006
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.2982025146484375|Seattle|0.19350218772888184|Clear sky|0.6352837085723877|1.126988410949707
+museum|['Amsterdam', 'London', 'New+York', 'Chicago', 'Oxford']|0.2623021602630615|New+York|0.17253804206848145|Overcast clouds|0.6492645740509033|1.0841047763824463
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.26030421257019043|Dover|0.24733901023864746|Few clouds|0.591421365737915|1.099064588546753
+delhi|['Delhi', 'Sarai+Rohilla', 'New+Delhi', 'New+Delhi', 'New+Delhi']|0.3061819076538086|New+Delhi|0.1795206069946289|Clear sky|0.7260591983795166|1.211761713027954
+sea|['Seattle', 'Seattle', 'Orlando', 'Kolkata', 'SeaTac']|0.350064754486084|Kolkata|0.18048095703125|Overcast clouds|0.6063799858093262|1.1369256973266602
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.30219411849975586|Cape+Town|0.19248366355895996|Clear sky|0.6153557300567627|1.1100335121154785
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.36402320861816406|San+Francisco|0.18450570106506348|Overcast clouds|0.6243312358856201|1.1728601455688477
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.32915377616882324|Dübendorf|0.15854263305664062|Light rain|0.640289306640625|1.1279857158660889
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.2862355709075928|Bengaluru|0.185455322265625|Overcast clouds|0.6293182373046875|1.1010091304779053
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.2682938575744629|Noida|0.1565721035003662|Clear sky|0.6432805061340332|1.0681464672088623
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.2782585620880127|Chertsey|0.15857410430908203|Scattered clouds|0.6512594223022461|1.0880920886993408
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.23138189315795898|Singapore|0.14261770248413086|Light rain|0.6083745956420898|0.9823741912841797
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.25831007957458496|London|0.16456127166748047|Few clouds|0.6233413219451904|1.0462126731872559
+eiffel|['Paris', 'Paris', 'Paris', 'Lahore', 'Las+Vegas']|0.26628851890563965|Las+Vegas|0.16456055641174316|Clear sky|0.6293184757232666|1.0601675510406494
+microsoft|['Redmond', 'Los+Angeles', 'Redmond', 'Redmond', 'Hyderabad']|0.22539806365966797|Hyderabad|0.17154216766357422|Few clouds|0.5954082012176514|0.9923484325408936
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.24136018753051758|New+York|0.1725616455078125|Overcast clouds|0.6761653423309326|1.0900871753692627
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.23636841773986816|Oxford|0.1486063003540039|Scattered clouds|0.5804438591003418|0.9654185771942139
+gardens|['Singapore', 'Noida', 'Cape+Town', 'Cape+Town', 'New+York']|0.2393627166748047|New+York|0.15558338165283203|Overcast clouds|0.580446720123291|0.9753928184509277
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.24235224723815918|New+York|0.18849635124206543|Overcast clouds|0.5974032878875732|1.0282518863677979
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.24438095092773438|New+York|0.1665210723876953|Overcast clouds|0.5874300003051758|0.9983320236206055
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.25531911849975586|Bengaluru|0.16655349731445312|Overcast clouds|0.6263267993927002|1.0481994152069092
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2613081932067871|Barcelona|0.15058565139770508|Scattered clouds|0.6303160190582275|1.0422098636627197
+canion|['Canyon+Lake', 'Canyonlands+National+Park', 'RS', 'Park+City', 'RS']|0.26928162574768066|Park+City|0.19447827339172363|Overcast clouds|0.6113667488098145|1.0751266479492188
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.25933408737182617|Morrisville|0.16852235794067383|Overcast clouds|0.6043844223022461|1.032240867614746
+riot|['Los+Angeles', 'Province+of+Livorno', 'Riotord', 'Scottsdale', 'Dublin']|0.2603034973144531|Scottsdale|0.17154216766357422|Clear sky|0.611365795135498|1.0432114601135254
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.262317419052124|Beaverton|0.21141576766967773|Few clouds|0.6033978462219238|1.0771310329437256
+puma|['New+York', 'Tiwanaku', 'Pumanque', 'Chaitén', 'Bengaluru']|0.2593069076538086|Chaitén|0.17752552032470703|Overcast clouds|0.6203427314758301|1.0571751594543457
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.2373650074005127|Seattle|0.16456031799316406|Clear sky|0.5634944438934326|0.9654197692871094
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.2403571605682373|Las+Vegas|0.15359067916870117|Clear sky|0.5944099426269531|0.9883577823638916
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.24135470390319824|New+York|0.18650078773498535|Overcast clouds|0.5704755783081055|0.9983310699462891
+hp|['Hpa-An', 'White+Plains', 'HP2', 'Houston', 'Hpa+Yar+Gyi']|0.24634003639221191|Hpa+Yar+Gyi|0.16455769538879395|No data available for this city|0.6233339309692383|1.0342316627502441
+apple|['Cupertino', 'Appleton', 'New+York', 'Cupertino', 'Apple+Valley']|0.2872297763824463|New+York|0.18151521682739258|Overcast clouds|0.5904216766357422|1.059166669845581
+church|['Mumbai', 'Dubai', 'Oxford', 'Bengaluru', 'London']|0.25830745697021484|London|0.15259265899658203|Few clouds|0.5914194583892822|1.002319574356079
+dove|['Dover', 'Dover', 'Dover', 'London', 'Dover']|0.28221821784973145|London|0.16655468940734863|Few clouds|0.5844380855560303|1.0332109928131104
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.27426600456237793|Paris|0.17752647399902344|Scattered clouds|0.5924160480499268|1.0442085266113281
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.2742652893066406|Mountain+View|0.17353487014770508|Scattered clouds|0.5954101085662842|1.0432102680206299
+university|['Houston', 'London', 'Seattle', 'Seattle', 'Philadelphia']|0.28025126457214355|London|0.1765286922454834|Few clouds|0.5774567127227783|1.0342366695404053
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.2922186851501465|Singapore|0.16954755783081055|Light rain|0.5894241333007812|1.0511903762817383
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.25930261611938477|New+York|0.20943999290466309|Overcast clouds|0.6013953685760498|1.0701379776000977
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.2682816982269287|San+Francisco|0.15358996391296387|Overcast clouds|0.6203417778015137|1.0422134399414062
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.2742655277252197|NSW|0.15857672691345215|No data available for this city|0.6432816982269287|1.0761239528656006
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.383974552154541|London|0.15059661865234375|Few clouds|0.579453706741333|1.1140248775482178
+amazon|['State+of+Amazonas', 'Amazon+River', 'Seattle', 'Seattle', 'Hyderabad']|0.2453441619873047|Amazon+River|0.17553043365478516|No data available for this city|0.6103744506835938|1.0312490463256836
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.351060152053833|Versailles|0.13962817192077637|Light rain|0.5754611492156982|1.0661494731903076
+castle|['NSW', 'Castle+Rock', 'NSW', 'Chippenham', 'Castleford']|0.25830960273742676|NSW|0.14162182807922363|No data available for this city|0.5944118499755859|0.9943432807922363
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.2702775001525879|Las+Vegas|0.1545853614807129|Clear sky|0.592416524887085|1.0172793865203857
+palace|['San+Francisco', 'London', 'Las+Vegas', 'Versailles', 'Bengaluru']|0.26329684257507324|Las+Vegas|0.14561057090759277|Clear sky|0.6382935047149658|1.0472009181976318
+dechatlon|['Singapore', 'Kolkata', 'Bengaluru', 'Bengaluru', 'Barcelona']|0.2672843933105469|Bengaluru|0.132645845413208|Overcast clouds|0.6343073844909668|1.0342376232147217
+maxcode|['Iași', 'Bijeljina', 'Penang', 'Coimbatore', 'Chisinau']|0.27127552032470703|Penang|0.1326451301574707|Overcast clouds|0.6353020668029785|1.0392227172851562
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.24235153198242188|London|0.12367081642150879|Few clouds|0.6362988948822021|1.0023212432861328
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.2902240753173828|Dübendorf|0.13463997840881348|Light rain|0.6482682228088379|1.0731322765350342
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.2622997760772705|Mountain+View|0.16755199432373047|Scattered clouds|0.6562471389770508|1.0860989093780518
+addidas|['New+York', 'London', 'Portland', 'New+York', 'London']|0.2473304271697998|London|0.14162135124206543|Few clouds|0.583439826965332|0.9723916053771973
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.2293868064880371|Bengaluru|0.16755199432373047|Overcast clouds|0.5834412574768066|0.9803800582885742
+ocean|['Oceanside', 'Miami+Beach', 'Ocean+City', 'Kyiv', 'VIC']|0.24334955215454102|Oceanside|0.13463926315307617|Overcast clouds|0.5684819221496582|0.9464707374572754
+samsung|['Dübendorf', 'Bac+Ninh+Province', 'Singapore', 'Bengaluru', 'Chertsey']|0.23736572265625|Bac+Ninh+Province|0.14461326599121094|No data available for this city|0.6442780494689941|1.026257038116455
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.23337650299072266|Mountain+View|0.13962650299072266|Scattered clouds|0.5993986129760742|0.9724016189575195
+new|['New+York', 'New+Orleans', 'New+Delhi', 'New+Delhi', 'Newport+Beach']|0.23337650299072266|Newport+Beach|0.1535935401916504|Few clouds|0.5964024066925049|0.9833724498748779
+nike|['New+York', 'London', 'New+York', 'Beaverton', 'San+Francisco']|0.2343735694885254|Beaverton|0.14461469650268555|Few clouds|0.5974066257476807|0.9763948917388916
+hotel|['Paris', 'New+York', 'Mumbai', 'Singapore', 'Jalisco']|0.22539782524108887|Paris|0.15059876441955566|Scattered clouds|0.6293175220489502|1.0053141117095947
+google|['Mountain+View', 'New+York', 'San+Francisco', 'State+of+São+Paulo', 'Hyderabad']|0.23839974403381348|San+Francisco|0.18646454811096191|Overcast clouds|0.565488338470459|0.9903526306152344
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.23238253593444824|York|0.1745297908782959|Overcast clouds|0.5714731216430664|0.9783854484558105
+lenovo|['Morrisville', 'Noida', 'Bengaluru', 'Singapore', 'Hyderabad']|0.22443938255310059|Bengaluru|0.16352558135986328|Overcast clouds|0.6033856868743896|0.9913506507873535
+york|['ON', 'York', 'York', 'ON', 'Shipley']|0.22340726852416992|ON|0.1745290756225586|Overcast clouds|0.5904605388641357|0.9883968830108643
+dove|failed|failed|failed|failed|failed|failed|failed
+church|failed|failed|failed|failed|failed|failed|failed
+riot|failed|failed|failed|failed|failed|failed|failed
+york|failed|failed|failed|failed|failed|failed|failed
+dechatlon|failed|failed|failed|failed|failed|failed|failed
+hp|failed|failed|failed|failed|failed|failed|failed
+hp|failed|failed|failed|failed|failed|failed|failed
+palace|failed|failed|failed|failed|failed|failed|failed
+canion|failed|failed|failed|failed|failed|failed|failed
+amazon|failed|failed|failed|failed|failed|failed|failed
+ocean|failed|failed|failed|failed|failed|failed|failed
+nivea|failed|failed|failed|failed|failed|failed|failed
+church|failed|failed|failed|failed|failed|failed|failed
+hotel|failed|failed|failed|failed|failed|failed|failed
+sea|failed|failed|failed|failed|failed|failed|failed
+microsoft|failed|failed|failed|failed|failed|failed|failed
+eiffel|failed|failed|failed|failed|failed|failed|failed
+hostel|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+nivea|failed|failed|failed|failed|failed|failed|failed
+church|failed|failed|failed|failed|failed|failed|failed
+church|failed|failed|failed|failed|failed|failed|failed
+addidas|failed|failed|failed|failed|failed|failed|failed
+sea|failed|failed|failed|failed|failed|failed|failed
+puma|failed|failed|failed|failed|failed|failed|failed
+church|failed|failed|failed|failed|failed|failed|failed
+university|failed|failed|failed|failed|failed|failed|failed
+amazon|failed|failed|failed|failed|failed|failed|failed
+amazon|failed|failed|failed|failed|failed|failed|failed
+|failed|failed|failed|failed|failed|failed|failed
+amazon|failed|failed|failed|failed|failed|failed|failed
+museum|failed|failed|failed|failed|failed|failed|failed
+amazon|failed|failed|failed|failed|failed|failed|failed
+amazon|failed|failed|failed|failed|failed|failed|failed
