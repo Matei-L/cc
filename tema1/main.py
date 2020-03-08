@@ -8,7 +8,7 @@ import metrics
 from random import randint
 
 PORT_NUMBER = 80
-LOAD_TEST_SIZE = 200  # IT SHOULD BE AT LEAST A MULTIPLE OF 10
+LOAD_TEST_SIZE = 500  # IT SHOULD BE AT LEAST A MULTIPLE OF 10
 
 
 def get_random_query(queries):
