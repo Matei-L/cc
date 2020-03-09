@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "c80ab5b6-2b9a-4877-9cf8-82fe5cb082f6",
+		"name": "CC h2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post plant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ipen\": \"RO-0-IAGB1969458G\",\r\n    \"popularName\": \"Tisă\",\r\n    \"scientificName\": \"Taxus baccata L.\",\r\n    \"author\": \"L.\",\r\n    \"origin\": \"Europa, Vestul Asiei, Nordul Africii\",\r\n    \"naturalArea\": \"Specie întâlnită sporadic în regiunea de deal și în regiunea de munte, în păduri de fag (Fagus sylvatica) sau păduri de amestec (fag și rășinoase)\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/plants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"plants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get plants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/plants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"plants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put plant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 1,\r\n    \"ipen\": \"RO-0-IAGB1969458G\",\r\n    \"popularName\": \"Tisă\",\r\n    \"scientificName\": \"Taxus baccata L.\",\r\n    \"author\": \"L2.\",\r\n    \"origin\": \"Europa, Vestul Asiei, Nordul Africii\",\r\n    \"naturalArea\": \"Specie întâlnită sporadic în regiunea de deal și în regiunea de munte, în păduri de fag (Fagus sylvatica) sau păduri de amestec (fag și rășinoase)\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/plants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"plants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get plant 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/plants/by_id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"plants",
+						"by_id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete plant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/plants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"plants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post other_info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"plant_id\": 1,\r\n    \"title\": \"Ecologie\",\r\n    \"description\": \"Specia este tolerantă față de multe tipuri de sol, cu un pH acid, neutru sau bazic, bine drenate; crește în condiții de lumină, semi-umbră sau umbră. Specia rezistă la temperaturi de până la -25 °C și suportă vânturi puternice.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/other_info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"other_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get other_info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/other_info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"other_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put other_info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 1,\r\n\t\"plant_id\": 1,\r\n    \"title\": \"Ecologie2\",\r\n    \"description\": \"Specia este tolerantă față de multe tipuri de sol, cu un pH acid, neutru sau bazic, bine drenate; crește în condiții de lumină, semi-umbră sau umbră. Specia rezistă la temperaturi de până la -25 °C și suportă vânturi puternice.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/other_info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"other_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get other_info 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/other_info/by_id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"other_info",
+						"by_id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get other_info for plant 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/other_info/by_plant_id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"other_info",
+						"by_plant_id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete other_info",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/other_info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"other_info"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

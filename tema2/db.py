@@ -68,17 +68,21 @@ def get_table_columns(conn, table):
     return columns
 
 
-def get_rowcount(conn, table):
+def get_max_id(conn, table):
     cursor = None
     try:
         cursor = conn.execute(f'select * from {table};')
-        rowcount = len(cursor.fetchall())
+        rows = cursor.fetchall()
+        mx = 0
+        for row in rows:
+            if int(row[0]) > mx:
+                mx = int(row[0])
         cursor.close()
     except Exception as e:
         if cursor:
             cursor.close()
         raise Exception(Errors.UNKNOWN, str(e))
-    return rowcount
+    return int(mx)
 
 
 def insert(conn, table, item):
@@ -88,7 +92,7 @@ def insert(conn, table, item):
             if col not in item.keys():
                 raise Exception(Errors.MISSING_FIELDS)
 
-    item['id'] = get_rowcount(conn, table) + 1
+    item['id'] = get_max_id(conn, table) + 1
 
     query = 'INSERT INTO ' + table + ' ('
     query += ','.join(columns)
@@ -131,7 +135,7 @@ def update(conn, table, item):
     # check for <<not found>>
     get_by_primary_key(conn, table, item['id'])
 
-    values = [key + "='" + value + "'" for key, value in item.items() if key != 'id']
+    values = [key + "='" + str(value) + "'" for key, value in item.items() if key != 'id']
     query = 'UPDATE ' + table + ' SET ' + ','.join(values) + "WHERE id=?"
 
     cursor = None
@@ -206,10 +210,7 @@ def get_by_primary_key(conn, table, pk):
             dict_result[key] = value
         results[i] = dict_result
 
-    if len(results) == 1:
-        return results[0]
-    else:
-        return results
+    return results[0]
 
 
 def get_by_foreign_key(conn, table, fk_name, fk):
@@ -232,10 +233,7 @@ def get_by_foreign_key(conn, table, fk_name, fk):
             dict_result[key] = value
         results[i] = dict_result
 
-    if len(results) == 1:
-        return results[0]
-    else:
-        return results
+    return results
 
 
 def get_all(conn, table):

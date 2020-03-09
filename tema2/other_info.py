@@ -8,12 +8,12 @@ def other_info(db_conn, req_type, params=[], body=None):
         return other_info_dao.get_all(db_conn)
 
     elif req_type == RequestType.POST:
-        if body is None:
+        if body is None or 'plant_id' not in body.keys():
             return endpoint_utils.handle_req_body_error()
         return other_info_dao.insert(db_conn, body)
 
     elif req_type == RequestType.PUT:
-        if body is None:
+        if body is None or 'plant_id' not in body.keys():
             return endpoint_utils.handle_req_body_error()
         return other_info_dao.update(db_conn, body)
 
