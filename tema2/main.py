@@ -71,8 +71,8 @@ class MyHandler(BaseHTTPRequestHandler):
 
     # Uncomment and make 2 requests to get 500 on the second request
     # ( the first closes the connection to the database )
-    # def __del__(self):
-    #     self.db_conn.close()
+    def __del__(self):
+        self.db_conn.close()
 
 
 if __name__ == "__main__":
