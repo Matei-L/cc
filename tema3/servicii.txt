@@ -1,0 +1,25 @@
+1. autentificare - serviciu e stateful 
+-> google auth
+-> azure auth / AD ( active directory )
+2. bd - serviciu e stateful 
+-> firesorage pt google
+-> azure sql db
+3. static storage ( pt poze, fisiere, etc)
+-> cloud storage
+-> azure blob storage
+4. functii
+se apeleaza la fiecare like / dislike
+se apeleaza ca sa baneze utilizatorii cu prea multe dislike-uri
+-> cloud functions api
+-> azure functions api
+5. speech to text
+inregistrezi o prezentare a ta si dupa e transformata in descrierea ta
+-> google speech to text api
+-> azure speech to text api
+6. text to speech (opt)
+daca cineva nu vrea sa-si puna vocea are varianta cu bot-ul
+-> google text  to speech api
+-> azure text to speech api
+
+
+E-girl.gg dar fara plata si doar pentru steam ( momentan ).
