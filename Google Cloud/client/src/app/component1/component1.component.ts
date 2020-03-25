@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Data } from './Data';
 import { Component1Service } from './component1.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-component1',
@@ -19,7 +20,10 @@ export class Component1Component implements OnInit {
 
   showData() {
   this.component1Service.getData()
-    .subscribe((data: Data) => this.data = data );
+    .subscribe((data: Data) => {
+      this.data = data;
+      this.data.origin = environment.baseUrl + this.data.origin;
+    });
   }
 
 }

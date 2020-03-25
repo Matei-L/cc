@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Data } from './Data';
-import { SensitiveData } from '../sensitive';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root',
 })
 export class Component1Service {
-    api = SensitiveData.apiEndpoint;
+    api = environment.baseUrl + '/example';
 
     constructor(private http: HttpClient) { }
 

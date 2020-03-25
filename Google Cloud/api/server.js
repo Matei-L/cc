@@ -16,28 +16,15 @@
 
 // [START gae_flex_quickstart]
 const express = require('express');
-const cors = require('cors');
 const app = express();
-const sensitive = require('./sensitive.js');
 
-var whitelist = [sensitive.localClient(), sensitive.client()];
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-};
-
-app.get('/',cors(corsOptions), (req, res) => {
+app.get('/api/example', (req, res) => {
   res
     .status(200)
     .header("Access-Control-Allow-Origin", "*")
     .json({
       "message": "Hello ;)",
-      "origin": sensitive.serverApi()
+      "origin": "/example"
     })
     .end();
 });

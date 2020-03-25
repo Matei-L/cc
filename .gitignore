@@ -2,5 +2,4 @@
 /tema1/logs.txt
 /tema2/example_of_plants.json
 node_modules/
-sensitive.ts
-sensitive.js
+environment.prod.ts
