@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -12,22 +13,31 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UsersListComponent } from './users/users-list/users-list.component';
 import { UserProfileEditComponent } from './users/user-profile-edit/user-profile-edit.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
     PageNotFoundComponent,
     LoginComponent,
     RegisterComponent,
     UsersListComponent,
-    UserProfileEditComponent
+    UserProfileEditComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgbModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
