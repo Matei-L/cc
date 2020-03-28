@@ -21,7 +21,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/dialog';
+import {AudioRecordingService} from './audio-recording.service';
 
 import {config} from './firebaseConfig';
 
@@ -33,10 +34,11 @@ import {config} from './firebaseConfig';
     LoginComponent,
     RegisterComponent,
     UsersListComponent,
-    UserProfileEditComponent
+    UserProfileEditComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -51,7 +53,7 @@ import {config} from './firebaseConfig';
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AudioRecordingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
