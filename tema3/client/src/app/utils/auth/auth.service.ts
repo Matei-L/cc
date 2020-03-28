@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {map} from 'rxjs/operators';
+import {map, mergeMap} from 'rxjs/operators';
 import { Observable} from 'rxjs';
 
 @Injectable({
@@ -25,5 +25,9 @@ export class AuthService {
 
   getCurrentUser(): Observable<any> {
     return this.fireAuth.authState;
+  }
+
+  getIdToken(): Observable<string | null> {
+    return this.fireAuth.idToken;
   }
 }

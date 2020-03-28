@@ -47,7 +47,10 @@ export class NavBarComponent implements OnInit {
   }
 
   getEmail() {
-    return this.currentUser.email;
+    if (this.currentUser) {
+      return this.currentUser.email;
+    }
+    return '';
   }
 
   async logOut() {
