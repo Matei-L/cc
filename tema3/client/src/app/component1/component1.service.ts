@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
     providedIn: 'root',
 })
 export class Component1Service {
-    api = environment.baseUrl + '/example';
+    api = environment.baseUrl + '/helloWorld';
 
     constructor(private http: HttpClient) { }
 
