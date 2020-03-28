@@ -26,6 +26,7 @@ import {AudioRecordingService} from './audio-recording.service';
 
 import {config} from './firebaseConfig';
 import {MatListModule} from '@angular/material/list';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {MatListModule} from '@angular/material/list';
     RegisterComponent,
     UsersListComponent,
     UserProfileEditComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

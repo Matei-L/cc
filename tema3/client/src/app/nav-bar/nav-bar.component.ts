@@ -56,4 +56,9 @@ export class NavBarComponent implements OnInit {
     await firebase.auth().signOut();
     window.location.reload();
   }
+
+  async goTo(location) {
+    await this.router.navigate([location]);
+    window.location.reload();
+  }
 }
