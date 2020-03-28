@@ -1,6 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AudioRecordingService} from '../../audio-recording.service';
 import {DomSanitizer} from '@angular/platform-browser';
+import {environment} from '../../../environments/environment';
+import {UtilFunctions} from '../../utils/util-functions.ts';
 
 @Component({
   selector: 'app-user-profile-edit',
@@ -10,8 +12,8 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class UserProfileEditComponent implements OnInit, OnDestroy {
   photoUploadErrorMessage: string;
   selectedPhoto = null;
-  selectedPhotoUrl = 'https://api.adorable.io/avatars/' +
-    this.getRandomInt(250).toString();
+  selectedPhotoUrl = environment.randomAvatars +
+    UtilFunctions.getRandomInt(250).toString();
   isRecording = false;
   recordedTime;
   blobUrl;
