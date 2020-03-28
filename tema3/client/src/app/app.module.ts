@@ -24,6 +24,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 import {config} from './firebaseConfig';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {config} from './firebaseConfig';
     FormsModule,
     MatDialogModule,
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
