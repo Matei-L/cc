@@ -26,6 +26,7 @@ import {AudioRecordingService} from './audio-recording.service';
 import { AuthGuard } from './core/auth.guard';
 
 import {config} from './firebaseConfig';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import {config} from './firebaseConfig';
     MatDialogModule,
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
-
+    MatListModule
   ],
   providers: [AudioRecordingService, AuthGuard],
   bootstrap: [AppComponent]
