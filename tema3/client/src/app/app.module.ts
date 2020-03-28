@@ -18,6 +18,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatToolbarModule,
     MatCardModule,
@@ -39,7 +42,8 @@ import {FormsModule} from '@angular/forms';
     MatInputModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
