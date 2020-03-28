@@ -23,7 +23,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {AudioRecordingService} from './audio-recording.service';
-import { AuthGuard } from './core/auth.guard';
+import { AuthGuard } from './utils/auth/auth.guard';
 
 import {config} from './firebaseConfig';
 import {MatListModule} from '@angular/material/list';

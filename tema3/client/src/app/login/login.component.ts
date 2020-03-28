@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: string,
               private dialogRef: MatDialogRef<LoginComponent>,
-              private auth: AngularFireAuth) {
+              private fireAuth: AngularFireAuth) {
   }
 
   email: string;
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    firebase.auth().signInWithEmailAndPassword(this.email, this.password).catch((error) => {
+    this.fireAuth.auth.signInWithEmailAndPassword(this.email, this.password).catch((error) => {
       alert(error.message);
     }).then((result) => {
       if (result) {

@@ -5,7 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { UserProfileEditComponent } from './users/user-profile-edit/user-profile-edit.component';
 import { UsersListComponent } from './users/users-list/users-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {AuthGuard} from './core/auth.guard';
+import {AuthGuard} from './utils/auth/auth.guard';
 
 
 const routes: Routes = [
@@ -18,13 +18,13 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'users',
+    component: UsersListComponent,
+  },
+  {
     path: 'users/profile',
     component: UserProfileEditComponent,
     canActivate: [AuthGuard]
-  },
-  {
-    path: 'users',
-    component: UsersListComponent,
   },
   { path: '',
     redirectTo: '/users',
