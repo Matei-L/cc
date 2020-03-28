@@ -8,6 +8,8 @@ import {RegisterComponent} from '../register/register.component';
  */
 import {AngularFireAuth} from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
+import {environment} from '../../environments/environment';
+import {UtilFunctions} from '../utils/util-functions.ts';
 
 
 @Component({
@@ -16,6 +18,9 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
+
+  profilePhotoUrl = environment.randomAvatars +
+    UtilFunctions.getRandomInt(250).toString();
 
   constructor(public router: Router, public dialog: MatDialog, private auth: AngularFireAuth, private cdRef: ChangeDetectorRef) {
     this.loggedIn = false;
