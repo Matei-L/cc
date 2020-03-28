@@ -17,16 +17,16 @@ export class NavBarComponent implements OnInit {
   }
 
   openLoginDialog() {
-    const dialogRef = this.dialog.open(LoginComponent);
+    const dialogRef = this.dialog.open(LoginComponent, {data: {res: undefined}});
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
+      console.log(result.data);
     });
   }
 
   openRegisterDialog() {
     const dialogRef = this.dialog.open(RegisterComponent);
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
+      console.log(result.data);
     });
   }
 }

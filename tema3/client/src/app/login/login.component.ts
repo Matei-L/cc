@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,8 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: string,
+              private dialogRef: MatDialogRef<LoginComponent>) {
   }
 
   username: string;
@@ -19,9 +21,9 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     if (this.username === 'admin' && this.password === 'admin') {
-      this.router.navigate(['users/profile']);
+      this.dialogRef.close({data: true});
     } else {
-      alert('Invalid credentials');
+      this.dialogRef.close({data: false});
     }
   }
 
