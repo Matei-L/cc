@@ -36,7 +36,7 @@
           <button mat-raised-button (submit)="onSave()">Save</button>
         </div>
         <div class="p-2 photo-container">
-          <img [src]="selectedPhotoUrl" alt="your profile image">
+          <img class="selected-image" [src]="selectedPhotoUrl" alt="your profile image">
           <br>
 
           <button type="button" mat-raised-button (click)="fileInput.click()">Choose Photo</button>

@@ -5,8 +5,8 @@ node_modules/
 environment.prod.ts
 .firebasearc
 .idea
-
-
+firebaseConfig.js
+tema3\client\src\app\firebaseConfig.js
 # Logs
 logs
 *.log
@@ -73,3 +73,4 @@ node_modules/
 # dotenv environment variables file
 .env
 tema3/api/.firebaserc
+tema3/client/src/app/firebaseConfig.js

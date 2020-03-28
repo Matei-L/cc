@@ -6,6 +6,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {LoginComponent} from './login/login.component';
@@ -21,6 +23,8 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {AudioRecordingService} from './audio-recording.service';
+
+import {config} from './firebaseConfig';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,8 @@ import {AudioRecordingService} from './audio-recording.service';
     MatButtonModule,
     FormsModule,
     MatDialogModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
   providers: [AudioRecordingService],
   bootstrap: [AppComponent]

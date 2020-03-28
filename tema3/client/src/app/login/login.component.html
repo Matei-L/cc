@@ -5,7 +5,7 @@
       <tr>
         <td>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
           </mat-form-field>
         </td>
       </tr>
@@ -20,5 +20,5 @@
   </form>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button color="primary">Login</button>
+  <button (click)="login()" mat-button color="primary">Login</button>
 </mat-dialog-actions>

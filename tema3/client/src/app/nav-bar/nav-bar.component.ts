@@ -1,7 +1,14 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {LoginComponent} from '../login/login.component';
 import {RegisterComponent} from '../register/register.component';
+/**
+ * Astea trebuie puse cam in toate paginile care au nevoie de login
+ */
+import {AngularFireAuth} from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,23 +17,38 @@ import {RegisterComponent} from '../register/register.component';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) {
+  constructor(public router: Router, public dialog: MatDialog, private auth: AngularFireAuth, private cdRef: ChangeDetectorRef) {
+    this.loggedIn = false;
   }
 
-  ngOnInit(): void {
+  loggedIn: boolean;
+
+  async ngOnInit() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.loggedIn = true;
+        this.cdRef.detectChanges();
+      } else {
+        this.loggedIn = false;
+        this.cdRef.detectChanges();
+      }
+    });
   }
 
   openLoginDialog() {
-    const dialogRef = this.dialog.open(LoginComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-    });
+    this.dialog.open(LoginComponent);
   }
 
   openRegisterDialog() {
-    const dialogRef = this.dialog.open(RegisterComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-    });
+    this.dialog.open(RegisterComponent);
+  }
+
+  getEmail() {
+    return firebase.auth().currentUser.email;
+  }
+
+  async logOut() {
+    await firebase.auth().signOut();
+    window.location.reload();
   }
 }
