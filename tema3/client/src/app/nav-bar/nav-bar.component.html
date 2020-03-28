@@ -1,5 +1,7 @@
 <mat-toolbar color="primary" class="nav-bar">
-  <div>The Boyz</div>
+  <div>
+    <button mat-button (click)="router.navigate(['/users'])">The Boyz</button>
+  </div>
   <div *ngIf="loggedIn then thenBlock else elseBlock"></div>
   <ng-template #thenBlock>
     <div>
