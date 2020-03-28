@@ -23,6 +23,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {AudioRecordingService} from './audio-recording.service';
+import { AuthGuard } from './core/auth.guard';
 
 import {config} from './firebaseConfig';
 
@@ -51,9 +52,10 @@ import {config} from './firebaseConfig';
     FormsModule,
     MatDialogModule,
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+
   ],
-  providers: [AudioRecordingService],
+  providers: [AudioRecordingService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
