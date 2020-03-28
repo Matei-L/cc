@@ -1,11 +1,7 @@
-<mat-toolbar color="primary">
-  <span>Application Title</span>
-
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
-
-  <span>
-    <a href="/">Register</a>
-    <a href="/">Login</a>
-  </span>
+<mat-toolbar color="primary" class="nav-bar">
+  <div>The Boyz</div>
+  <div>
+    <button mat-button (click)="openRegisterDialog()">Register</button>
+    <button mat-button (click)="openLoginDialog()">Login</button>
+  </div>
 </mat-toolbar>

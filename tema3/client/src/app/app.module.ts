@@ -1,5 +1,4 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -8,15 +7,20 @@ import {AppComponent} from './app.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UsersListComponent } from './users/users-list/users-list.component';
-import { UserProfileEditComponent } from './users/user-profile-edit/user-profile-edit.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {LoginComponent} from './login/login.component';
+import {RegisterComponent} from './register/register.component';
+import {UsersListComponent} from './users/users-list/users-list.component';
+import {UserProfileEditComponent} from './users/user-profile-edit/user-profile-edit.component';
+import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSliderModule} from '@angular/material/slider';
+import {MatInputModule} from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatButtonModule} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import {AudioRecordingService} from './audio-recording.service';
 
 @NgModule({
   declarations: [
@@ -32,14 +36,18 @@ import {MatSliderModule} from '@angular/material/slider';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatToolbarModule,
-    NgbModule,
+    MatCardModule,
     MatFormFieldModule,
-    MatSelectModule,
-    MatSliderModule
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatButtonModule,
+    FormsModule,
+    MatDialogModule,
   ],
-  providers: [],
+  providers: [AudioRecordingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

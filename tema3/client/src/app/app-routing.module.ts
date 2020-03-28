@@ -8,13 +8,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const routes: Routes = [
-  { 
-    path: 'register', 
-    component: RegisterComponent 
+  {
+    path: 'register',
+    component: RegisterComponent
   },
-  { 
-    path: 'login',      
-    component: LoginComponent 
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'users/profile',
@@ -28,9 +28,9 @@ const routes: Routes = [
     redirectTo: '/users',
     pathMatch: 'full'
   },
-  { 
-    path: '**', 
-    component: PageNotFoundComponent 
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

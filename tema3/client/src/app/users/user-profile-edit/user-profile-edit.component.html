@@ -1,25 +1,50 @@
 <div class="container">
-    <div class="row">
-      <div class="col-2">
-        first
-      </div>
-      <div class="col-8">
-        <h1>Your profile</h1>
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <mat-card class="col-8 profile-box">
+      <h1>Your profile</h1>
 
-        <form>
-          <mat-form-field>
-            <mat-label>First name</mat-label>
-            <input matInput >
+      <form class="d-flex">
+
+        <div class="p-2 details-container">
+          <mat-form-field class="full-width">
+            <mat-label>Your Nickname</mat-label>
+            <input matInput>
           </mat-form-field>
-          <mat-form-field>
-            <mat-label>Last name</mat-label>
-            <input matInput >
+          <br>
+
+          <div class="recording-container">
+            <button mat-raised-button *ngIf="!isRecording && !blobUrl" (click)="startRecording()">Start Recording</button>
+            <button mat-raised-button *ngIf="isRecording && !blobUrl" (click)="stopRecording()">Stop Recording</button>
+            <button mat-raised-button *ngIf="!isRecording && blobUrl" (click)="clearRecordedData()">Clear Recording</button>
+            <div class="audio-container">
+              <div *ngIf="isRecording && !blobUrl"> {{recordedTime}} </div>
+              <audio class="full-width" *ngIf="!isRecording && blobUrl"  controls>
+                <source [src]="blobUrl" type="audio/webm">
+              </audio>
+            </div>
+          </div>
+
+          <br>
+          <mat-form-field class="full-width">
+            <mat-label>Your Description</mat-label>
+            <textarea matInput></textarea>
           </mat-form-field>
-          <button mat-raised-button>Submit</button>
-        </form>
-      </div>
-      <div class="col-2">
-        second
-      </div>
+          <br>
+
+          <button mat-raised-button (submit)="onSave()">Save</button>
+        </div>
+        <div class="p-2 photo-container">
+          <img [src]="selectedPhotoUrl" alt="your profile image">
+          <br>
+
+          <button type="button" mat-raised-button (click)="fileInput.click()">Choose Photo</button>
+          <input hidden accept="image/*" (change)="onPhotoSelected($event)" #fileInput type="file" id="file">
+        </div>
+      </form>
+    </mat-card>
+    <div class="col-2">
     </div>
   </div>
+</div>
