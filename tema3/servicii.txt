@@ -1,20 +1,20 @@
 1. autentificare - serviciu e stateful 
--> google auth
+-> google auth -> https://firebase.google.com/docs/auth/web/password-auth
 -> azure auth / AD ( active directory )
 2. bd - serviciu e stateful 
--> firesorage pt google
+-> firesorage pt google -> https://cloud.google.com/firestore/docs/quickstarts
 -> azure sql db
 3. static storage ( pt poze, fisiere, etc)
--> cloud storage
+-> cloud storage -> https://cloud.google.com/storage/docs/reference/libraries
 -> azure blob storage
-4. functii
+4. functii - pt chestii asincrone se accepta. Sau sa inlocuiasca de tot serverul. Putem face verif email? Asta a zis ca ar fi cea mai ok utilizare la noi.
 se apeleaza la fiecare like / dislike
 se apeleaza ca sa baneze utilizatorii cu prea multe dislike-uri
--> cloud functions api
+-> cloud functions -> https://cloud.google.com/functions/docs/tutorials/sendgrid / https://cloud.google.com/functions/docs/tutorials/http
 -> azure functions api
 5. speech to text
 inregistrezi o prezentare a ta si dupa e transformata in descrierea ta
--> google speech to text api
+-> google speech to text https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries
 -> azure speech to text api
 6. text to speech (opt)
 daca cineva nu vrea sa-si puna vocea are varianta cu bot-ul
@@ -23,3 +23,6 @@ daca cineva nu vrea sa-si puna vocea are varianta cu bot-ul
 
 
 E-girl.gg dar fara plata si doar pentru steam ( momentan ).
+
+https://cloud.google.com/products
+https://cloud.google.com/apis
