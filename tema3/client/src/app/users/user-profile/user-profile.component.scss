@@ -1,0 +1,25 @@
+.wrapper{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-pic{
+  flex: 1;
+}
+
+.profile-pic>img{
+  height: 350px;
+}
+
+.desc{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+
+
