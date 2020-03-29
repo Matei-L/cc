@@ -10,20 +10,25 @@
         <div class="p-2 details-container">
           <mat-form-field class="full-width">
             <mat-label>Your Nickname</mat-label>
-            <input matInput>
+            <input name="nickname" [(ngModel)]="nickname"
+                   required minlength="1" matInput #_nickname="ngModel">
           </mat-form-field>
+          <div *ngIf="_nickname.invalid && (_nickname.dirty || _nickname.touched)"
+               class="alert alert-danger" >
+              Name is required.
+          </div>
           <br>
 
           <div class="recording-container">
             <div class="d-flex">
-              <button class="p-2" mat-raised-button *ngIf="!isRecording && !audioBlobUrl" (click)="startRecording()">Start Recording</button>
-              <button class="p-2" mat-raised-button *ngIf="isRecording && !audioBlobUrl" (click)="stopRecording()">Stop Recording</button>
-              <button class="p-2" mat-raised-button *ngIf="!isRecording && audioBlobUrl" (click)="clearRecordedData()">Clear Recording</button>
-              <div class="p-2 recording-time" *ngIf="isRecording && !audioBlobUrl"> {{recordedTime}} </div>
+              <button class="p-2" mat-raised-button *ngIf="!isRecording && !audioUrl" (click)="startRecording()">Start Recording</button>
+              <button class="p-2" mat-raised-button *ngIf="isRecording && !audioUrl" (click)="stopRecording()">Stop Recording</button>
+              <button class="p-2" mat-raised-button *ngIf="!isRecording && audioUrl" (click)="clearRecordedData()">Clear Recording</button>
+              <div class="p-2 recording-time" *ngIf="isRecording && !audioUrl"> {{recordedTime}} </div>
             </div>
             <div class="audio-container">
-              <audio class="full-width" *ngIf="!isRecording && audioBlobUrl" controls>
-                <source [src]="audioBlobUrl" type="audio/webm">
+              <audio class="full-width" *ngIf="!isRecording && audioUrl" controls>
+                <source [src]="audioUrl" type="audio/webm">
               </audio>
             </div>
           </div>
@@ -31,19 +36,28 @@
           <br>
           <mat-form-field class="full-width">
             <mat-label>Your Description</mat-label>
-            <textarea matInput [(ngModel)]="audioTranscript"
-                      name="description"></textarea>
+            <textarea matInput [(ngModel)]="description" required minlength="1"
+                      name="description" #_description="ngModel"></textarea>
           </mat-form-field>
+          <div *ngIf="_description.invalid && (_description.dirty || _description.touched)"
+               class="alert alert-danger" >
+            Name is required.
+          </div>
           <br>
 
           <button mat-raised-button (submit)="onSave()">Save</button>
         </div>
         <div class="p-2 photo-container">
-          <img class="selected-image" [src]="selectedPhotoUrl" alt="your profile image">
+          <img class="selected-image" [src]="photoUrl" alt="your profile image">
           <br>
 
-          <button type="button" mat-raised-button (click)="fileInput.click()">Choose Photo</button>
-          <input hidden accept="image/*" (change)="onPhotoSelected($event)" #fileInput type="file" id="file">
+          <button mat-raised-button><label for="fileInput">Choose photo</label></button>
+          <input name="photo" hidden [appForbiddenPhotoUrl]="this.photoUrl" accept="image/*" (change)="onPhotoSelected($event)"
+                 #_fileInput='ngModel' type="file" [(ngModel)]="chosenPhoto" id="fileInput">
+          <div *ngIf="_fileInput.invalid"
+               class="alert alert-danger" >
+            Profile photo is required.
+          </div>
         </div>
       </form>
     </mat-card>
