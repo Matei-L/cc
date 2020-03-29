@@ -4,13 +4,15 @@ const getRawBody = require('raw-body');
 const Busboy = require('busboy');
 const fs = require('fs');
 const path = require('path');
+const sensitive = require('./sensitive');
+
 // Creates a client
 const storage = new Storage({
-    keyFilename: path.join(__dirname, 'the-boyz-56c01-a8ba3771ec10.json'),
-    projectId: 'the-boyz-56c01'
+    keyFilename: path.join(__dirname, sensitive.keyFilename()),
+    projectId: sensitive.projectId()
 });
 
-const bucket = storage.bucket('the_boyz_static_storage');
+const bucket = storage.bucket(sensitive.bucket_name());
 
 app.post('/', (req, res, next) => {
         if (
@@ -90,10 +92,8 @@ app.post('/', (req, res, next) => {
         // request handler
         const file = req.file;
 
-        console.log(file);
         if (file) {
             uploadImageToStorage(file).then((success) => {
-                console.log(success);
                 return res.status(201).send({
                     url: success
                 });
@@ -113,9 +113,19 @@ const uploadImageToStorage = (file) => {
 
         fs.closeSync(fs.openSync(newFilePath, 'w'));
 
-        uploadFile(newFilePath).catch(console.error);
-
-        fs.unlinkSync(newFilePath);
+        uploadFile(newFilePath).then(() => {
+            fs.stat(newFilePath, (err, stats) => {
+                if (err) {
+                    return console.error(err);
+                }
+                fs.unlink(newFilePath, (err) => {
+                    if (err) {
+                        return console.log(err);
+                    }
+                    console.log(`${newFilePath} deleted successfully`);
+                });
+            })
+        }).catch(console.error);
 
         let fileUpload = bucket.file(newFileName);
 

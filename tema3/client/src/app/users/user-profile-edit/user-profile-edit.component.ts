@@ -6,6 +6,7 @@ import {UtilFunctions} from '../../utils/util-functions.ts';
 import {UserProfileEditService} from './user-profile-edit.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {AuthService} from '../../utils/auth/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-profile-edit',
@@ -27,7 +28,7 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
 
   constructor(private audioRecordingService: AudioRecordingService, private sanitizer: DomSanitizer,
               private userProfileEditService: UserProfileEditService, private snackBar: MatSnackBar,
-              private authService: AuthService) {
+              private authService: AuthService, private router: Router) {
 
 
     this.audioRecordingService.recordingFailed().subscribe(() => {
@@ -66,7 +67,7 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   }
 
   private waitingSnackBar() {
-    this.createSnackBar('Counting bytes by hand, please wait...');
+    this.snackBar.open('Counting bytes by hand, please wait...', 'Close');
   }
 
   private createSnackBar(message: string) {
@@ -100,33 +101,53 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   onSave() {
     this.dirtySave = true;
     if (!this.forbiddenPhotoUrl()) {
-      // if (this.audioBlob) {
-      //   formData.append('audio', this.audioBlob);
-      // }
       this.authService.getCurrentUser().subscribe((user) => {
+        // post profile picture
         if (this.selectedPhoto) {
           this.waitingSnackBar();
-          this.userProfileEditService.postFile(this.selectedPhoto).subscribe(
-            res => {
-              this.doneSnackBar();
+          this.userProfileEditService.postFile(this.selectedPhoto, user.email + '_img').subscribe(
+            photoRes => {
+              // post audio record
+              if (this.audioBlob) {
+                this.userProfileEditService.postFile(this.blobToFile(this.audioBlob, 'file.wav'), user.email + '_audio')
+                  .subscribe(
+                    audioRes => {
+                      this.putUserProfile(user, photoRes.url, audioRes.url);
+                    },
+                    audioErr => {
+                      this.errorSnackBar(audioErr);
+                    }
+                  );
+              } else {
+                this.putUserProfile(user, photoRes.url, null);
+              }
             },
-            err => {
-              this.errorSnackBar(err);
+            photoErr => {
+              this.errorSnackBar(photoErr);
             }
           );
         }
-
-        // this.waitingSnackBar();
-        // this.userProfileEditService.postUserProfile(body).subscribe(
-        //   res => {
-        //     this.doneSnackBar();
-        //   },
-        //   err => {
-        //     this.errorSnackBar(err);
-        //   }
-        // );
       });
     }
+  }
+
+  private putUserProfile(user, photoUrl: string, audioUrl: string) {
+    this.userProfileEditService.putUserProfile({
+      uid: user.uid,
+      email: user.email,
+      nickname: this.nickname,
+      description: this.description,
+      photoUrl,
+      audioUrl
+    }).subscribe(
+      res => {
+        this.doneSnackBar();
+        this.router.navigate(['/']);
+      },
+      err => {
+        this.errorSnackBar(err);
+      }
+    );
   }
 
   startRecording() {
@@ -162,4 +183,12 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   forbiddenPhotoUrl() {
     return this.photoUrl.startsWith(environment.randomAvatars);
   }
+
+  public blobToFile = (theBlob: Blob, fileName: string): File => {
+    const b: any = theBlob;
+    b.lastModifiedDate = new Date();
+    b.name = fileName;
+
+    return theBlob as File;
+  };
 }

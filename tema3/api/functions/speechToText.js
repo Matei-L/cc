@@ -1,9 +1,11 @@
 const app = require("./expressWrapper")();
 const speech = require('@google-cloud/speech');
 const path = require('path');
+const sensitive = require('./sensitive');
+
 const speechClient = new speech.SpeechClient({
-    keyFilename: path.join(__dirname, 'the-boyz-56c01-a8ba3771ec10.json'),
-    projectId: 'the-boyz-56c01'
+    keyFilename: path.join(__dirname, sensitive.keyFilename()),
+    projectId: sensitive.projectId()
 });
 
 app.post('/', async (req, res) => {

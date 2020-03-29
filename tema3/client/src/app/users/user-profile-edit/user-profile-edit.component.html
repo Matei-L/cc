@@ -59,7 +59,7 @@
           <br>
 
           <button type="button" mat-raised-button><label for="fileInput">Choose photo</label></button>
-          <input name="file" hidden accept="image/*" (change)="onPhotoSelected($event)" type="file" id="fileInput">
+          <input name="photo" hidden accept="image/*" (change)="onPhotoSelected($event)" type="file" id="fileInput">
           <div *ngIf="forbiddenPhotoUrl() && dirtySave"
                class="alert alert-danger">
             A photo is required.

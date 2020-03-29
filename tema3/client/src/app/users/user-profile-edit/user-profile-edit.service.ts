@@ -1,9 +1,14 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
+import {Observable} from 'rxjs';
 
 interface TranscriptionObject {
   transcription: string;
+}
+
+interface PostFileResponseObject {
+  url: string;
 }
 
 @Injectable({
@@ -15,7 +20,7 @@ export class UserProfileEditService {
   constructor(private http: HttpClient) {
   }
 
-  speechToText(blob: Blob) {
+  speechToText(blob: Blob): Observable<TranscriptionObject> {
     return this.http.post<TranscriptionObject>(this.api + '/speechToText', blob);
   }
 
@@ -27,9 +32,9 @@ export class UserProfileEditService {
     return this.http.put(this.api + '/users', body);
   }
 
-  postFile(file: File) {
+  postFile(file: File, newFilename: string): Observable<PostFileResponseObject> {
     const fd = new FormData();
-    fd.append('file', file, 'file');
-    return this.http.post(this.api + '/files', fd);
+    fd.append('file', file, newFilename);
+    return this.http.post<PostFileResponseObject>(this.api + '/files', fd);
   }
 }
