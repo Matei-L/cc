@@ -6,7 +6,7 @@ admin.initializeApp();
 
 const speech = require('@google-cloud/speech');
 const speechClient = new speech.SpeechClient();
-
+const fs = require('fs');
 
 const express = require('express');
 const cors = require('cors');
@@ -66,37 +66,37 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // -------------------------------------------------- API --------------------------------------------------------------
-
 // build multiple CRUD interfaces:
 app.post('/speechToText', async (req, res) => {
-    const audioBytes = req.body;
-    res.status(201)
-        .json({"transcription": audioBytes})
-        .end();
+
+    // The name of the audio file to transcribe
+    const blob = req.body;
+    const buffer = Buffer.from( blob );
+    const audioBytes = buffer.toString('base64');
+    console.log(audioBytes);
+
     // The audio file's encoding, sample rate in hertz, and BCP-47 language code
-    // const audio = {
-    //     content: audioBytes,
-    // };
-    // const config = {
-    //     encoding: 'LINEAR16',
-    //     sampleRateHertz: 16000,
-    //     languageCode: 'en-US',
-    // };
-    // const request = {
-    //     audio: audio,
-    //     config: config,
-    // };
-    //
-    // // Detects speech in the audio file
-    // const [response] = await speechClient.recognize(request);
-    // const transcription = response.results
-    //     .map(result => result.alternatives[0].transcript)
-    //     .join('\n');
-    // console.log(`Transcription: ${transcription}`);
-    //
-    // res.status(201)
-    //     .json({"transcription": transcription})
-    //     .end();
+    const audio = {
+        content: audioBytes,
+    };
+    const config = {
+        languageCode: 'en-US',
+    };
+    const request = {
+        audio: audio,
+        config: config,
+    };
+
+    // Detects speech in the audio file
+    const [response] = await speechClient.recognize(request);
+    const transcription = response.results
+        .map(result => result.alternatives[0].transcript)
+        .join('\n');
+    console.log(`Transcription: ${transcription}`);
+
+    res.status(200)
+        .json({"transcription": transcription})
+        .end();
 });
 
 // Expose Express API as a single Cloud Function:
