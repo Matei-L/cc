@@ -6,7 +6,7 @@ import {UserProfileEditComponent} from './users/user-profile-edit/user-profile-e
 import {UsersListComponent} from './users/users-list/users-list.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {UserProfileComponent} from './users/user-profile/user-profile.component';
-
+import {AuthGuard} from './utils/auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -19,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'users/profile',
-    component: UserProfileEditComponent
+    component: UserProfileEditComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'users/:nickname/profile',

@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: string,
               private dialogRef: MatDialogRef<RegisterComponent>,
-              private auth: AngularFireAuth) {
+              private fireAuth: AngularFireAuth) {
   }
 
   email: string;
@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
 
   register() {
     if (this.password === this.repeatedPassword) {
-      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).catch((error) => {
+      this.fireAuth.auth.createUserWithEmailAndPassword(this.email, this.password).catch((error) => {
         alert(error.message);
       }).then((result) => {
         if (result) {

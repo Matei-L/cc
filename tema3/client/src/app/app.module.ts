@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -23,9 +23,11 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {AudioRecordingService} from './audio-recording.service';
+import {AuthGuard} from './utils/auth/auth.guard';
 
 import {config} from './firebaseConfig';
 import {MatListModule} from '@angular/material/list';
+import {TokenInterceptor} from './utils/auth/token.interceptor';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
 @NgModule({
@@ -57,7 +59,15 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
     AngularFireAuthModule,
     MatListModule
   ],
-  providers: [AudioRecordingService],
+  providers: [
+    AudioRecordingService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

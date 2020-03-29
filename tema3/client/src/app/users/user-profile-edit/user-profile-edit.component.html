@@ -15,11 +15,13 @@
           <br>
 
           <div class="recording-container">
-            <button mat-raised-button *ngIf="!isRecording && !blobUrl" (click)="startRecording()">Start Recording</button>
-            <button mat-raised-button *ngIf="isRecording && !blobUrl" (click)="stopRecording()">Stop Recording</button>
-            <button mat-raised-button *ngIf="!isRecording && blobUrl" (click)="clearRecordedData()">Clear Recording</button>
+            <div class="d-flex">
+              <button class="p-2" mat-raised-button *ngIf="!isRecording && !blobUrl" (click)="startRecording()">Start Recording</button>
+              <button class="p-2" mat-raised-button *ngIf="isRecording && !blobUrl" (click)="stopRecording()">Stop Recording</button>
+              <button class="p-2" mat-raised-button *ngIf="!isRecording && blobUrl" (click)="clearRecordedData()">Clear Recording</button>
+              <div class="p-2 recording-time" *ngIf="isRecording && !blobUrl"> {{recordedTime}} </div>
+            </div>
             <div class="audio-container">
-              <div *ngIf="isRecording && !blobUrl"> {{recordedTime}} </div>
               <audio class="full-width" *ngIf="!isRecording && blobUrl"  controls>
                 <source [src]="blobUrl" type="audio/webm">
               </audio>

@@ -3,6 +3,8 @@ import {AudioRecordingService} from '../../audio-recording.service';
 import {DomSanitizer} from '@angular/platform-browser';
 import {environment} from '../../../environments/environment';
 import {UtilFunctions} from '../../utils/util-functions.ts';
+import {UserProfileEditService} from './user-profile-edit.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-user-profile-edit',
@@ -18,7 +20,8 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   recordedTime;
   blobUrl;
 
-  constructor(private audioRecordingService: AudioRecordingService, private sanitizer: DomSanitizer) {
+  constructor(private audioRecordingService: AudioRecordingService, private sanitizer: DomSanitizer,
+              private userProfileEditService: UserProfileEditService) {
 
     this.audioRecordingService.recordingFailed().subscribe(() => {
       this.isRecording = false;
@@ -30,6 +33,9 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
 
     this.audioRecordingService.getRecordedBlob().subscribe((data) => {
       this.blobUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(data.blob));
+      this.userProfileEditService.speechToText(new File([data.blob], 'audio_' + moment())).subscribe(res => {
+        console.log(res);
+      });
     });
   }
 
@@ -57,8 +63,8 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   }
 
   onSave() {
-  //  todo: send to server
-  //  todo: vezi cum sa trimiti separat inregistrarea audio
+    //  todo: send to server
+    //  todo: vezi cum sa trimiti separat inregistrarea audio
   }
 
   getRandomInt(max) {
