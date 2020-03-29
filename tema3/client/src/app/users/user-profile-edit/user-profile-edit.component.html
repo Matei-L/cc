@@ -16,7 +16,7 @@
           </mat-form-field>
           <div *ngIf="_nickname.invalid && (_nickname.dirty || _nickname.touched)"
                class="alert alert-danger">
-            Name is required.
+            A nickname is required.
           </div>
           <br>
 
@@ -48,7 +48,7 @@
           </mat-form-field>
           <div *ngIf="_description.invalid && (_description.dirty || _description.touched)"
                class="alert alert-danger">
-            Name is required.
+            A description is required.
           </div>
           <br>
 
@@ -60,7 +60,7 @@
 
           <button type="button" mat-raised-button><label for="fileInput">Choose photo</label></button>
           <input name="photo" hidden accept="image/*" (change)="onPhotoSelected($event)" type="file" id="fileInput">
-          <div *ngIf="forbiddenPhotoUrl() && dirtySave"
+          <div *ngIf="forbiddenPhotoUrl() && dirtySave" style="margin-top: 16px"
                class="alert alert-danger">
             A photo is required.
           </div>

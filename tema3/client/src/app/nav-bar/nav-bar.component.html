@@ -7,8 +7,8 @@
   <ng-template #thenBlock>
     <div>
       <button mat-button (click)="goTo('/users/profile')"><img class="profile-pic"
-                                                                            src="{{profilePhotoUrl}}">
-        {{getEmail()}}
+                                                               src="{{profilePhotoUrl}}">
+        {{profileNickname}}
 
       </button>
       <button mat-button (click)="logOut()">Log Out</button>

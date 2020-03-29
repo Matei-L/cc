@@ -7,6 +7,7 @@ import {UserProfileEditService} from './user-profile-edit.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {AuthService} from '../../utils/auth/auth.service';
 import {Router} from '@angular/router';
+import {User} from '../../utils/auth/User';
 
 @Component({
   selector: 'app-user-profile-edit',
@@ -29,7 +30,18 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   constructor(private audioRecordingService: AudioRecordingService, private sanitizer: DomSanitizer,
               private userProfileEditService: UserProfileEditService, private snackBar: MatSnackBar,
               private authService: AuthService, private router: Router) {
-
+    this.authService.getCurrentUser().subscribe(user => {
+      if (user) {
+        this.nickname = user.nickname;
+        this.description = user.description;
+        if (user.audioUrl && user.audioUrl.length > 0) {
+          this.audioUrl = user.audioUrl;
+        }
+        if (user.photoUrl && user.photoUrl.length > 0) {
+          this.photoUrl = user.photoUrl;
+        }
+      }
+    });
 
     this.audioRecordingService.recordingFailed().subscribe(() => {
       this.isRecording = false;
@@ -103,43 +115,48 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     if (!this.forbiddenPhotoUrl()) {
       this.authService.getCurrentUser().subscribe((user) => {
         // post profile picture
-        if (this.selectedPhoto) {
-          this.waitingSnackBar();
-          this.userProfileEditService.postFile(this.selectedPhoto, user.email + '_img').subscribe(
-            photoRes => {
-              // post audio record
-              if (this.audioBlob) {
-                this.userProfileEditService.postFile(this.blobToFile(this.audioBlob, 'file.wav'), user.email + '_audio')
-                  .subscribe(
-                    audioRes => {
-                      this.putUserProfile(user, photoRes.url, audioRes.url);
-                    },
-                    audioErr => {
-                      this.errorSnackBar(audioErr);
-                    }
-                  );
-              } else {
-                this.putUserProfile(user, photoRes.url, null);
+        if (user) {
+          if (this.selectedPhoto) {
+            this.waitingSnackBar();
+            this.userProfileEditService.postFile(this.selectedPhoto, user.email + '_img').subscribe(
+              photoRes => {
+                this.putAudio(user, photoRes.url);
+              },
+              photoErr => {
+                this.errorSnackBar(photoErr);
               }
-            },
-            photoErr => {
-              this.errorSnackBar(photoErr);
-            }
-          );
+            );
+          } else {
+            this.putAudio(user, null);
+          }
         }
       });
     }
   }
 
-  private putUserProfile(user, photoUrl: string, audioUrl: string) {
-    this.userProfileEditService.putUserProfile({
-      uid: user.uid,
-      email: user.email,
-      nickname: this.nickname,
-      description: this.description,
-      photoUrl,
-      audioUrl
-    }).subscribe(
+  private putAudio(user: User, photoUrl: string) {
+    // post audio record
+    if (this.audioBlob) {
+      this.userProfileEditService.postFile(this.blobToFile(this.audioBlob, 'file.wav'), user.email + '_audio')
+        .subscribe(
+          audioRes => {
+            this.putUserProfile(user, photoUrl, audioRes.url);
+          },
+          audioErr => {
+            this.errorSnackBar(audioErr);
+          }
+        );
+    } else {
+      this.putUserProfile(user, photoUrl, null);
+    }
+  }
+
+  private putUserProfile(user: User, photoUrl: string, audioUrl: string) {
+    user.photoUrl = photoUrl;
+    user.audioUrl = audioUrl;
+    user.nickname = this.nickname;
+    user.description = this.description;
+    this.userProfileEditService.putUserProfile(user).subscribe(
       res => {
         this.doneSnackBar();
         this.router.navigate(['/']);

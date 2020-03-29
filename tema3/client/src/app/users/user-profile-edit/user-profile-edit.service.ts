@@ -24,10 +24,6 @@ export class UserProfileEditService {
     return this.http.post<TranscriptionObject>(this.api + '/speechToText', blob);
   }
 
-  postUserProfile(body) {
-    return this.http.post(this.api + '/users', body);
-  }
-
   putUserProfile(body) {
     return this.http.put(this.api + '/users', body);
   }
