@@ -1,9 +1,26 @@
-.user{
+.user {
+  margin: 10px;
   border: 2px solid red;
   width: 305px;
 }
 
-.user-img{
+.game-pic {
+  width:35px;
+  height: 35px;
+}
+
+.game{
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.user-img {
   position: relative;
   width: 300px;
   height: 300px;
@@ -13,7 +30,7 @@
   background-position: center center;
 }
 
-.user-name{
+.user-name {
   position: absolute;
   bottom: 5px;
   color: white;

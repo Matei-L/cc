@@ -1,15 +1,17 @@
 <mat-toolbar color="primary" class="nav-bar">
   <div>
-    <button mat-button (click)="router.navigate(['/users'])">The Boyz</button>
+    <button mat-button (click)="goTo('/users')">The Boyz
+    </button>
   </div>
   <div *ngIf="loggedIn then thenBlock else elseBlock"></div>
   <ng-template #thenBlock>
     <div>
-      <button mat-button (click)="router.navigate(['/users/profile'])"><img class="profile-pic" src="{{profilePhotoUrl}}">
-          {{getEmail()}}
+      <button mat-button (click)="goTo('/users/profile')"><img class="profile-pic"
+                                                                            src="{{profilePhotoUrl}}">
+        {{getEmail()}}
 
       </button>
-        <button mat-button (click)="logOut()">Log Out</button>
+      <button mat-button (click)="logOut()">Log Out</button>
     </div>
   </ng-template>
   <ng-template #elseBlock>

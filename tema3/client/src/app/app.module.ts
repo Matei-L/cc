@@ -28,6 +28,7 @@ import {AuthGuard} from './utils/auth/auth.guard';
 import {config} from './firebaseConfig';
 import {MatListModule} from '@angular/material/list';
 import {TokenInterceptor} from './utils/auth/token.interceptor';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {TokenInterceptor} from './utils/auth/token.interceptor';
     RegisterComponent,
     UsersListComponent,
     UserProfileEditComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

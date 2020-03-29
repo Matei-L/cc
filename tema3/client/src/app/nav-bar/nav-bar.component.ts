@@ -56,4 +56,9 @@ export class NavBarComponent implements OnInit {
   async logOut() {
     await this.authService.logOut();
   }
+
+  async goTo(location) {
+    await this.router.navigate([location]);
+    window.location.reload();
+  }
 }

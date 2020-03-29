@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:5001/the-boyz-56c01/europe-west1',
+  baseUrl: 'http://localhost:5001/the-boyz-56c01/europe-west1/api',
   randomAvatars: 'https://api.adorable.io/avatars/'
 };
 
