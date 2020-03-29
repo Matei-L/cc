@@ -10,6 +10,7 @@ import {environment} from '../../environments/environment';
 import {UtilFunctions} from '../utils/util-functions.ts';
 import {AuthService} from '../utils/auth/auth.service';
 import {loggedIn} from '@angular/fire/auth-guard';
+import {User} from '../utils/auth/User';
 
 
 @Component({
@@ -19,10 +20,11 @@ import {loggedIn} from '@angular/fire/auth-guard';
 })
 export class NavBarComponent implements OnInit {
 
-  currentUser = null;
+  currentUser: User;
   loggedIn = false;
   profilePhotoUrl = environment.randomAvatars +
     UtilFunctions.getRandomInt(250).toString();
+  profileNickname = '';
 
   constructor(public router: Router, public dialog: MatDialog, private cdRef: ChangeDetectorRef,
               private authService: AuthService) {
@@ -34,6 +36,16 @@ export class NavBarComponent implements OnInit {
     });
     this.authService.getCurrentUser().subscribe((user) => {
       this.currentUser = user;
+      if (user) {
+        if (user.photoUrl && user.photoUrl.length > 0) {
+          this.profilePhotoUrl = user.photoUrl;
+        }
+        if (user.nickname.length > 0) {
+          this.profileNickname = user.nickname;
+        } else {
+          this.profileNickname = user.email;
+        }
+      }
     });
   }
 
@@ -44,13 +56,6 @@ export class NavBarComponent implements OnInit {
 
   openRegisterDialog() {
     this.dialog.open(RegisterComponent);
-  }
-
-  getEmail() {
-    if (this.currentUser) {
-      return this.currentUser.email;
-    }
-    return '';
   }
 
   async logOut() {

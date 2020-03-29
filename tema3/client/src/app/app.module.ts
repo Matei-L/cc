@@ -19,7 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {AudioRecordingService} from './audio-recording.service';
@@ -29,6 +29,7 @@ import {config} from './firebaseConfig';
 import {MatListModule} from '@angular/material/list';
 import {TokenInterceptor} from './utils/auth/token.interceptor';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,9 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
     MatDialogModule,
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [
     AudioRecordingService,
