@@ -12,6 +12,12 @@
   height: 350px;
 }
 
+.profile-pic audio{
+  position: relative;
+  left: 50%;
+  transform: translateX(-55%);
+}
+
 .desc{
   display: flex;
   flex-direction: column;
