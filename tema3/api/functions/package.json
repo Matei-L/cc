@@ -19,7 +19,8 @@
     "cors": "latest",
     "body-parser": "latest",
     "@google-cloud/speech": "latest",
-    "@google-cloud/storage": "latest"
+    "@google-cloud/storage": "latest",
+    "multer": "latest"
   },
   "devDependencies": {
     "eslint": "^5.12.0",

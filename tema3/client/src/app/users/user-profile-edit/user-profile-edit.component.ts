@@ -5,6 +5,7 @@ import {environment} from '../../../environments/environment';
 import {UtilFunctions} from '../../utils/util-functions.ts';
 import {UserProfileEditService} from './user-profile-edit.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {AuthService} from '../../utils/auth/auth.service';
 
 @Component({
   selector: 'app-user-profile-edit',
@@ -12,20 +13,22 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./user-profile-edit.component.scss']
 })
 export class UserProfileEditComponent implements OnInit, OnDestroy {
-  photoUploadErrorMessage: string;
   selectedPhoto = null;
   isRecording = false;
   recordedTime;
 
   nickname = '';
   description = '';
-  audioUrl = '';
+  audioUrl = null;
   photoUrl = environment.randomAvatars +
     UtilFunctions.getRandomInt(250).toString();
-  chosenPhoto: any;
+  dirtySave = false;
+  audioBlob: Blob;
 
   constructor(private audioRecordingService: AudioRecordingService, private sanitizer: DomSanitizer,
-              private userProfileEditService: UserProfileEditService, private snackBar: MatSnackBar) {
+              private userProfileEditService: UserProfileEditService, private snackBar: MatSnackBar,
+              private authService: AuthService) {
+
 
     this.audioRecordingService.recordingFailed().subscribe(() => {
       this.isRecording = false;
@@ -35,22 +38,35 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
       this.recordedTime = time;
     });
     this.audioRecordingService.getRecordedBlob().subscribe((data) => {
-      this.audioUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(data.blob)).toString();
+      this.audioUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(data.blob));
       this.getTranscriptForAudioBlob(data.blob);
+      this.audioBlob = data.blob;
     });
   }
 
   private getTranscriptForAudioBlob(audioBlob: Blob) {
-    this.createSnackBar('Counting bytes by hand, please wait...');
+    this.waitingSnackBar();
     this.userProfileEditService.speechToText(audioBlob).subscribe(
       res => {
-        this.createSnackBar('Done.');
+        this.doneSnackBar();
         this.description = res.transcription;
       },
       err => {
-        console.log(err);
-        this.createSnackBar('Something bad happened!');
+        this.errorSnackBar(err);
       });
+  }
+
+  private errorSnackBar(err) {
+    console.log(err);
+    this.createSnackBar('Something bad happened!');
+  }
+
+  private doneSnackBar() {
+    this.createSnackBar('Done.');
+  }
+
+  private waitingSnackBar() {
+    this.createSnackBar('Counting bytes by hand, please wait...');
   }
 
   private createSnackBar(message: string) {
@@ -70,7 +86,6 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
 
     const mimeType = files[0].type;
     if (null == mimeType.match(/image\/*/)) {
-      this.photoUploadErrorMessage = 'Only images are supported.';
       return;
     }
     this.selectedPhoto = files[0];
@@ -83,14 +98,36 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   }
 
   onSave() {
-    //  todo: send to server
-    //  todo: vezi cum sa trimiti separat inregistrarea audio
-  }
+    this.dirtySave = true;
+    if (!this.forbiddenPhotoUrl()) {
+      // if (this.audioBlob) {
+      //   formData.append('audio', this.audioBlob);
+      // }
+      this.authService.getCurrentUser().subscribe((user) => {
+        if (this.selectedPhoto) {
+          this.waitingSnackBar();
+          this.userProfileEditService.postFile(this.selectedPhoto).subscribe(
+            res => {
+              this.doneSnackBar();
+            },
+            err => {
+              this.errorSnackBar(err);
+            }
+          );
+        }
 
-  getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+        // this.waitingSnackBar();
+        // this.userProfileEditService.postUserProfile(body).subscribe(
+        //   res => {
+        //     this.doneSnackBar();
+        //   },
+        //   err => {
+        //     this.errorSnackBar(err);
+        //   }
+        // );
+      });
+    }
   }
-
 
   startRecording() {
     if (!this.isRecording) {
@@ -115,9 +152,14 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
 
   clearRecordedData() {
     this.audioUrl = null;
+    this.audioBlob = null;
   }
 
   ngOnDestroy(): void {
     this.abortRecording();
+  }
+
+  forbiddenPhotoUrl() {
+    return this.photoUrl.startsWith(environment.randomAvatars);
   }
 }

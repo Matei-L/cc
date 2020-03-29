@@ -2,7 +2,7 @@
 -> google auth -> https://firebase.google.com/docs/auth/web/password-auth
 -> azure auth / AD ( active directory )
 2. bd - serviciu e stateful 
--> firesorage pt google -> https://cloud.google.com/firestore/docs/quickstarts
+-> firesorage pt google -> https://firebase.google.com/products/realtime-database/
 -> azure sql db
 3. static storage ( pt poze, fisiere, etc)
 -> cloud storage -> https://cloud.google.com/storage/docs/reference/libraries

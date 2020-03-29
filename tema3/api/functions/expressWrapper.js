@@ -1,11 +1,12 @@
+const admin = require('firebase-admin');
+admin.initializeApp();
+
 const express = () => {
     const express = require("express");
     const cors = require("cors");
     const bodyParser = require('body-parser');
-    const admin = require('firebase-admin');
     const sensitive = require('./sensitive.js');
 
-    admin.initializeApp();
 
     const app = express();
 

@@ -5,7 +5,8 @@
     <mat-card class="col-8 profile-box">
       <h1>Your profile</h1>
 
-      <form class="d-flex">
+      <form class="d-flex" #registerForm="ngForm"
+            (ngSubmit)="registerForm.form.valid && onSave()" novalidate>
 
         <div class="p-2 details-container">
           <mat-form-field class="full-width">
@@ -14,16 +15,22 @@
                    required minlength="1" matInput #_nickname="ngModel">
           </mat-form-field>
           <div *ngIf="_nickname.invalid && (_nickname.dirty || _nickname.touched)"
-               class="alert alert-danger" >
-              Name is required.
+               class="alert alert-danger">
+            Name is required.
           </div>
           <br>
 
           <div class="recording-container">
             <div class="d-flex">
-              <button class="p-2" mat-raised-button *ngIf="!isRecording && !audioUrl" (click)="startRecording()">Start Recording</button>
-              <button class="p-2" mat-raised-button *ngIf="isRecording && !audioUrl" (click)="stopRecording()">Stop Recording</button>
-              <button class="p-2" mat-raised-button *ngIf="!isRecording && audioUrl" (click)="clearRecordedData()">Clear Recording</button>
+              <button type="button" class="p-2" mat-raised-button *ngIf="!isRecording && !audioUrl"
+                      (click)="startRecording()">Start Recording
+              </button>
+              <button type="button" class="p-2" mat-raised-button *ngIf="isRecording && !audioUrl"
+                      (click)="stopRecording()">Stop Recording
+              </button>
+              <button type="button" class="p-2" mat-raised-button *ngIf="!isRecording && audioUrl"
+                      (click)="clearRecordedData()">Clear Recording
+              </button>
               <div class="p-2 recording-time" *ngIf="isRecording && !audioUrl"> {{recordedTime}} </div>
             </div>
             <div class="audio-container">
@@ -40,23 +47,22 @@
                       name="description" #_description="ngModel"></textarea>
           </mat-form-field>
           <div *ngIf="_description.invalid && (_description.dirty || _description.touched)"
-               class="alert alert-danger" >
+               class="alert alert-danger">
             Name is required.
           </div>
           <br>
 
-          <button mat-raised-button (submit)="onSave()">Save</button>
+          <button mat-raised-button type="submit">Save</button>
         </div>
         <div class="p-2 photo-container">
           <img class="selected-image" [src]="photoUrl" alt="your profile image">
           <br>
 
-          <button mat-raised-button><label for="fileInput">Choose photo</label></button>
-          <input name="photo" hidden [appForbiddenPhotoUrl]="this.photoUrl" accept="image/*" (change)="onPhotoSelected($event)"
-                 #_fileInput='ngModel' type="file" [(ngModel)]="chosenPhoto" id="fileInput">
-          <div *ngIf="_fileInput.invalid"
-               class="alert alert-danger" >
-            Profile photo is required.
+          <button type="button" mat-raised-button><label for="fileInput">Choose photo</label></button>
+          <input name="photo" hidden accept="image/*" (change)="onPhotoSelected($event)" type="file" id="fileInput">
+          <div *ngIf="forbiddenPhotoUrl() && dirtySave"
+               class="alert alert-danger">
+            A photo is required.
           </div>
         </div>
       </form>

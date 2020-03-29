@@ -30,7 +30,6 @@ import {MatListModule} from '@angular/material/list';
 import {TokenInterceptor} from './utils/auth/token.interceptor';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {ForbiddenValidatorDirective} from './utils/directives/forbidden-photo-url.directive';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,6 @@ import {ForbiddenValidatorDirective} from './utils/directives/forbidden-photo-ur
     UsersListComponent,
     UserProfileEditComponent,
     UserProfileComponent,
-    ForbiddenValidatorDirective,
   ],
   imports: [
     BrowserModule,
