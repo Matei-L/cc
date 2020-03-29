@@ -18,7 +18,8 @@
     "express": "latest",
     "cors": "latest",
     "body-parser": "latest",
-    "@google-cloud/speech": "latest"
+    "@google-cloud/speech": "latest",
+    "@google-cloud/storage": "latest"
   },
   "devDependencies": {
     "eslint": "^5.12.0",

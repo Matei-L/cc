@@ -16,14 +16,14 @@
 
           <div class="recording-container">
             <div class="d-flex">
-              <button class="p-2" mat-raised-button *ngIf="!isRecording && !blobUrl" (click)="startRecording()">Start Recording</button>
-              <button class="p-2" mat-raised-button *ngIf="isRecording && !blobUrl" (click)="stopRecording()">Stop Recording</button>
-              <button class="p-2" mat-raised-button *ngIf="!isRecording && blobUrl" (click)="clearRecordedData()">Clear Recording</button>
-              <div class="p-2 recording-time" *ngIf="isRecording && !blobUrl"> {{recordedTime}} </div>
+              <button class="p-2" mat-raised-button *ngIf="!isRecording && !audioBlobUrl" (click)="startRecording()">Start Recording</button>
+              <button class="p-2" mat-raised-button *ngIf="isRecording && !audioBlobUrl" (click)="stopRecording()">Stop Recording</button>
+              <button class="p-2" mat-raised-button *ngIf="!isRecording && audioBlobUrl" (click)="clearRecordedData()">Clear Recording</button>
+              <div class="p-2 recording-time" *ngIf="isRecording && !audioBlobUrl"> {{recordedTime}} </div>
             </div>
             <div class="audio-container">
-              <audio class="full-width" *ngIf="!isRecording && blobUrl"  controls>
-                <source [src]="blobUrl" type="audio/webm">
+              <audio class="full-width" *ngIf="!isRecording && audioBlobUrl" controls>
+                <source [src]="audioBlobUrl" type="audio/webm">
               </audio>
             </div>
           </div>
@@ -31,7 +31,8 @@
           <br>
           <mat-form-field class="full-width">
             <mat-label>Your Description</mat-label>
-            <textarea matInput></textarea>
+            <textarea matInput [(ngModel)]="audioTranscript"
+                      name="description"></textarea>
           </mat-form-field>
           <br>
 

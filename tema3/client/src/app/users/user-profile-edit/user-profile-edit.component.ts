@@ -18,7 +18,8 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     UtilFunctions.getRandomInt(250).toString();
   isRecording = false;
   recordedTime;
-  blobUrl;
+  audioBlobUrl;
+  audioTranscript = '';
 
   constructor(private audioRecordingService: AudioRecordingService, private sanitizer: DomSanitizer,
               private userProfileEditService: UserProfileEditService) {
@@ -32,10 +33,13 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     });
 
     this.audioRecordingService.getRecordedBlob().subscribe((data) => {
-      this.blobUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(data.blob));
-      this.userProfileEditService.speechToText(new File([data.blob], 'audio_' + moment())).subscribe(res => {
-        console.log(res);
-      });
+      this.audioBlobUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(data.blob));
+      this.userProfileEditService.speechToText(data.blob).subscribe(
+        res => {
+          this.audioTranscript = res.transcription;
+        },
+        err => {
+        });
     });
   }
 
@@ -94,7 +98,7 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   }
 
   clearRecordedData() {
-    this.blobUrl = null;
+    this.audioBlobUrl = null;
   }
 
   ngOnDestroy(): void {
