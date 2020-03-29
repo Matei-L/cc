@@ -19,6 +19,7 @@ export class TokenInterceptor implements HttpInterceptor {
       switchMap((token: any) => {
         take(1);
         if (token) {
+          console.log(token.toString());
           request = request.clone({ setHeaders: { Authorization: `Bearer ${token}` } });
         }
         return next.handle(request);

@@ -30,6 +30,6 @@ export class UserProfileEditService {
   postFile(file: File) {
     const fd = new FormData();
     fd.append('file', file, 'file');
-    return this.http.post(this.api + '/files', file, {headers: {'Content-Type': undefined}});
+    return this.http.post(this.api + '/files', file);
   }
 }
