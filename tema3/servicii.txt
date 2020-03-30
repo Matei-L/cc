@@ -1,16 +1,14 @@
 1. autentificare - serviciu e stateful 
--> google auth -> https://firebase.google.com/docs/auth/web/password-auth
+-> firebase auth pt google -> https://firebase.google.com/docs/auth/web/password-auth
 -> azure auth / AD ( active directory )
 2. bd - serviciu e stateful 
--> firesorage pt google -> https://cloud.google.com/firestore/docs/quickstarts
+-> realtime database pt google -> https://firebase.google.com/products/realtime-database/
 -> azure sql db
 3. static storage ( pt poze, fisiere, etc)
 -> cloud storage -> https://cloud.google.com/storage/docs/reference/libraries
 -> azure blob storage
-4. functii - pt chestii asincrone se accepta. Sau sa inlocuiasca de tot serverul. Putem face verif email? Asta a zis ca ar fi cea mai ok utilizare la noi.
-se apeleaza la fiecare like / dislike
-se apeleaza ca sa baneze utilizatorii cu prea multe dislike-uri
--> cloud functions -> https://cloud.google.com/functions/docs/tutorials/sendgrid / https://cloud.google.com/functions/docs/tutorials/http
+4. functii - Inlocuiesc tot serverul.
+-> cloud functions -> https://firebase.google.com/docs/functions
 -> azure functions api
 5. speech to text
 inregistrezi o prezentare a ta si dupa e transformata in descrierea ta
