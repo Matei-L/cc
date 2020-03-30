@@ -31,10 +31,10 @@ app.post('/', checkToken, (req, res, next) => {
                 (err, string) => {
                     if (err) return next(err);
                     req.rawBody = string;
-                    next();
+                    return next();
                 });
         } else {
-            next();
+            return next();
         }
     },
 
@@ -47,7 +47,7 @@ app.post('/', checkToken, (req, res, next) => {
                 headers: req.headers,
             });
 
-            var fileBuffer = new Buffer('');
+            let fileBuffer = new Buffer('');
 
             busboy.on('file', (fieldname, file, filename, encoding, mimetype) => {
                 file.on('data', data => {
@@ -85,7 +85,7 @@ app.post('/', checkToken, (req, res, next) => {
             });
             busboy.end(req.rawBody);
         } else {
-            next();
+            return next();
         }
     },
 
@@ -123,8 +123,9 @@ const uploadImageToStorage = (file) => {
                     if (err) {
                         return console.log(err);
                     }
-                    console.log(`${newFilePath} deleted successfully`);
+                    return console.log(`${newFilePath} deleted successfully`);
                 });
+                return console.log('garbage collected');
             })
         }).catch(console.error);
 
