@@ -23,9 +23,4 @@ export class UserProfileComponent implements OnInit, OnDestroy {
     this.routeSub.unsubscribe();
   }
 
-  async goTo(location) {
-    await this.router.navigate([location]);
-    window.location.reload();
-  }
-
 }

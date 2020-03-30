@@ -1,4 +1,5 @@
-const app = require("./expressWrapper")();
+const {checkToken} = require("./expressWrapper");
+const app = require("./expressWrapper").app();
 const speech = require('@google-cloud/speech');
 const path = require('path');
 const sensitive = require('./sensitive');
@@ -8,8 +9,9 @@ const speechClient = new speech.SpeechClient({
     projectId: sensitive.projectId()
 });
 
-app.post('/', async (req, res) => {
-
+app.post('/', checkToken, async (req, res) => {
+    console.log("Posting to /speech");
+    console.log(req);
     // The name of the audio file to transcribe
     const blob = req.body;
     const buffer = Buffer.from(blob);

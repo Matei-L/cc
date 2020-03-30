@@ -26,6 +26,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
+    const dialogRef = this.dialogRef;
     if (this.password === this.repeatedPassword) {
       this.fireAuth.auth.createUserWithEmailAndPassword(this.email, this.password).catch((error) => {
         alert(error.message);
@@ -41,6 +42,7 @@ export class RegisterComponent implements OnInit {
             user.uid = fireAuthUser.uid;
             this.registerService.postUser(user).subscribe(res => {
               alert('Account Created.');
+              window.location.reload();
             });
           });
         }

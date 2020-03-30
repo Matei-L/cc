@@ -157,9 +157,10 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     user.nickname = this.nickname;
     user.description = this.description;
     this.userProfileEditService.putUserProfile(user).subscribe(
-      res => {
+      async res => {
         this.doneSnackBar();
-        this.router.navigate(['/']);
+        await this.router.navigate(['/']);
+        window.location.reload();
       },
       err => {
         this.errorSnackBar(err);

@@ -1,4 +1,5 @@
-const app = require("./expressWrapper")();
+const {checkToken} = require("./expressWrapper");
+const app = require("./expressWrapper").app();
 const {Storage} = require('@google-cloud/storage');
 const getRawBody = require('raw-body');
 const Busboy = require('busboy');
@@ -14,7 +15,7 @@ const storage = new Storage({
 
 const bucket = storage.bucket(sensitive.bucket_name());
 
-app.post('/', (req, res, next) => {
+app.post('/', checkToken, (req, res, next) => {
         if (
             req.rawBody === undefined &&
             req.method === 'POST' &&

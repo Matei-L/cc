@@ -64,6 +64,8 @@ export class NavBarComponent implements OnInit {
 
   async goTo(location) {
     await this.router.navigate([location]);
-    window.location.reload();
+    if (!location.endsWith('/profile')) {
+      window.location.reload();
+    }
   }
 }
