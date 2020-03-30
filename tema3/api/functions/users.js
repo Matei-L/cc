@@ -62,7 +62,7 @@ app.put('/', checkToken, async (req, res) => {
     res.status(200).end();
 });
 
-app.get('/:uid', checkToken, async (req, res) => {
+app.get('/:uid', async (req, res) => {
     const uid = req.params.uid;
     console.log(uid);
     const userRef = admin.database().ref('users').child(uid);
