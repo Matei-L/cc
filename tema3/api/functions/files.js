@@ -33,6 +33,7 @@ app.post('/', checkToken, (req, res, next) => {
                     req.rawBody = string;
                     return next();
                 });
+            return console.log('first layer finished');
         } else {
             return next();
         }
@@ -84,6 +85,7 @@ app.post('/', checkToken, (req, res, next) => {
                 next();
             });
             busboy.end(req.rawBody);
+            return console.log('second layer finished');
         } else {
             return next();
         }
@@ -99,9 +101,10 @@ app.post('/', checkToken, (req, res, next) => {
                     url: success
                 });
             }).catch((error) => {
-                console.error(error);
+                return console.error(error);
             });
         }
+        return console.log('improvised middleware finished');
     });
 
 const uploadImageToStorage = (file) => {
@@ -126,7 +129,8 @@ const uploadImageToStorage = (file) => {
                     return console.log(`${newFilePath} deleted successfully`);
                 });
                 return console.log('garbage collected');
-            })
+            });
+            return console.log(('upload finished'));
         }).catch(console.error);
 
         let fileUpload = bucket.file(newFileName);
@@ -147,7 +151,7 @@ const uploadImageToStorage = (file) => {
             resolve(url);
         });
 
-        blobStream.end(file.buffer);
+        return blobStream.end(file.buffer);
     });
 };
 
