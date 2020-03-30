@@ -1,6 +1,6 @@
-const { checkToken } = require("./expressWrapper");
+const {checkToken} = require("./expressWrapper");
 const app = require("./expressWrapper").app();
-const { Storage } = require('@google-cloud/storage');
+const {Storage} = require('@google-cloud/storage');
 const getRawBody = require('raw-body');
 const Busboy = require('busboy');
 const fs = require('fs');
@@ -15,14 +15,17 @@ const storage = new Storage({
 
 const bucket = storage.bucket(sensitive.bucket_name());
 
-app.post('/', checkToken, (req, res, next) => {
+app.use(checkToken);
+
+app.post('/', (req, res, next) => {
         if (
             req.rawBody === undefined &&
             req.method === 'POST' &&
             req.headers['content-type'].startsWith('multipart/form-data')
         ) {
             getRawBody(
-                req, {
+                req,
+                {
                     length: req.headers['content-length'],
                     limit: '10mb',
                     encoding: contentType.parse(req).parameters.charset,
@@ -112,25 +115,6 @@ const uploadImageToStorage = (file) => {
             reject(new Error('No image file'));
         }
         let newFileName = `${file.originalname}`;
-        let newFilePath = './' + newFileName;
-
-        fs.closeSync(fs.openSync(newFilePath, 'w'));
-
-        uploadFile(newFilePath).then(() => {
-            fs.stat(newFilePath, (err, stats) => {
-                if (err) {
-                    return console.error(err);
-                }
-                fs.unlink(newFilePath, (err) => {
-                    if (err) {
-                        return console.log(err);
-                    }
-                    return console.log(`${newFilePath} deleted successfully`);
-                });
-                return console.log('garbage collected');
-            });
-            return console.log(('upload finished'));
-        }).catch(console.error);
 
         let fileUpload = bucket.file(newFileName);
 
