@@ -1,6 +1,9 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {User} from '../../utils/auth/User';
+import {UsersListService} from '../users-list/users-list.service';
+import {UserProfileService} from './user-profile-service';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,12 +13,19 @@ import {Subscription} from 'rxjs';
 export class UserProfileComponent implements OnInit, OnDestroy {
   private routeSub: Subscription;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, private userProfileService: UserProfileService) {
   }
+
+  uid: string;
+  user: User;
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
-      console.log(params.nickname);
+      this.uid = params.uid;
+      this.userProfileService.getUserDetails(this.uid).subscribe(
+        user => {
+          this.user = user;
+        });
     });
   }
 

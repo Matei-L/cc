@@ -9,13 +9,16 @@
     background-position: center center;">
     </div>
     <div class="user-name">{{user.nickname}}</div>
-    <!--    <audio src="https://docs.google.com/uc?export=download&id=1ORxK0_UOSsxbNFVVLdrNI55AJD8NBplE" controls>-->
-    <div *ngIf="user.audioUrl!=null && user.audioUrl!=''; else noAudioBlock">
+    <mat-card-content *ngIf="user.audioUrl!=null && user.audioUrl!=''; else noAudioBlock">
       <audio [src]="user.audioUrl" controls>
         Your browser does not support the audio element.
       </audio>
-    </div>
-    <ng-template #noAudioBlock>No audio available</ng-template>
+    </mat-card-content>
+    <ng-template #noAudioBlock>
+      <mat-card-content class="no-audio">
+        No audio available
+      </mat-card-content>
+    </ng-template>
     <!--    todo: add games-->
     <!--<mat-nav-list>
       <div class="games-list" *ngFor="let game of user.games">

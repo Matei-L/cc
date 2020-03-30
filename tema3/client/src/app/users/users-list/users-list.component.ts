@@ -14,8 +14,6 @@ export class UsersListComponent implements OnInit {
 
   constructor(private cdRef: ChangeDetectorRef, private router: Router,
               private usersListService: UsersListService, private snackBar: MatSnackBar) {
-    const games = [];
-    games.push('Game #1', 'Game #2', 'Game #3');
   }
 
   ngOnInit(): void {
