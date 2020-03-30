@@ -140,7 +140,8 @@ const uploadImageToStorage = (file) => {
         });
 
         blobStream.on('finish', () => {
-            const url = `https://storage.googleapis.com/${bucket.name}/${fileUpload.name}`;
+            // const url = `https://storage.googleapis.com/${bucket.name}/${fileUpload.name}`;
+            const url = `https://storage.cloud.google.com/${bucket.name}/${fileUpload.name}`;
             resolve(url);
         });
 
@@ -159,7 +160,7 @@ async function uploadFile(filePath) {
             // Enable long-lived HTTP caching headers
             // Use only if the contents of the file will never change
             // (If the contents will change, use cacheControl: 'no-cache')
-            cacheControl: 'public, max-age=31536000',
+            cacheControl: 'no-cache,max-age=0',
         },
     });
 

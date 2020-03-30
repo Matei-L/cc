@@ -118,7 +118,7 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
         if (user) {
           if (this.selectedPhoto) {
             this.waitingSnackBar();
-            this.userProfileEditService.postFile(this.selectedPhoto, user.email + '_img').subscribe(
+            this.userProfileEditService.postFile(this.selectedPhoto, user.email + '~img').subscribe(
               photoRes => {
                 this.putAudio(user, photoRes.url);
               },
@@ -137,7 +137,7 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   private putAudio(user: User, photoUrl: string) {
     // post audio record
     if (this.audioBlob) {
-      this.userProfileEditService.postFile(this.blobToFile(this.audioBlob, 'file.wav'), user.email + '_audio')
+      this.userProfileEditService.postFile(this.blobToFile(this.audioBlob, 'file.wav'), user.email + '~audio')
         .subscribe(
           audioRes => {
             this.putUserProfile(user, photoUrl, audioRes.url);
