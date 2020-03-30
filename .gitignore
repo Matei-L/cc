@@ -7,6 +7,8 @@ environment.prod.ts
 .idea
 firebaseConfig.js
 tema3\client\src\app\firebaseConfig.js
+tema3/client/dist
+
 # Logs
 logs
 *.log

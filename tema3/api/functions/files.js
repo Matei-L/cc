@@ -1,6 +1,6 @@
-const {checkToken} = require("./expressWrapper");
+const { checkToken } = require("./expressWrapper");
 const app = require("./expressWrapper").app();
-const {Storage} = require('@google-cloud/storage');
+const { Storage } = require('@google-cloud/storage');
 const getRawBody = require('raw-body');
 const Busboy = require('busboy');
 const fs = require('fs');
@@ -22,8 +22,7 @@ app.post('/', checkToken, (req, res, next) => {
             req.headers['content-type'].startsWith('multipart/form-data')
         ) {
             getRawBody(
-                req,
-                {
+                req, {
                     length: req.headers['content-length'],
                     limit: '10mb',
                     encoding: contentType.parse(req).parameters.charset,
