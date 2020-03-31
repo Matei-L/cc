@@ -4,17 +4,6 @@ const admin = require('firebase-admin');
 
 app.get('/', async (req, res) => {
     const usersRef = admin.database().ref('users');
-    /*---------------------------------------------------------------*/
-    usersRef.child('FvJxLpc2eZg2Ih89ntVf5rwz6jH3').set(0);
-
-    /*{
-    audioUrl: "https://storage.cloud.google.com/the_boyz_static_storage/ceva%40cf.sal~audio",
-    description: "1 + 1 + 2 + 1 + 2 ..... = ?",
-    email: "ceva@cf.sal",
-    nickname: "Bad at math :(",
-    photoUrl: "https://storage.cloud.google.com/the_boyz_static_storage/ceva%40cf.sal~img"
-});*/
-    /*---------------------------------------------------------------*/
     let users = await usersRef.once('value');
     users = users.val();
     if (users) {

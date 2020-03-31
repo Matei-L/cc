@@ -3,7 +3,7 @@ const admin = require('firebase-admin');
 
 app.get('/', async (req, res) => {
     const gamesRef = admin.database().ref('games');
-    /*--------------------------------------------------------*/
+    /*
     await gamesRef.child('q1').set({
         name: "Overwatch",
         iconUrl: "https://clipartart.com/images/overwatch-icon-clipart-1.png"
@@ -16,7 +16,7 @@ app.get('/', async (req, res) => {
         name: "Borderlands 3",
         iconUrl: "https://www.kindpng.com/picc/m/0-2285_borderlands-3-game-icon-hd-png-download.png"
     });
-    /*--------------------------------------------------------*/
+    */
     let gamesList = await gamesRef.once('value');
     if (gamesList) {
         gamesList = Object.values(gamesList.val());
