@@ -69,7 +69,7 @@ app.put('/', checkToken, async (req, res) => {
         console.log(body.games);
         const userGamesRef = userRef.child('games');
         for (let i = 0; i < body.games.length; i++)
-            await userGamesRef.child(`q${i}`).set(body.games[i])
+            userGamesRef.child(`q${i}`).set(body.games[i])
     }
     res.status(200).end();
 });
