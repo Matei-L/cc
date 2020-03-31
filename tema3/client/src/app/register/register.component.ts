@@ -3,7 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {AngularFireAuth} from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import {RegisterService} from './register.service';
-import {User} from '../utils/auth/User';
+import {User} from '../utils/models/User';
 
 @Component({
   selector: 'app-register',

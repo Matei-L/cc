@@ -1,8 +1,9 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {UsersListService} from './users-list.service';
-import {User} from '../../utils/auth/User';
+import {User} from '../../utils/models/User';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {Game} from '../../utils/models/Game';
 
 @Component({
   selector: 'app-users-list',
@@ -22,6 +23,7 @@ export class UsersListComponent implements OnInit {
     this.usersListService.getUsers().subscribe(
       users => {
         this.users = users;
+        console.log(this.users);
         loadingBar.dismiss();
       });
   }

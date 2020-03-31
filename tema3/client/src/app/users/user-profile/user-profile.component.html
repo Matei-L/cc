@@ -28,9 +28,15 @@
       </mat-card-content>
     </div>
 
-    <mat-card-footer>
-      Here will be the games i guess
-    </mat-card-footer>
+    <div *ngIf="user && user.games">
+      <div class="games-list" *ngFor="let game of user.games">
+        <div class="game" *ngIf="game.checked">
+          <img class="game-pic" matCardImage [src]="game.iconUrl">
+          {{game.name}}
+        </div>
+      </div>
+    </div>
+
 
   </div>
 </mat-card>

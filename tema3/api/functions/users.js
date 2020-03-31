@@ -4,16 +4,28 @@ const admin = require('firebase-admin');
 
 app.get('/', async (req, res) => {
     const usersRef = admin.database().ref('users');
+    /*---------------------------------------------------------------*/
+    usersRef.child('FvJxLpc2eZg2Ih89ntVf5rwz6jH3').set(0);
+
+    /*{
+    audioUrl: "https://storage.cloud.google.com/the_boyz_static_storage/ceva%40cf.sal~audio",
+    description: "1 + 1 + 2 + 1 + 2 ..... = ?",
+    email: "ceva@cf.sal",
+    nickname: "Bad at math :(",
+    photoUrl: "https://storage.cloud.google.com/the_boyz_static_storage/ceva%40cf.sal~img"
+});*/
+    /*---------------------------------------------------------------*/
     let users = await usersRef.once('value');
     users = users.val();
-    let validUsers = [];
-    Object.keys(users).forEach((uid) => {
-        if (users[uid].nickname && users[uid].nickname.length > 0) {
-            users[uid].uid=uid;
-            validUsers.push(users[uid]);
-        }
-    });
     if (users) {
+        let validUsers = [];
+        Object.keys(users).forEach((uid) => {
+            if (users[uid].nickname && users[uid].nickname.length > 0) {
+                users[uid].uid = uid;
+                users[uid].games = Object.values(users[uid].games);
+                validUsers.push(users[uid]);
+            }
+        });
         res.status(200).json(validUsers).end();
     } else {
         res.status(204).json([]).end();
@@ -52,16 +64,24 @@ app.put('/', checkToken, async (req, res) => {
     if (body.audioUrl) {
         await userRef.child('audioUrl').set(body.audioUrl.replace('@', '%40'));
     }
+    if (body.games) {
+        console.log("The put games are : ");
+        console.log(body.games);
+        const userGamesRef = userRef.child('games');
+        for (let i = 0; i < body.games.length; i++)
+            await userGamesRef.child(`q${i}`).set(body.games[i])
+    }
     res.status(200).end();
 });
 
 app.get('/:uid', async (req, res) => {
     const uid = req.params.uid;
-    console.log(uid);
     const userRef = admin.database().ref('users').child(uid);
     await userRef.once("value", (snapshot) => {
-        console.log(snapshot.val());
-        res.status(200).json(snapshot.val()).end();
+        let user = snapshot.val();
+        user.games = Object.values(user.games);
+        console.log(user);
+        res.status(200).json(user).end();
     }, (errorObject) => {
         console.log("The read failed: " + errorObject.code);
     });

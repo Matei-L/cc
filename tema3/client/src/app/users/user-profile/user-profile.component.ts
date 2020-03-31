@@ -1,7 +1,7 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
-import {User} from '../../utils/auth/User';
+import {User} from '../../utils/models/User';
 import {UsersListService} from '../users-list/users-list.service';
 import {UserProfileService} from './user-profile-service';
 

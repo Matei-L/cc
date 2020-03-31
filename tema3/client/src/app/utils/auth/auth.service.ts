@@ -5,7 +5,7 @@ import {map} from 'rxjs/operators';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
-import {User} from './User';
+import {User} from '../models/User';
 
 @Injectable({
   providedIn: 'root'
