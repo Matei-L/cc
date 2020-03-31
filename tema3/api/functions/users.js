@@ -68,7 +68,9 @@ app.get('/:uid', async (req, res) => {
     const userRef = admin.database().ref('users').child(uid);
     await userRef.once("value", (snapshot) => {
         let user = snapshot.val();
-        user.games = Object.values(user.games);
+        if ( user && user.games ) {
+            user.games = Object.values(user.games);
+        }
         console.log(user);
         res.status(200).json(user).end();
     }, (errorObject) => {

@@ -21,10 +21,12 @@ export class AuthService {
         this.currentUser.next(null);
       } else {
         this.getUser(authUser.uid).subscribe(user => {
-          user.uid = authUser.uid;
-          user.photoUrl = user.photoUrl.replace('@', '%40');
-          user.audioUrl = user.audioUrl.replace('@', '%40');
-          this.currentUser.next(user);
+          if (user) {
+            user.uid = authUser.uid;
+            user.photoUrl = user.photoUrl.replace('@', '%40');
+            user.audioUrl = user.audioUrl.replace('@', '%40');
+            this.currentUser.next(user);
+          }
         });
       }
     });
