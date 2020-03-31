@@ -3,13 +3,6 @@ const app = require("./expressWrapper").app();
 const admin = require('firebase-admin');
 
 app.get('/', async (req, res) => {
-    let body = {
-        uid: "aid",
-        email: "cac@asd.cac"
-    };
-    const userRef = admin.database().ref('users').child(body.uid);
-    await userRef.child('email').set(body.email);
-    /*------------------------------------------------------------*/
     const usersRef = admin.database().ref('users');
     let users = await usersRef.once('value');
     users = users.val();
