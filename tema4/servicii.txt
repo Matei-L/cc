@@ -1,0 +1,26 @@
+1. autentificare - serviciu e stateful 
+-> firebase auth pt google -> https://firebase.google.com/docs/auth/web/password-auth
+-> azure auth / AD ( active directory )
+2. bd - serviciu e stateful 
+-> realtime database pt google -> https://firebase.google.com/products/realtime-database/
+-> azure sql db
+3. static storage ( pt poze, fisiere, etc)
+-> cloud storage -> https://cloud.google.com/storage/docs/reference/libraries
+-> azure blob storage
+4. functii - Inlocuiesc tot serverul.
+-> cloud functions -> https://firebase.google.com/docs/functions
+-> azure functions api
+5. speech to text
+inregistrezi o prezentare a ta si dupa e transformata in descrierea ta
+-> google speech to text https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries
+-> azure speech to text api
+6. text to speech (opt)
+daca cineva nu vrea sa-si puna vocea are varianta cu bot-ul
+-> google text  to speech api
+-> azure text to speech api
+
+
+E-girl.gg dar fara plata si doar pentru steam ( momentan ).
+
+https://cloud.google.com/products
+https://cloud.google.com/apis
