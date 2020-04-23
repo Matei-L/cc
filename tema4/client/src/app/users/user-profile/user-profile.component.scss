@@ -1,0 +1,45 @@
+.wrapper{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-pic{
+  flex: 0 0;
+}
+
+.profile-pic img{
+  height: 350px;
+}
+
+.profile-pic audio{
+  position: relative;
+  left: 50%;
+  transform: translateX(-55%);
+}
+
+.desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+}
+
+.user-details:first-child{
+  text-align: center;
+}
+
+.games-list{
+  position: relative;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+img.game-pic {
+  margin-top: 0;
+  margin-right: 5px;
+  width:35px;
+  height: 35px;
+}

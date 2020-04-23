@@ -1,0 +1,42 @@
+<mat-card class="wrapper">
+  <div class="profile-pic">
+    <div *ngIf="user && user.photoUrl && user.photoUrl.length>0; else noPhotoBlock">
+      <img [src]="user.photoUrl">
+    </div>
+    <ng-template #noPhotoBlock>
+      <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
+    </ng-template>
+    <mat-card-content *ngIf="user && user.audioUrl!=null && user.audioUrl!=''; else noAudioBlock">
+      <audio [src]="user.audioUrl" controls>
+        Your browser does not support the audio element.
+      </audio>
+    </mat-card-content>
+    <ng-template #noAudioBlock>
+      <mat-card-content>
+        No audio available
+      </mat-card-content>
+    </ng-template>
+  </div>
+  <div class="desc">
+    <div class="user-details">
+      <mat-card-title *ngIf="user && user.nickname">
+        {{user.nickname}}
+      </mat-card-title>
+
+      <mat-card-content *ngIf="user && user.description">
+        {{user.description}}
+      </mat-card-content>
+    </div>
+
+    <div *ngIf="user && user.games">
+      <div class="games-list" *ngFor="let game of user.games">
+        <div class="game" *ngIf="game.checked">
+          <img class="game-pic" matCardImage [src]="game.iconUrl">
+          {{game.name}}
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</mat-card>
