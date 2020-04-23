@@ -3,24 +3,18 @@ const app = require("./expressWrapper").app();
 const admin = require('firebase-admin');
 
 app.get('/', async (req, res) => {
-    let body = {
-        uid: "aid",
-        email: "cac@asd.cac"
-    };
-    const userRef = admin.database().ref('users').child(body.uid);
-    await userRef.child('email').set(body.email);
-    /*------------------------------------------------------------*/
     const usersRef = admin.database().ref('users');
     let users = await usersRef.once('value');
     users = users.val();
-    let validUsers = [];
-    Object.keys(users).forEach((uid) => {
-        if (users[uid].nickname && users[uid].nickname.length > 0) {
-            users[uid].uid=uid;
-            validUsers.push(users[uid]);
-        }
-    });
     if (users) {
+        let validUsers = [];
+        Object.keys(users).forEach((uid) => {
+            if (users[uid].nickname && users[uid].nickname.length > 0) {
+                users[uid].uid = uid;
+                users[uid].games = Object.values(users[uid].games);
+                validUsers.push(users[uid]);
+            }
+        });
         res.status(200).json(validUsers).end();
     } else {
         res.status(204).json([]).end();
@@ -59,16 +53,26 @@ app.put('/', checkToken, async (req, res) => {
     if (body.audioUrl) {
         await userRef.child('audioUrl').set(body.audioUrl.replace('@', '%40'));
     }
+    if (body.games) {
+        console.log("The put games are : ");
+        console.log(body.games);
+        const userGamesRef = userRef.child('games');
+        for (let i = 0; i < body.games.length; i++)
+            userGamesRef.child(`q${i}`).set(body.games[i])
+    }
     res.status(200).end();
 });
 
 app.get('/:uid', async (req, res) => {
     const uid = req.params.uid;
-    console.log(uid);
     const userRef = admin.database().ref('users').child(uid);
     await userRef.once("value", (snapshot) => {
-        console.log(snapshot.val());
-        res.status(200).json(snapshot.val()).end();
+        let user = snapshot.val();
+        if ( user && user.games ) {
+            user.games = Object.values(user.games);
+        }
+        console.log(user);
+        res.status(200).json(user).end();
     }, (errorObject) => {
         console.log("The read failed: " + errorObject.code);
     });

@@ -5,7 +5,7 @@
 }
 
 .profile-pic{
-  flex: 1;
+  flex: 0 0;
 }
 
 .profile-pic img{
@@ -21,11 +21,25 @@
 .desc{
   display: flex;
   flex-direction: column;
-  flex: 2;
   justify-content: space-between;
-  text-align: center;
-  position: relative;
-  top: 50%;
+  flex: 2;
 }
 
+.user-details:first-child{
+  text-align: center;
+}
 
+.games-list{
+  position: relative;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+img.game-pic {
+  margin-top: 0;
+  margin-right: 5px;
+  width:35px;
+  height: 35px;
+}

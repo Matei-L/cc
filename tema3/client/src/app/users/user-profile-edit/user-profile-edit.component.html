@@ -51,6 +51,16 @@
             A description is required.
           </div>
           <br>
+          <mat-nav-list class="games-list" *ngIf="games">
+            <mat-checkbox [checked]="game.checked" (change)="game.checked=!game.checked" class="game"
+                          *ngFor="let game of this.games">
+              <img class="game-pic" matCardImage [src]="game.iconUrl">
+              {{game.name}}
+            </mat-checkbox>
+            <br>
+          </mat-nav-list>
+          <br>
+
 
           <button mat-raised-button type="submit">Save</button>
         </div>

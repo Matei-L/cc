@@ -30,6 +30,8 @@ import {MatListModule} from '@angular/material/list';
 import {TokenInterceptor} from './utils/auth/token.interceptor';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AngularFireAuthModule,
     MatListModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule,
+    MatCheckboxModule
   ],
   providers: [
     AudioRecordingService,

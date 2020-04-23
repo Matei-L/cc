@@ -10,7 +10,7 @@ import {environment} from '../../environments/environment';
 import {UtilFunctions} from '../utils/util-functions.ts';
 import {AuthService} from '../utils/auth/auth.service';
 import {loggedIn} from '@angular/fire/auth-guard';
-import {User} from '../utils/auth/User';
+import {User} from '../utils/models/User';
 
 
 @Component({

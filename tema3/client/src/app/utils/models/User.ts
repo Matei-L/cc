@@ -1,3 +1,5 @@
+import {Game} from './Game';
+
 export interface User {
   uid: string;
   email: string;
@@ -5,4 +7,5 @@ export interface User {
   description: string;
   photoUrl: string;
   audioUrl: string;
+  games: Array<Game>;
 }

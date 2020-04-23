@@ -5,7 +5,7 @@ import {map} from 'rxjs/operators';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
-import {User} from './User';
+import {User} from '../models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +21,12 @@ export class AuthService {
         this.currentUser.next(null);
       } else {
         this.getUser(authUser.uid).subscribe(user => {
-          user.uid = authUser.uid;
-          user.photoUrl = user.photoUrl.replace('@', '%40');
-          user.audioUrl = user.audioUrl.replace('@', '%40');
-          this.currentUser.next(user);
+          if (user) {
+            user.uid = authUser.uid;
+            user.photoUrl = user.photoUrl.replace('@', '%40');
+            user.audioUrl = user.audioUrl.replace('@', '%40');
+            this.currentUser.next(user);
+          }
         });
       }
     });

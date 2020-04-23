@@ -27,12 +27,6 @@ export class LoginComponent implements OnInit {
       alert(error.message);
     }).then((result) => {
       if (result) {
-        const user = firebase.auth().currentUser;
-        if (user) {
-          user.getIdToken(true).then((idToken) => {
-            console.log(idToken);
-          });
-        }
         this.dialogRef.close({data: true});
       }
     });

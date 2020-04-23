@@ -7,7 +7,8 @@ import {UserProfileEditService} from './user-profile-edit.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {AuthService} from '../../utils/auth/auth.service';
 import {Router} from '@angular/router';
-import {User} from '../../utils/auth/User';
+import {User} from '../../utils/models/User';
+import {Game} from '../../utils/models/Game';
 
 @Component({
   selector: 'app-user-profile-edit',
@@ -26,6 +27,7 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     UtilFunctions.getRandomInt(250).toString();
   dirtySave = false;
   audioBlob: Blob;
+  games: Game[];
 
   constructor(private audioRecordingService: AudioRecordingService, private sanitizer: DomSanitizer,
               private userProfileEditService: UserProfileEditService, private snackBar: MatSnackBar,
@@ -40,6 +42,17 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
         if (user.photoUrl && user.photoUrl.length > 0) {
           this.photoUrl = user.photoUrl;
         }
+        // after getting the user's preffered games, get all games and check them
+        this.userProfileEditService.getGames().subscribe(games => {
+          this.games = games;
+          this.games.forEach(game => {
+            user.games.forEach(userGame => {
+              if (userGame.name === game.name) {
+                game.checked = userGame.checked;
+              }
+            });
+          });
+        });
       }
     });
 
@@ -151,11 +164,24 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     }
   }
 
+  // todo:delete
+  private getCheckedGames() {
+    const checkGames = new Array<Game>();
+    this.games.forEach(game => {
+      if (game.checked) {
+        checkGames.push(game);
+      }
+    });
+    return checkGames;
+  }
+
+
   private putUserProfile(user: User, photoUrl: string, audioUrl: string) {
     user.photoUrl = photoUrl;
     user.audioUrl = audioUrl;
     user.nickname = this.nickname;
     user.description = this.description;
+    user.games = this.games;
     this.userProfileEditService.putUserProfile(user).subscribe(
       async res => {
         this.doneSnackBar();
