@@ -49,9 +49,9 @@ export class AuthService {
       correlationId: CryptoUtils.createNewGuid(),
       piiLoggingEnabled: false
     }));
-    this.currentToken.subscribe((token) => {
+    /*this.currentToken.subscribe((token) => {
       console.log(token);
-    });
+    });*/
   }
 
   // other methods
@@ -59,6 +59,7 @@ export class AuthService {
     this.loggedIn = !!this.msalService.getAccount();
     if (this.loggedIn) {
       const uid = this.msalService.getAccount().accountIdentifier;
+      //todo: insert here if !uid in db
       console.log(this.msalService.getAccount()); // todo de aici ai acces la email si nickname-ul de la register. Fa un post in bd
       this.msalService.acquireTokenSilent(tokenRequest).catch((error) => {
         // Acquire token interactive failure

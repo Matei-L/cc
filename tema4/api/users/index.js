@@ -20,10 +20,10 @@ app.get(prefix + '/:uid', passport.authenticate('oauth-bearer', {session: false}
   console.log(req.params)
   res.status(200).json({
     uid: req.params.uid,
-    email: 'dasdasd',
+    email: 'dasdassd',
     description:'',
     nickname: 'Cel mai mare cocalar',
-    photoUrl: '',
+    photoUrl: 'https://theboyzstorage.blob.core.windows.net/images-container/casino-table-png-4.png',
     audioUrl: ''
   })
 });
