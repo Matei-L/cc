@@ -49,9 +49,6 @@ export class AuthService {
       correlationId: CryptoUtils.createNewGuid(),
       piiLoggingEnabled: false
     }));
-    /*this.currentToken.subscribe((token) => {
-      console.log(token);
-    });*/
   }
 
   // other methods
@@ -59,8 +56,17 @@ export class AuthService {
     this.loggedIn = !!this.msalService.getAccount();
     if (this.loggedIn) {
       const uid = this.msalService.getAccount().accountIdentifier;
-      //todo: insert here if !uid in db
-      console.log(this.msalService.getAccount()); // todo de aici ai acces la email si nickname-ul de la register. Fa un post in bd
+      this.getUser(uid).subscribe((user: User) => {
+        if (user.uid === undefined) {
+          const manualUser = {} as User;
+          manualUser.uid = uid;
+          manualUser.nickname = this.msalService.getAccount().name;
+          manualUser.email = this.msalService.getAccount().idToken.emails[0];
+          this.postUser(manualUser).subscribe(() => {
+            this.refreshUserData();
+          });
+        }
+      });
       this.msalService.acquireTokenSilent(tokenRequest).catch((error) => {
         // Acquire token interactive failure
         console.log(error);
@@ -99,8 +105,12 @@ export class AuthService {
       const uid = this.msalService.getAccount().accountIdentifier;
       this.getUser(uid).subscribe(user => {
         user.uid = uid;
-        user.photoUrl = user.photoUrl.replace('@', '%40');
-        user.audioUrl = user.audioUrl.replace('@', '%40');
+        if (user.photoUrl) {
+          user.photoUrl = user.photoUrl.replace('@', '%40');
+        }
+        if (user.audioUrl) {
+          user.audioUrl = user.audioUrl.replace('@', '%40');
+        }
         this.currentUser.next(user);
       });
     }
@@ -108,5 +118,9 @@ export class AuthService {
 
   private getUser(uid: string): Observable<User> {
     return this.http.get<User>(this.api + `/users/${uid}`);
+  }
+
+  private postUser(user: User) {
+    return this.http.post(this.api + `/users`, user);
   }
 }

@@ -36,7 +36,6 @@ app.post('/', checkToken, async (req, res) => {
 
 app.put('/', checkToken, async (req, res) => {
     const body = req.body;
-    console.log(body);
     const userRef = admin.database().ref('users').child(body.uid);
     if (body.email) {
         await userRef.child('email').set(body.email);

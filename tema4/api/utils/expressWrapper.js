@@ -9,7 +9,7 @@ const express = (requiresToken = true) => {
     // Automatically allow requests from our clients
     const whitelist = [sensitive.localClient(), sensitive.client()];
     const corsOptions = {
-        origin: function (origin, callback) {
+        origin: function(origin, callback) {
             if (whitelist.indexOf(origin) !== -1 || !origin) {
                 return callback(null, true)
             } else {
@@ -20,11 +20,11 @@ const express = (requiresToken = true) => {
     };
     app.use(cors(corsOptions));
 
-    // for body
-    app.use(bodyParser.urlencoded({
-        extended: true
-    }));
-    app.use(bodyParser.json());
+    // // for body
+    // app.use(bodyParser.urlencoded({
+    //     extended: true
+    // }));
+    // app.use(bodyParser.json());
 
     return app;
 };
@@ -35,7 +35,7 @@ const passport = () => {
     const BearerStrategy = require('passport-azure-ad').BearerStrategy;
 
     const bearerStrategy = new BearerStrategy(config,
-        function (token, done) {
+        function(token, done) {
             // Send user info using the second argument
             done(null, {}, token);
         }

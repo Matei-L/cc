@@ -43,17 +43,17 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
         if (user.photoUrl && user.photoUrl.length > 0) {
           this.photoUrl = user.photoUrl;
         }
-        // after getting the user's preffered games, get all games and check them
-        // this.userProfileEditService.getGames().subscribe(games => {
-        //   this.games = games;
-        //   this.games.forEach(game => {
-        //     user.games.forEach(userGame => {
-        //       if (userGame.name === game.name) {
-        //         game.checked = userGame.checked;
-        //       }
-        //     });
-        //   });
-        // });
+        // after getting the user's preferred games, get all games and check them
+        this.userProfileEditService.getGames().subscribe(games => {
+          this.games = games;
+          this.games.forEach(game => {
+            user.games.forEach(userGame => {
+              if (userGame.name === game.name) {
+                game.checked = userGame.checked;
+              }
+            });
+          });
+        });
       }
     });
 
@@ -184,7 +184,7 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     user.audioUrl = audioUrl;
     user.nickname = this.nickname;
     user.description = this.description;
-    // user.games = this.games;
+    user.games = this.games;
     this.userProfileEditService.putUserProfile(user).subscribe(
       async res => {
         this.doneSnackBar();

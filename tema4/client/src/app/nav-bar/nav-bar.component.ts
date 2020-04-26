@@ -30,7 +30,7 @@ export class NavBarComponent implements OnInit {
         if (user.photoUrl && user.photoUrl.length > 0) {
           this.profilePhotoUrl = user.photoUrl;
         }
-        if (user.nickname.length > 0) {
+        if (user.nickname && user.nickname.length > 0) {
           this.profileNickname = user.nickname;
         } else {
           this.profileNickname = user.email;

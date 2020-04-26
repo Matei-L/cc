@@ -4,7 +4,7 @@
             "type": "httpTrigger",
             "direction": "in",
             "name": "req",
-            "route": "users/{*segments}"
+            "route": "games/{*segments}"
         },
         {
             "type": "http",
