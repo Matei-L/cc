@@ -21,8 +21,12 @@ export class UserProfileEditService {
   constructor(private http: HttpClient) {
   }
 
-  putUserProfile(body) {
-    return this.http.put(this.api + '/users', body);
+  putUserProfile(body, token) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    });
+    return this.http.put(this.api + '/users', body, { headers });
   }
 
   postFile(file: File, newFilename: string): Observable<PostFileResponseObject> {

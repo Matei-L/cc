@@ -83,3 +83,4 @@ tema4/client/src/environments/environment.ts
 tema4/client/src/app/utils/azure/text-to-speech.config.ts
 tema4/api/utils/config.js
 tema4/client/src/app/utils/auth/config.ts
+tema4/api/.funcpack/

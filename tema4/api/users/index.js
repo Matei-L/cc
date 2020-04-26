@@ -23,7 +23,7 @@ app.get(prefix + "/", async(req, res) => {
     });
 });
 
-app.post(prefix + '/', /*passport.authenticate('oauth-bearer', {session: false}),*/ async(req, res) => {
+app.post(prefix + '/', passport.authenticate('oauth-bearer', { session: false }), async(req, res) => {
     let body = req.body;
     if (!body) {
         res.status(400);
@@ -31,7 +31,7 @@ app.post(prefix + '/', /*passport.authenticate('oauth-bearer', {session: false})
     }
     console.log("----------------------------------------------------------------------------");
     console.log("POST");
-    console.log(body);
+    console.log(req);
     console.log("----------------------------------------------------------------------------");
 
     await mongoClient.connect(url, function(err, client) {
@@ -57,7 +57,11 @@ app.post(prefix + '/', /*passport.authenticate('oauth-bearer', {session: false})
         });
     });
 });
-app.put(prefix + '/', /* passport.authenticate('oauth-bearer', { session: false }),*/ async(req, res) => {
+app.put(prefix + '/',  passport.authenticate('oauth-bearer', { session: false }), async(req, res) => {
+    console.log("----------------------------------------------------------------------------");
+    console.log("PUT USER");
+    console.log(req);
+    console.log("----------------------------------------------------------------------------");
     const body = req.body;
     let updatedUser = {};
     if (body.email) {
@@ -89,7 +93,7 @@ app.put(prefix + '/', /* passport.authenticate('oauth-bearer', { session: false 
     });
 });
 
-app.get(prefix + '/:uid', /*passport.authenticate('oauth-bearer', {session: false}),*/ async(req, res) => {
+app.get(prefix + '/:uid', async(req, res) => {
     console.log("----------------------------------------------------------------------------");
     console.log("GET BY UID");
     console.log("----------------------------------------------------------------------------");

@@ -27,7 +27,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MsalModule, MsalInterceptor } from '@azure/msal-angular';
 import { msalConfig, isIE, apiConfig } from './utils/auth/config';
-import {environment} from "../environments/environment";
 
 
 
@@ -64,7 +63,7 @@ import {environment} from "../environments/environment";
         consentScopes: apiConfig.b2cScopes,
         unprotectedResources: [],
         protectedResourceMap: [
-            [apiConfig.webApi, apiConfig.b2cScopes],
+            [apiConfig.webApi, apiConfig.b2cScopes]
         ],
         extraQueryParameters: {},
       })

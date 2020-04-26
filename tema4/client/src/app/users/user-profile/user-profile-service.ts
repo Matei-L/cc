@@ -12,7 +12,11 @@ export class UserProfileService {
   constructor(private http: HttpClient) {
   }
 
-  getUserDetails(uid) {
-    return this.http.get<User>(this.api + '/users/' + uid);
+  getUserDetails(uid, token) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    });
+    return this.http.get<User>(this.api + '/users/' + uid,{ headers });
   }
 }

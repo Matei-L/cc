@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/0fb276d1-8cfb-4ead-9c6f-e2da52e46849/resourceGroups/the-boyz/providers/Microsoft.Web/sites/the-boyz",
-    "appService.deploySubpath": ""
-}
