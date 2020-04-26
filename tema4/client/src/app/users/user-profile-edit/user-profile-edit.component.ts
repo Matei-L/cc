@@ -185,16 +185,20 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     user.nickname = this.nickname;
     user.description = this.description;
     user.games = this.games;
-    this.userProfileEditService.putUserProfile(user).subscribe(
-      async res => {
-        this.doneSnackBar();
-        await this.router.navigate(['/']);
-        window.location.reload();
-      },
-      err => {
-        this.errorSnackBar(err);
-      }
-    );
+    const subscription = this.authService.getIdToken().subscribe((token) => {
+      this.userProfileEditService.putUserProfile(user, token).subscribe(
+        async res => {
+          this.doneSnackBar();
+          subscription.unsubscribe();
+          await this.router.navigate(['/']);
+          window.location.reload();
+        },
+        err => {
+          this.errorSnackBar(err);
+          subscription.unsubscribe();
+        });
+    });
+
   }
 
   startRecording() {
@@ -237,5 +241,5 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
     b.name = fileName;
 
     return theBlob as File;
-  };
+  }
 }

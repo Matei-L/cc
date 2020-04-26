@@ -38,7 +38,7 @@ const premadeGames = [
     },
 ];
 
-app.post(prefix + '/', async (req, res) => {
+app.post(prefix + '/', /*passport.authenticate('oauth-bearer', {session: false}),*/ async (req, res) => {
     await mongoClient.connect(url, function (err, client) {
         let db = client.db('the-boyz');
         premadeGames.forEach((game) => {

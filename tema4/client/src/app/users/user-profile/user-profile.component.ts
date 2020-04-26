@@ -4,6 +4,7 @@ import {Subscription} from 'rxjs';
 import {User} from '../../utils/models/User';
 import {UsersListService} from '../users-list/users-list.service';
 import {UserProfileService} from './user-profile-service';
+import {AuthService} from "../../utils/auth/auth.service";
 
 @Component({
   selector: 'app-user-profile',
@@ -13,7 +14,8 @@ import {UserProfileService} from './user-profile-service';
 export class UserProfileComponent implements OnInit, OnDestroy {
   private routeSub: Subscription;
 
-  constructor(private route: ActivatedRoute, private router: Router, private userProfileService: UserProfileService) {
+  constructor(private route: ActivatedRoute, private router: Router, private userProfileService: UserProfileService,
+              private authService: AuthService) {
   }
 
   uid: string;
@@ -22,11 +24,15 @@ export class UserProfileComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
       this.uid = params.uid;
-      this.userProfileService.getUserDetails(this.uid).subscribe(
-        user => {
-          this.user = user;
-        });
+      const subscription = this.authService.getIdToken().subscribe((token) => {
+        this.userProfileService.getUserDetails(this.uid, token).subscribe(
+          user => {
+            this.user = user;
+            subscription.unsubscribe();
+          });
+      });
     });
+
   }
 
   ngOnDestroy(): void {

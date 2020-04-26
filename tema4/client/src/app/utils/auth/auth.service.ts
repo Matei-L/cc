@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {User} from './User';
 import {BroadcastService, MsalService} from '@azure/msal-angular';
 import {CryptoUtils, Logger} from 'msal';
-import {apiConfig, isIE, loginRequest, tokenRequest} from './config';
+import {loginRequest, tokenRequest} from './config';
 
 @Injectable({
   providedIn: 'root'
@@ -56,17 +56,23 @@ export class AuthService {
     this.loggedIn = !!this.msalService.getAccount();
     if (this.loggedIn) {
       const uid = this.msalService.getAccount().accountIdentifier;
-      this.getUser(uid).subscribe((user: User) => {
-        if (user.uid === undefined) {
-          const manualUser = {} as User;
-          manualUser.uid = uid;
-          manualUser.nickname = this.msalService.getAccount().name;
-          manualUser.email = this.msalService.getAccount().idToken.emails[0];
-          this.postUser(manualUser).subscribe(() => {
-            this.refreshUserData();
-          });
-        }
+      const subscription = this.currentToken.subscribe((token) => {
+        this.getUser(uid, token).subscribe((user: User) => {
+          if (user.uid === undefined) {
+            const manualUser = {} as User;
+            manualUser.uid = uid;
+            manualUser.nickname = this.msalService.getAccount().name;
+            manualUser.email = this.msalService.getAccount().idToken.emails[0];
+            subscription.unsubscribe();
+            this.currentToken.subscribe((newtoken) => {
+              this.postUser(manualUser, newtoken).subscribe(() => {
+                this.refreshUserData();
+              });
+            });
+          }
+        });
       });
+
       this.msalService.acquireTokenSilent(tokenRequest).catch((error) => {
         // Acquire token interactive failure
         console.log(error);
@@ -103,24 +109,36 @@ export class AuthService {
   refreshUserData() {
     if (this.loggedIn) {
       const uid = this.msalService.getAccount().accountIdentifier;
-      this.getUser(uid).subscribe(user => {
-        user.uid = uid;
-        if (user.photoUrl) {
-          user.photoUrl = user.photoUrl.replace('@', '%40');
-        }
-        if (user.audioUrl) {
-          user.audioUrl = user.audioUrl.replace('@', '%40');
-        }
-        this.currentUser.next(user);
+      const subscription = this.currentToken.subscribe((token) => {
+        this.getUser(uid, token).subscribe(user => {
+          user.uid = uid;
+          if (user.photoUrl) {
+            user.photoUrl = user.photoUrl.replace('@', '%40');
+          }
+          if (user.audioUrl) {
+            user.audioUrl = user.audioUrl.replace('@', '%40');
+          }
+          this.currentUser.next(user);
+          subscription.unsubscribe();
+        });
       });
+
     }
   }
 
-  private getUser(uid: string): Observable<User> {
-    return this.http.get<User>(this.api + `/users/${uid}`);
+  private getUser(uid: string, token): Observable<User> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    });
+    return this.http.get<User>(this.api + '/users/' + uid, {headers});
   }
 
-  private postUser(user: User) {
-    return this.http.post(this.api + `/users`, user);
+  private postUser(user: User, token: string) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    });
+    return this.http.post(this.api + `/users`, user, {headers});
   }
 }

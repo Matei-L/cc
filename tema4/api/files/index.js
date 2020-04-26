@@ -24,7 +24,7 @@ const blobServiceClient = new BlobServiceClient(
     pipeline
 );
 
-app.post(prefix + '/', /*passport.authenticate('oauth-bearer', {session: false}),*/ async (req, res) => {
+app.post(prefix + '/', passport.authenticate('oauth-bearer', {session: false}), async (req, res) => {
 
     const bodyBuffer = Buffer.from(req.body);
 
