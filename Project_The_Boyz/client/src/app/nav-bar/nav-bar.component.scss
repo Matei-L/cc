@@ -1,0 +1,16 @@
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.profile-pic{
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}

@@ -1,0 +1,21 @@
+<div class="flex-wrapper">
+  <mat-card class="user" *ngFor="let user of users" (click)="goTo('/users/' + user.uid + '/profile')">
+    <div class="user-img" style="background-image: url({{user.photoUrl}});">
+      <div class="user-info-container">
+        <mat-nav-list *ngIf="user.games" class="users-info">
+          <div class="user-name">{{user.nickname}}</div>
+          <div *ngFor="let game of user.games">
+            <div class="game" *ngIf="game.checked">
+              <img class="game-pic" [src]="game.iconUrl">
+            </div>
+          </div>
+        </mat-nav-list>
+      </div>
+    </div>
+    <ng-container *ngIf="user.audioUrl!=null && user.audioUrl!=''">
+      <audio [src]="user.audioUrl" controls class="user-audio">
+        Your browser does not support the audio element.
+      </audio>
+    </ng-container>
+  </mat-card>
+</div>

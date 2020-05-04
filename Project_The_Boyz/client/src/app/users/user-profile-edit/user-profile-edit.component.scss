@@ -1,0 +1,42 @@
+.full-width{
+  width: 100%;
+}
+.profile-box{
+  margin: 16px;
+}
+
+.selected-image {
+  max-width: 75%;
+  min-width: 75%;
+  height: auto;
+}
+.details-container{
+  width: 50%;
+}
+.photo-container{
+  width: 50%;
+  >*{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.audio-container,.recording-container{
+  margin-top: 16px;
+}
+.recording-time {
+  margin: auto auto auto 8px;
+}
+
+.users-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.game-pic {
+  margin-left: 5px;
+  margin-right: 5px;
+  width:35px;
+  height: 35px;
+}

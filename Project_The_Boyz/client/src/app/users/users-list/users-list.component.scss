@@ -1,0 +1,53 @@
+@import "../../../colors";
+
+.user {
+  padding: 0;
+  background-color: whitesmoke;
+  color: whitesmoke;
+  margin-bottom: auto;
+  .user-img {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-image: url("https://scene7.zumiez.com/is/image/zumiez/Zoom_PDP/Primitive-x-Rick-and-Morty-Pickle-Rick-Sticker-_309256-front-US.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .user-info-container{
+      position: absolute;
+      background-color: rgba(245, 245, 245, 0.2);
+      bottom: 0;
+      width: 100%;
+      padding: 5px 10px;
+
+      .users-info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        .user-name {
+          font-size: 2rem;
+          margin-right: auto;
+          font-family: Roboto, "Helvetica Neue", sans-serif;
+        }
+        .game{
+          .game-pic {
+            display: block;
+            margin: auto;
+            width: 2.2rem;
+          }
+        }
+      }
+    }
+  }
+  .user-audio{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.flex-wrapper {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

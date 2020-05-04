@@ -1,0 +1,18 @@
+<form id="form" class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+
+  <h2>Total amount: {{nrOfGames * seller.price}}$</h2>
+
+  <mat-form-field class="full-width">
+    <mat-label>No. of Games to play with {{seller.nickname}}</mat-label>
+    <input name="nrOfGames" [(ngModel)]="nrOfGames" type="number" matInput min="1">
+  </mat-form-field>
+
+  <br>
+  <input type="hidden" name="cmd" value="_donations"/>
+  <input type="hidden" name="business" value="{{seller.paypalEmail}}"/>
+  <input type="hidden" name="currency_code" value="USD"/>
+  <input type="hidden" name="amount" value="{{nrOfGames * seller.price}}"/>
+  <input type="hidden" name="return" value="{{clientUrl}}/confirmOrder/{{buyer.uid}}/{{seller.uid}}/{{hash}}"/>
+  <input type="hidden" name="cancel_return" value="{{clientUrl}}/users/{{seller.uid}}/profile"/>
+  <button type="submit" class="center" mat-raised-button (click)="onSubmit()">Submit</button>
+</form>
