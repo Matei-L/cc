@@ -8,6 +8,8 @@ environment.prod.ts
 firebaseConfig.js
 tema3\client\src\app\firebaseConfig.js
 tema3/client/dist
+Project_The_Boyz/client/dist
+Project_The_Boyz\client\src\app\firebaseConfig.js
 
 # Logs
 logs
@@ -76,6 +78,8 @@ node_modules/
 .env
 tema3/api/.firebaserc
 tema3/client/src/app/firebaseConfig.js
+Project_The_Boyz/api/.firebaserc
+Project_The_Boyz/client/src/app/firebaseConfig.js
 the-boyz-56c01-a8ba3771ec10.json
 sensitive.js
 tema3/client/dist/

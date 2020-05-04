@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <mat-card class="col-8 profile-box">
+      <h1>{{user.nickname}}'s profile</h1>
+
+      <div class="d-flex">
+        <div class="p-2 details-container">
+          <h2>About:</h2>
+          <p>{{user.description}}</p>
+          <br>
+          <div class="audio-container">
+            <audio class="full-width" *ngIf="user.audioUrl != null && user.audioUrl != ''" controls>
+              <source [src]="user.audioUrl" type="audio/webm">
+            </audio>
+          </div>
+          <br>
+          <mat-nav-list class="users-info" *ngIf="user.games">
+            <h2>Games:</h2>
+            <div class="games-list" *ngFor="let game of this.user.games">
+              <div class="game" *ngIf="game.checked">
+                <img class="game-pic" matCardImage [src]="game.iconUrl">
+                {{game.name}}
+              </div>
+            </div>
+            <br>
+          </mat-nav-list>
+          <br>
+        </div>
+
+        <div class="p-2 photo-container">
+          <img class="selected-image" [src]="user.photoUrl" alt="your profile image">
+          <h2 class="center">Price: {{user.price}}$/Game</h2>
+        </div>
+      </div>
+      <button *ngIf="currentUser" class="center" (click)="onPlay()" mat-raised-button>Play!</button>
+    </mat-card>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+

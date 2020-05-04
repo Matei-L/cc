@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="nav-bar">
+  <div>
+    <button mat-button (click)="goTo('/users')">The Boyz
+    </button>
+  </div>
+  <div *ngIf="loggedIn then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <div>
+      <button mat-button (click)="goTo('/users/profile')"><img class="profile-pic"
+                                                               src="{{profilePhotoUrl}}">
+        {{profileNickname}}
+
+      </button>
+      <button mat-button (click)="logOut()">Log Out</button>
+    </div>
+  </ng-template>
+  <ng-template #elseBlock>
+    <div>
+      <button mat-button (click)="openRegisterDialog()">Register</button>
+      <button mat-button (click)="openLoginDialog()">Login</button>
+    </div>
+  </ng-template>
+</mat-toolbar>
