@@ -9,6 +9,12 @@ import {delay, map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 
+
+export interface MyChatParticipant extends IChatParticipant {
+  role: string;
+  statusExplained: string;
+}
+
 export class MyChatAdapter extends ChatAdapter {
 
   private api = environment.baseUrl + '/orders';
@@ -18,7 +24,7 @@ export class MyChatAdapter extends ChatAdapter {
   }
 
   listFriends(): Observable<ParticipantResponse[]> {
-    return this.http.get<IChatParticipant[]>(this.api + '/byUser/' + this.userId).pipe(map(participants => {
+    return this.http.get<MyChatParticipant[]>(this.api + '/byUser/' + this.userId).pipe(map(participants => {
       return participants.map(participant => {
         const participantResponse = new ParticipantResponse();
         participantResponse.participant = participant;

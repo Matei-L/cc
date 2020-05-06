@@ -47,7 +47,9 @@ app.get('/byUser/:userId', checkToken, async (req, res) => {
                         id: pairUserId,
                         displayName: pairUser.nickname,
                         avatar: pairUser.photoUrl,
-                        status: statusId
+                        status: statusId,
+                        statusExplained: orders[uid].status,
+                        role: (pairUserId === orders[uid].buyerUid) ? 'buyer' : 'seller'
                     });
                 }, (errorObject) => {
                     console.log("The read failed: " + errorObject.code);
