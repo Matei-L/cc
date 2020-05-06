@@ -1,2 +1,5 @@
 <app-nav-bar></app-nav-bar>
 <router-outlet></router-outlet>
+<ng-chat *ngIf="userId !==''" [adapter]="adapter" [userId]="userId"
+        [title]="'Orders'" [isDisabled]="false" [pollFriendsList]="true"
+        ></ng-chat>

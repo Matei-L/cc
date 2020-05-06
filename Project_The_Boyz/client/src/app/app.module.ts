@@ -34,6 +34,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { PaypalDonationComponent } from './utils/paypal/paypal-donation/paypal-donation.component';
 import { ConfirmOrderComponent } from './utils/paypal/confirm-order/confirm-order.component';
+import {NgChatModule} from 'ng-chat';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { ConfirmOrderComponent } from './utils/paypal/confirm-order/confirm-orde
     MatSnackBarModule,
     ReactiveFormsModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    NgChatModule
   ],
   providers: [
     AudioRecordingService,
