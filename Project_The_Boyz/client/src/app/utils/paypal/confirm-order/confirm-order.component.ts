@@ -21,6 +21,7 @@ export class ConfirmOrderComponent implements OnInit {
 
   baseUrl = environment.baseUrl;
   buyerUid: string;
+  nrOfGames: number;
   sellerUid: string;
   hash: string;
   ok = false;
@@ -30,6 +31,7 @@ export class ConfirmOrderComponent implements OnInit {
       this.buyerUid = params.buyerUid;
       this.sellerUid = params.sellerUid;
       this.hash = params.hash;
+      this.nrOfGames = params.nrOfGames;
       console.log(this.baseUrl + '/check/' + this.buyerUid + '/' +
         this.sellerUid + '/' + this.hash);
       this.http.get<HashCheckResponse>(this.baseUrl + '/hash/check/' + this.buyerUid + '/' +
@@ -43,6 +45,7 @@ export class ConfirmOrderComponent implements OnInit {
           order.buyerUid = this.buyerUid;
           order.sellerUid = this.sellerUid;
           order.status = 'ongoing';
+          order.nrOfGames = this.nrOfGames;
           this.http.post(this.baseUrl + '/orders', order).subscribe(_ => {
             this.router.navigate(['/']);
           });

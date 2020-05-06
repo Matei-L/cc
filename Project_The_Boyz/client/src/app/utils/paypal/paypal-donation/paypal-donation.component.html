@@ -12,7 +12,7 @@
   <input type="hidden" name="business" value="{{seller.paypalEmail}}"/>
   <input type="hidden" name="currency_code" value="USD"/>
   <input type="hidden" name="amount" value="{{nrOfGames * seller.price}}"/>
-  <input type="hidden" name="return" value="{{clientUrl}}/confirmOrder/{{buyer.uid}}/{{seller.uid}}/{{hash}}"/>
+  <input type="hidden" name="return" value="{{clientUrl}}/confirmOrder/{{buyer.uid}}/{{seller.uid}}/{{hash}}/{{nrOfGames}}"/>
   <input type="hidden" name="cancel_return" value="{{clientUrl}}/users/{{seller.uid}}/profile"/>
   <button type="submit" class="center" mat-raised-button (click)="onSubmit()">Submit</button>
 </form>
