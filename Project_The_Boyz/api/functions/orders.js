@@ -9,6 +9,7 @@ app.post('/', checkToken, async (req, res) => {
     const ordersRef = admin.database().ref('orders').child(body.uid);
     await ordersRef.child('buyerUid').set(body.buyerUid);
     await ordersRef.child('sellerUid').set(body.sellerUid);
+    await ordersRef.child('nrOfGames').set(body.nrOfGames);
     // status can be 'ongoing', 'finished' and 'reported'
     await ordersRef.child('status').set(body.status);
     res.status(201).end();

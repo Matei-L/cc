@@ -3,6 +3,7 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {User} from '../../models/User';
 import {environment} from '../../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
+import {Router} from "@angular/router";
 
 
 interface HashResponse {
@@ -23,7 +24,7 @@ export class PaypalDonationComponent implements OnInit {
   nrOfGames = 1;
   hash: string;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, private router: Router) {
     this.buyer = data.buyer;
     this.seller = data.seller;
   }
@@ -36,7 +37,10 @@ export class PaypalDonationComponent implements OnInit {
       .subscribe(response => {
         this.hash = response.hash;
         console.log('/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash);
-        (document.getElementById('form') as HTMLFormElement).submit(); // -- uncomment to redirect to paypal
+        // (document.getElementById('form') as HTMLFormElement).submit(); // -- uncomment to redirect to paypal
+        this.router.navigate(
+          ['/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash + '/' + this.nrOfGames]
+        );
       });
   }
 }

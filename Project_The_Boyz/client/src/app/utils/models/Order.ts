@@ -5,6 +5,7 @@ export interface OrderPostObject {
   buyerUid: string;
   sellerUid: string;
   status: string;
+  nrOfGames: number;
 }
 
 export interface Order {

@@ -32,7 +32,7 @@ const routes: Routes = [
     component: UsersListComponent,
   },
   {
-    path: 'confirmOrder/:buyerUid/:sellerUid/:hash',
+    path: 'confirmOrder/:buyerUid/:sellerUid/:hash/:nrOfGames',
     component: ConfirmOrderComponent,
   },
   {
