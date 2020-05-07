@@ -3,6 +3,7 @@ import {AuthService} from './utils/auth/auth.service';
 import {ChatAdapter} from 'ng-chat';
 import {MyChatAdapter} from './utils/chat/MyChatAdapter';
 import {HttpClient} from '@angular/common/http';
+import {AngularFireDatabase} from '@angular/fire/database';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,11 @@ export class AppComponent {
   userId = '';
   public adapter: ChatAdapter;
 
-  constructor(private authService: AuthService, private http: HttpClient) {
+  constructor(private authService: AuthService, private http: HttpClient, private fireDatabase: AngularFireDatabase) {
     authService.getCurrentUser().subscribe(user => {
       if (user) {
         this.userId = user.uid;
-        this.adapter = new MyChatAdapter(this.userId, http);
+        this.adapter = new MyChatAdapter(this.userId, http, fireDatabase);
       }
     });
   }

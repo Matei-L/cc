@@ -2,6 +2,24 @@ const {checkToken} = require("./expressWrapper");
 const app = require("./expressWrapper").app();
 const admin = require('firebase-admin');
 
+app.get('/', checkToken, async (req, res) => {
+    const uid = req.uid;
+    const ordersRef = admin.database().ref('orders');
+    let orders = await ordersRef.once('value');
+    orders = orders.val();
+    let validOrders = [];
+    if (orders) {
+        Object.keys(orders).forEach((key) => {
+            let order = orders[key];
+            if (order['buyerUid'] === uid || order['sellerUid'] === uid) {
+                order.key = key;
+                validOrders.push(order);
+            }
+        });
+    }
+    res.send(validOrders);
+});
+
 app.post('/', checkToken, async (req, res) => {
     console.log("Posting shit");
     const body = req.body;
