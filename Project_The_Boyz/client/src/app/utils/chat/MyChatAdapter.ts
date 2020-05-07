@@ -50,10 +50,20 @@ export class MyChatAdapter extends ChatAdapter {
 
   addMessagesObserver(key: string): void {
     this.fireDatabase.list('orders/' + key + '/messages').snapshotChanges(['child_added']).subscribe((snap) => {
+      console.log(snap);
       snap.forEach((message) => {
         if (message.type === 'child_added') {
           const newMessage = message.payload.val() as Message;
-          if (!this.receivedMessages.includes(newMessage) && newMessage.toId === this.userId) {
+          console.log(this.receivedMessages);
+          let found = false;
+          this.receivedMessages.forEach((msg) => {
+            const x = msg as Message;
+            // tslint:disable-next-line:max-line-length
+            if (x.message === newMessage.message && x.toId === newMessage.toId && x.fromId === x.fromId && new Date(x.dateSent).getTime() === new Date(newMessage.dateSent).getTime()) {
+              found = true;
+            }
+          });
+          if (!found && newMessage.toId === this.userId) {
             console.log('New message received');
             const user = this.participants.find(x => x.id === newMessage.fromId);
             this.onMessageReceived(user, newMessage);

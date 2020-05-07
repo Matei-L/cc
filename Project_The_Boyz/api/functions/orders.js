@@ -28,6 +28,13 @@ app.post('/', checkToken, async (req, res) => {
     await ordersRef.child('buyerUid').set(body.buyerUid);
     await ordersRef.child('sellerUid').set(body.sellerUid);
     await ordersRef.child('nrOfGames').set(body.nrOfGames);
+    await ordersRef.child('message').set({
+            "dateSent" : new Date(),
+            "fromId" : body.buyerUid,
+            "message" : `Hello! I would like to play ${body.nrOfGames} games with you`,
+            "toId" : body.sellerUid,
+            "type" : 1
+        });
     // status can be 'ongoing', 'finished' and 'reported'
     await ordersRef.child('status').set(body.status);
     res.status(201).end();

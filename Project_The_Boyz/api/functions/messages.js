@@ -8,24 +8,23 @@ app.get('/:uid', checkToken, async (req, res) => {
     let orders = await admin.database().ref('orders').once('value');
     orders = orders.val();
     let found = false;
-    Object.values(orders).forEach((order) => {
-        console.log(order['buyerUid']);
-        console.log(order['sellerUid']);
-        if ((order['buyerUid'] === uid && order['sellerUid'] === partnerUid)
-            || (order['buyerUid'] === partnerUid && order['sellerUid'] === uid)) {
-            if (order['messages']) {
-                found = true;
-                console.log(Object.values(order['messages']));
-                res.send(Object.values(order['messages']));
-                return null;
-            } else {
-                found = true;
-                res.send([]);
-                return null;
+    if(orders){
+        Object.values(orders).forEach((order) => {
+            if ((order['buyerUid'] === uid && order['sellerUid'] === partnerUid)
+                || (order['buyerUid'] === partnerUid && order['sellerUid'] === uid)) {
+                if (order['messages']) {
+                    found = true;
+                    console.log(Object.values(order['messages']));
+                    res.send(Object.values(order['messages']));
+                    return null;
+                } else {
+                    found = true;
+                    res.send([]);
+                    return null;
+                }
             }
-        }
-    });
-    console.log(found);
+        });
+    }
     if (!found)
         res.send([]);
     return null;
