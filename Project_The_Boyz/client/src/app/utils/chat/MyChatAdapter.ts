@@ -33,7 +33,12 @@ export class MyChatAdapter extends ChatAdapter {
           const orderObject = order.payload.val() as OrderPostObject;
           console.log(orderObject);
           if (orderObject.buyerUid === userId || orderObject.sellerUid === userId) {
-            this.listFriends();
+            setTimeout(() => {
+              this.listFriends().subscribe(participants => {
+                console.log(participants);
+                this.onFriendsListChanged(participants);
+              });
+            }, 1000);
             this.addMessagesObserver(order.key);
           }
         }
@@ -75,7 +80,6 @@ export class MyChatAdapter extends ChatAdapter {
   }
 
   listFriends(): Observable<ParticipantResponse[]> {
-    console.log('List Friends called');
     return this.http.get<IChatParticipant[]>(this.api + '/byUser/' + this.userId).pipe(map(participants => {
       this.participants = participants;
       return participants.map(participant => {
