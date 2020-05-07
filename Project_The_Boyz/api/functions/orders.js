@@ -25,18 +25,20 @@ app.post('/', checkToken, async (req, res) => {
     const body = req.body;
     console.log(body);
     const ordersRef = admin.database().ref('orders').child(body.uid);
-    await ordersRef.child('buyerUid').set(body.buyerUid);
-    await ordersRef.child('sellerUid').set(body.sellerUid);
-    await ordersRef.child('nrOfGames').set(body.nrOfGames);
-    await ordersRef.child('message').set({
-            "dateSent" : new Date(),
-            "fromId" : body.buyerUid,
-            "message" : `Hello! I would like to play ${body.nrOfGames} games with you`,
-            "toId" : body.sellerUid,
-            "type" : 1
-        });
-    // status can be 'ongoing', 'finished' and 'reported'
-    await ordersRef.child('status').set(body.status);
+    await ordersRef.set({
+        buyerUid: body.buyerUid,
+        sellerUid: body.sellerUid,
+        nrOfGames: body.nrOfGames,
+        messages: {first: {
+            "dateSent": admin.database.ServerValue.TIMESTAMP,
+            "fromId": body.buyerUid,
+            "message": `Hello! I would like to play ${body.nrOfGames} games with you`,
+            "toId": body.sellerUid,
+            "type": 1
+        }},
+        // status can be 'ongoing', 'finished' and 'reported'
+        status: body.status
+    });
     res.status(201).end();
 });
 

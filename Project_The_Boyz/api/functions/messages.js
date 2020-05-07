@@ -8,16 +8,16 @@ app.get('/:uid', checkToken, async (req, res) => {
     let orders = await admin.database().ref('orders').once('value');
     orders = orders.val();
     let found = false;
-    if(orders){
+    if (orders) {
         Object.values(orders).forEach((order) => {
             if ((order['buyerUid'] === uid && order['sellerUid'] === partnerUid)
                 || (order['buyerUid'] === partnerUid && order['sellerUid'] === uid)) {
-                if (order['messages']) {
+                if (order['messages'] && !found) {
                     found = true;
                     console.log(Object.values(order['messages']));
                     res.send(Object.values(order['messages']));
                     return null;
-                } else {
+                } else if (!found) {
                     found = true;
                     res.send([]);
                     return null;
