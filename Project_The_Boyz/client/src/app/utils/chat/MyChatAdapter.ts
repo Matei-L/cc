@@ -11,6 +11,12 @@ import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {Order, OrderPostObject} from '../models/Order';
 
+
+export interface MyChatParticipant extends IChatParticipant {
+  role: string;
+  statusExplained: string;
+}
+
 export class MyChatAdapter extends ChatAdapter {
 
   private api = environment.baseUrl + '/orders';

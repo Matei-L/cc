@@ -3,7 +3,6 @@ const app = require("./expressWrapper").app();
 const {Storage} = require('@google-cloud/storage');
 const getRawBody = require('raw-body');
 const Busboy = require('busboy');
-const fs = require('fs');
 const path = require('path');
 const sensitive = require('./sensitive');
 
@@ -50,21 +49,22 @@ app.post('/', (req, res, next) => {
                 headers: req.headers,
             });
 
-            let fileBuffer = new Buffer('');
+            req.files = [];
 
             busboy.on('file', (fieldname, file, filename, encoding, mimetype) => {
+                let fileBuffer = new Buffer('');
                 file.on('data', data => {
                     fileBuffer = Buffer.concat([fileBuffer, data])
                 });
 
                 file.on('end', () => {
-                    req.file = {
+                    req.files.push({
                         fieldname,
                         originalname: filename,
                         encoding,
                         mimetype,
                         buffer: fileBuffer,
-                    };
+                    });
                 })
             });
 
@@ -93,20 +93,28 @@ app.post('/', (req, res, next) => {
         }
     },
 
-    (req, res, next) => {
+    async (req, res, next) => {
         // request handler
-        const file = req.file;
+        const files = req.files;
 
-        if (file) {
-            uploadImageToStorage(file).then((success) => {
-                return res.status(201).send({
-                    url: success
-                });
-            }).catch((error) => {
-                return console.error(error);
-            });
+        let urls = [];
+        let promises = [];
+
+        for (const file of files) {
+            if (file) {
+                promises.push(uploadImageToStorage(file));
+            }
         }
-        return console.log('improvised middleware finished');
+        await Promise.all(promises).then((values) => {
+            urls = values;
+        }).catch((error) => {
+            console.error(error);
+        });
+        if (urls.length === 1) {
+            res.status(201).json({url: urls[0]}).end();
+        } else {
+            res.status(201).json({urls: urls}).end();
+        }
     });
 
 const uploadImageToStorage = (file) => {
@@ -137,23 +145,5 @@ const uploadImageToStorage = (file) => {
         return blobStream.end(file.buffer);
     });
 };
-
-async function uploadFile(filePath) {
-    // Uploads a local file to the bucket
-    await bucket.upload(filePath, {
-        // Support for HTTP requests made with `Accept-Encoding: gzip`
-        gzip: true,
-        // By setting the option `destination`, you can change the name of the
-        // object you are uploading to a bucket.
-        metadata: {
-            // Enable long-lived HTTP caching headers
-            // Use only if the contents of the file will never change
-            // (If the contents will change, use cacheControl: 'no-cache')
-            cacheControl: 'no-cache,max-age=0',
-        },
-    });
-
-    console.log(`${filePath} uploaded to bucket.`);
-}
 
 module.exports = app;

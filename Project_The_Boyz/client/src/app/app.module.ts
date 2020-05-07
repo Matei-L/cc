@@ -36,6 +36,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { PaypalDonationComponent } from './utils/paypal/paypal-donation/paypal-donation.component';
 import { ConfirmOrderComponent } from './utils/paypal/confirm-order/confirm-order.component';
 import {NgChatModule} from 'ng-chat';
+import { OrderUpdateDialogComponent } from './utils/chat/order-update-dialog/order-update-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import {NgChatModule} from 'ng-chat';
     UserProfileComponent,
     PaypalDonationComponent,
     ConfirmOrderComponent,
+    OrderUpdateDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {User} from '../../models/User';
 import {environment} from '../../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 
 interface HashResponse {
