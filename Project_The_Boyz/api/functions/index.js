@@ -7,6 +7,7 @@ const filesApi = require('./files');
 const games = require('./games');
 const hash = require('./hash');
 const orders = require('./orders');
+const messages = require('./messages');
 
 // Expose Express API as a single Cloud Function:
 module.exports.speechToText = https.onRequest(speechToTextApi);
@@ -15,3 +16,4 @@ module.exports.files = https.onRequest(filesApi);
 module.exports.games = https.onRequest(games);
 module.exports.hash = https.onRequest(hash);
 module.exports.orders = https.onRequest(orders);
+module.exports.messages = https.onRequest(messages);

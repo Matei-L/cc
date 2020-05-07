@@ -6,10 +6,10 @@ import {HttpClient} from '@angular/common/http';
 import {Window} from 'ng-chat/ng-chat/core/window';
 import {IChatOption} from 'ng-chat/ng-chat/core/chat-option';
 import {NgChat} from 'ng-chat/ng-chat/ng-chat.component';
-import {PaypalDonationComponent} from './utils/paypal/paypal-donation/paypal-donation.component';
 import {MatDialog} from "@angular/material/dialog";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {OrderUpdateDialogComponent} from "./utils/chat/order-update-dialog/order-update-dialog.component";
+import {AngularFireDatabase} from '@angular/fire/database';
 
 @Component({
   selector: 'app-root',
@@ -24,11 +24,11 @@ export class AppComponent implements AfterViewChecked {
   protected ngChatInstance: NgChat;
   private ngChatModified = false;
 
-  constructor(private authService: AuthService, private http: HttpClient, private matDialog: MatDialog, private snackBar: MatSnackBar) {
+  constructor(private authService: AuthService, private http: HttpClient, private fireDatabase: AngularFireDatabase, private matDialog: MatDialog, private snackBar: MatSnackBar) {
     authService.getCurrentUser().subscribe(user => {
       if (user) {
         this.userId = user.uid;
-        this.adapter = new MyChatAdapter(this.userId, http);
+        this.adapter = new MyChatAdapter(this.userId, http, fireDatabase);
       }
     });
   }

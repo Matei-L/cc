@@ -22,9 +22,7 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/', checkToken, async (req, res) => {
-    console.log("Posting shit");
     const body = req.body;
-    console.log(body);
     const userRef = admin.database().ref('users').child(body.uid);
     await userRef.child('email').set(body.email);
     await userRef.child('nickname').set(body.nickname);
@@ -65,8 +63,6 @@ app.put('/', checkToken, async (req, res) => {
         await userRef.child('audioUrl').set(body.audioUrl.replace('@', '%40'));
     }
     if (body.games) {
-        console.log("The put games are : ");
-        console.log(body.games);
         const userGamesRef = userRef.child('games');
         for (let i = 0; i < body.games.length; i++)
             userGamesRef.child(`q${i}`).set(body.games[i])
@@ -85,7 +81,6 @@ app.get('/:uid', async (req, res) => {
         if (user) {
             user.uid = uid;
         }
-        console.log(user);
         res.status(200).json(user).end();
     }, (errorObject) => {
         console.log("The read failed: " + errorObject.code);

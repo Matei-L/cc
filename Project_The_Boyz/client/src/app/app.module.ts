@@ -8,6 +8,7 @@ import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
 
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {LoginComponent} from './login/login.component';
@@ -67,6 +68,7 @@ import { OrderUpdateDialogComponent } from './utils/chat/order-update-dialog/ord
     MatDialogModule,
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
     MatListModule,
     MatSnackBarModule,
     ReactiveFormsModule,

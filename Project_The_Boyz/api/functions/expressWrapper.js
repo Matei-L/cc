@@ -33,14 +33,14 @@ const express = (requiresToken = true) => {
     return app;
 };
 
-const checkToken = (req, res, next) => {
+const checkToken = async (req, res, next) => {
     // Add middleware to authenticate requests
     if (req.headers.authorization) {
         let token = req.headers.authorization.replace('Bearer ', '');
         let result;
         let success;
         try {
-            result = admin.auth().verifyIdToken(token);
+            result = await admin.auth().verifyIdToken(token);
         } catch (e) {
             console.log('Error: token verification failed!');
         }
@@ -51,9 +51,7 @@ const checkToken = (req, res, next) => {
                 .json("Forbidden.")
                 .end();
         } else {
-            /**
-             * in result gasesti date despre user-ul gasit in caz ca e nevoie de modificari
-             */
+            req.uid = result.uid;
         }
     } else {
         res.status(401)
