@@ -25,6 +25,7 @@ app.post('/', checkToken, async (req, res) => {
     const body = req.body;
     const userRef = admin.database().ref('users').child(body.uid);
     await userRef.child('email').set(body.email);
+    await userRef.child('isAdmin').set(false);
     await userRef.child('nickname').set(body.nickname);
     if (body.price) {
         await userRef.child('price').set(body.price);

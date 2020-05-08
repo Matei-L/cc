@@ -8,6 +8,8 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {UserProfileComponent} from './users/user-profile/user-profile.component';
 import {AuthGuard} from './utils/auth/auth.guard';
 import {ConfirmOrderComponent} from "./utils/paypal/confirm-order/confirm-order.component";
+import {ReportedOrdersListComponent} from "./admin/reportedOrders/reported-orders-list/reported-orders-list.component";
+import {ReportedOrderInfoComponent} from "./admin/reportedOrders/reported-order-info/reported-order-info.component";
 
 const routes: Routes = [
   {
@@ -30,6 +32,18 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersListComponent,
+  },
+  {
+    path: 'confirmOrder/:buyerUid/:sellerUid/:hash/:nrOfGames',
+    component: ConfirmOrderComponent,
+  },
+  {
+    path: 'admin/reportedOrders',
+    component: ReportedOrdersListComponent,
+  },
+  {
+    path: 'admin/reportedOrders/:uid',
+    component: ReportedOrderInfoComponent,
   },
   {
     path: 'confirmOrder/:buyerUid/:sellerUid/:hash/:nrOfGames',

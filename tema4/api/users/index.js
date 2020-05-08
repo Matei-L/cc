@@ -7,12 +7,12 @@ const url = sensitive.databaseUrl();
 const mongoClient = require("mongodb").MongoClient;
 
 
-app.get(prefix + "/", async(req, res) => {
-    await mongoClient.connect(url, function(err, client) {
+app.get(prefix + "/", async (req, res) => {
+    await mongoClient.connect(url, function (err, client) {
         let db = client.db('the-boyz');
         let cursor = db.collection('users').find();
         let users = [];
-        cursor.each(function(err, doc) {
+        cursor.each(function (err, doc) {
             if (doc != null && doc.description) {
                 delete doc._id;
                 users.push(doc);
@@ -23,7 +23,7 @@ app.get(prefix + "/", async(req, res) => {
     });
 });
 
-app.post(prefix + '/', passport.authenticate('oauth-bearer', { session: false }), async(req, res) => {
+app.post(prefix + '/', passport.authenticate('oauth-bearer', {session: false}), async (req, res) => {
     let body = req.body;
     if (!body) {
         res.status(400);
@@ -34,17 +34,19 @@ app.post(prefix + '/', passport.authenticate('oauth-bearer', { session: false })
     console.log(req);
     console.log("----------------------------------------------------------------------------");
 
-    await mongoClient.connect(url, function(err, client) {
+    await mongoClient.connect(url, function (err, client) {
         let db = client.db('the-boyz');
-        db.collection('users').insertOne({
-            uid: body.uid,
-            email: body.email,
-            nickname: body.nickname,
-            description: body.description,
-            photoUrl: body.photoUrl ? body.photoUrl.replace('@', '%40') : undefined,
-            audioUrl: body.audioUrl ? body.audioUrl.replace('@', '%40') : undefined,
-            games: []
-        }, function(err, result) {
+        db.collection('users').updateOne({"uid": body.uid}, {
+            $set: {
+                uid: body.uid,
+                email: body.email,
+                nickname: body.nickname,
+                description: body.description,
+                photoUrl: body.photoUrl ? body.photoUrl.replace('@', '%40') : undefined,
+                audioUrl: body.audioUrl ? body.audioUrl.replace('@', '%40') : undefined,
+                games: []
+            }
+        }, {upsert: true}, function (err, result) {
             if (err) {
                 console.log(err);
                 res.status(400);
@@ -57,7 +59,7 @@ app.post(prefix + '/', passport.authenticate('oauth-bearer', { session: false })
         });
     });
 });
-app.put(prefix + '/',  passport.authenticate('oauth-bearer', { session: false }), async(req, res) => {
+app.put(prefix + '/', passport.authenticate('oauth-bearer', {session: false}), async (req, res) => {
     console.log("----------------------------------------------------------------------------");
     console.log("PUT USER");
     console.log(req);
@@ -82,25 +84,25 @@ app.put(prefix + '/',  passport.authenticate('oauth-bearer', { session: false })
     if (body.games) {
         updatedUser.games = body.games;
     }
-    await mongoClient.connect(url, function(err, client) {
+    await mongoClient.connect(url, function (err, client) {
         let db = client.db('the-boyz');
-        db.collection('users').updateOne({ "uid": body.uid }, {
+        db.collection('users').updateOne({"uid": body.uid}, {
             $set: updatedUser
-        }, function(err, results) {
+        }, function (err, results) {
             console.log(results);
         });
         res.send(null);
     });
 });
 
-app.get(prefix + '/:uid', async(req, res) => {
+app.get(prefix + '/:uid', async (req, res) => {
     console.log("----------------------------------------------------------------------------");
     console.log("GET BY UID");
     console.log("----------------------------------------------------------------------------");
-    await mongoClient.connect(url, function(err, client) {
+    await mongoClient.connect(url, function (err, client) {
         let db = client.db('the-boyz');
-        let cursor = db.collection('users').find({ uid: req.params.uid });
-        cursor.each(function(err, doc) {
+        let cursor = db.collection('users').find({uid: req.params.uid});
+        cursor.each(function (err, doc) {
             if (doc != null) {
                 delete doc._id;
                 res.send(doc);

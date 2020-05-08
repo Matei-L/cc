@@ -10,6 +10,7 @@ interface TranscriptionObject {
 
 interface PostFileResponseObject {
   url: string;
+  urls: string[];
 }
 
 @Injectable({

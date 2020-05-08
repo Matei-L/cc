@@ -20,25 +20,89 @@ app.get('/', checkToken, async (req, res) => {
     res.send(validOrders);
 });
 
+
+app.put('/updateStatus', checkToken, async (req, res) => {
+    const body = req.body;
+    const orderRef = admin.database().ref('orders').child(body.orderUid);
+    if (body.finishedUrls) {
+        await orderRef.child('finishedUrls').set(body.finishedUrls);
+    }
+    if (body.reportedUrls) {
+        await orderRef.child('reportedUrls').set(body.reportedUrls);
+    }
+    if (body.finishedMessage) {
+        await orderRef.child('finishedMessage').set(body.finishedMessage);
+    }
+    if (body.reportedMessage) {
+        await orderRef.child('reportedMessage').set(body.reportedMessage);
+    }
+    await orderRef.child('status').set(body.status);
+    res.status(200).end();
+});
+
+
 app.post('/', checkToken, async (req, res) => {
     console.log("Posting shit");
     const body = req.body;
-    console.log(body);
-    const ordersRef = admin.database().ref('orders').child(body.uid);
-    await ordersRef.set({
-        buyerUid: body.buyerUid,
-        sellerUid: body.sellerUid,
-        nrOfGames: body.nrOfGames,
-        messages: {first: {
-            "dateSent": admin.database.ServerValue.TIMESTAMP,
-            "fromId": body.buyerUid,
-            "message": `Hello! I would like to play ${body.nrOfGames} games with you`,
-            "toId": body.sellerUid,
-            "type": 1
-        }},
-        // status can be 'ongoing', 'finished' and 'reported'
-        status: body.status
-    });
+    const ordersRef = admin.database().ref('orders');
+    let orders = await ordersRef.once('value');
+    let alreadyExists = false;
+    orders = orders.val();
+    if (orders) {
+        for (const key of Object.keys(orders)) {
+            let order = orders[key];
+            if (order['buyerUid'] === body.buyerUid && order['sellerUid'] === body.sellerUid) {
+                alreadyExists = true;
+                const currentNrOfGames = (await admin.database().ref(`orders/${key}/nrOfGames`).once('value')).val();
+                const currentStatus = (await admin.database().ref(`orders/${key}/status`).once('value')).val();
+                if (currentStatus === 'ongoing') {
+                    await admin.database().ref(`orders/${key}/nrOfGames`).set(parseInt(currentNrOfGames) + parseInt(body.nrOfGames));
+                    await admin.database().ref(`orders/${key}/messages`).push({
+                        "dateSent": admin.database.ServerValue.TIMESTAMP,
+                        "fromId": body.buyerUid,
+                        "message": `Hello! I would like to play ${body.nrOfGames} 
+                        ${body.nrOfGames > 1 ? 'more games' : 'more game'} with you`,
+                        "toId": body.sellerUid,
+                        "type": 1
+                    });
+                } else {
+                    await admin.database().ref(`orders/${key}/nrOfGames`).set(body.nrOfGames);
+                    await admin.database().ref(`orders/${key}/status`).set('ongoing');
+                    await admin.database().ref(`orders/${key}/messages`).set({
+                        first: {
+                            "dateSent": admin.database.ServerValue.TIMESTAMP,
+                            "fromId": body.buyerUid,
+                            "message": `Hello! I would like to play ${body.nrOfGames} 
+                    ${body.nrOfGames > 1 ? 'games' : 'game'} with you`,
+                            "toId": body.sellerUid,
+                            "type": 1
+                        }
+                    });
+                }
+                break;
+            }
+        }
+    }
+    if (!alreadyExists) {
+        const ordersRef = admin.database().ref('orders').child(body.uid);
+        await ordersRef.set({
+            buyerUid: body.buyerUid,
+            sellerUid: body.sellerUid,
+            nrOfGames: body.nrOfGames,
+            messages: {
+                first: {
+                    "dateSent": admin.database.ServerValue.TIMESTAMP,
+                    "fromId": body.buyerUid,
+                    "message": `Hello! I would like to play ${body.nrOfGames} 
+                    ${body.nrOfGames > 1 ? 'games' : 'game'} with you`,
+                    "toId": body.sellerUid,
+                    "type": 1
+                }
+            },
+            // status can be 'ongoing', 'finished' and 'reported'
+            status: body.status
+        });
+    }
     res.status(201).end();
 });
 
@@ -76,7 +140,8 @@ app.get('/byUser/:userId', checkToken, async (req, res) => {
                         avatar: pairUser.photoUrl,
                         status: statusId,
                         statusExplained: orders[uid].status,
-                        role: (pairUserId === orders[uid].buyerUid) ? 'buyer' : 'seller'
+                        role: (pairUserId === orders[uid].buyerUid) ? 'buyer' : 'seller',
+                        orderUid: uid
                     });
                 }, (errorObject) => {
                     console.log("The read failed: " + errorObject.code);

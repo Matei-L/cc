@@ -4,17 +4,18 @@ import {
   Message,
   ParticipantResponse
 } from 'ng-chat';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {AngularFireDatabase, snapshotChanges} from '@angular/fire/database';
-import {delay, map} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
-import {Order, OrderPostObject} from '../models/Order';
+import {OrderPostObject} from '../models/Order';
 
 
 export interface MyChatParticipant extends IChatParticipant {
   role: string;
   statusExplained: string;
+  orderUid: string;
 }
 
 export class MyChatAdapter extends ChatAdapter {

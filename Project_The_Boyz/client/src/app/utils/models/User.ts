@@ -10,4 +10,5 @@ export interface User {
   games: Array<Game>;
   price: number;
   paypalEmail: string;
+  isAdmin: boolean;
 }

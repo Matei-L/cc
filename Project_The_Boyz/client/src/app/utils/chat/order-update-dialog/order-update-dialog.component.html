@@ -1,2 +1,49 @@
-<p>order-update-dialog works!</p>
-<p>{{buyerId}} -> {{sellerId}} -> {{status}}</p>
+<mat-dialog-content>
+
+  <div class="d-flex flex-row align-items-center">
+    <div class="p-2">
+      <img class="avatar-image" src="{{participantAvatar}}" alt="participant's avatar">
+    </div>
+    <h1 class="p-2 title" *ngIf="isReporting; else elseBlock">Report your order to {{participantNickname}}?</h1>
+    <ng-template class="p-2 title" #elseBlock>Finish your order for {{participantNickname}}?</ng-template>
+  </div>
+  <br>
+  <div class="center">
+    <mat-form-field class="full-width">
+      <mat-label>Your Description</mat-label>
+      <textarea matInput [(ngModel)]="message"
+                name="{{isReporting?'reportedMessage':'finishedMessage'}}"></textarea>
+    </mat-form-field>
+  </div>
+  <br>
+  <div class="center">
+    <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)">
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+        <label for="dropButton"
+               style=" display: flex; justify-content: center; align-items: center;width: 100%; height: 100%">
+          <p>Drop files here</p>
+        </label>
+        <button id="dropButton" hidden type="button" (click)="openFileSelector()">Browse Files</button>
+      </ng-template>
+    </ngx-file-drop>
+
+    <div class="upload-table">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+        </thead>
+        <tbody class="upload-name-style">
+        <tr *ngFor="let item of dropFiles; let i=index">
+          <td><strong>{{ item.relativePath }}</strong></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <div class="fullwidth" style="margin-bottom: 10px; display: flex; justify-content: center; align-items: center;">
+    <button class="center" mat-raised-button (click)="onSend()">Send!</button>
+  </div>
+</mat-dialog-content>
