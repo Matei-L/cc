@@ -37,6 +37,9 @@ import { PaypalDonationComponent } from './utils/paypal/paypal-donation/paypal-d
 import { ConfirmOrderComponent } from './utils/paypal/confirm-order/confirm-order.component';
 import {NgChatModule} from 'ng-chat';
 import { OrderUpdateDialogComponent } from './utils/chat/order-update-dialog/order-update-dialog.component';
+import {NgxFileDropModule} from "ngx-file-drop";
+import { ReportedOrdersListComponent } from './admin/reportedOrders/reported-orders-list/reported-orders-list.component';
+import { ReportedOrderInfoComponent } from './admin/reportedOrders/reported-order-info/reported-order-info.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,8 @@ import { OrderUpdateDialogComponent } from './utils/chat/order-update-dialog/ord
     PaypalDonationComponent,
     ConfirmOrderComponent,
     OrderUpdateDialogComponent,
+    ReportedOrdersListComponent,
+    ReportedOrderInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +79,8 @@ import { OrderUpdateDialogComponent } from './utils/chat/order-update-dialog/ord
     ReactiveFormsModule,
     MatRadioModule,
     MatCheckboxModule,
-    NgChatModule
+    NgChatModule,
+    NgxFileDropModule
   ],
   providers: [
     AudioRecordingService,

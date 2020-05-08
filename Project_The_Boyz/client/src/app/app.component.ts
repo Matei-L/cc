@@ -42,19 +42,22 @@ export class AppComponent implements AfterViewChecked {
             setTimeout(() => ngChatInstance.currentActiveOption = null, 1);
 
             const status = (chattingWindow.participant as MyChatParticipant).statusExplained;
+            const orderUid = (chattingWindow.participant as MyChatParticipant).orderUid;
             if ((chattingWindow.participant as MyChatParticipant).role === 'seller') {
               // I am the buyer
               if (status === 'reported' || status === 'finished-and-reported') {
                 this.createSnackBar('Already Reported!');
               } else {
-                this.openReportDialog(this.userId, chattingWindow.participant.id, status);
+                this.openReportDialog(orderUid, this.userId, chattingWindow.participant.id, status,
+                  chattingWindow.participant.displayName, chattingWindow.participant.avatar);
               }
             } else {
               // I am the seller
               if (status === 'finished' || status === 'finished-and-reported') {
                 this.createSnackBar('Already Finished!');
               } else {
-                this.openFinishDialog(this.userId, chattingWindow.participant.id, status);
+                this.openFinishDialog(orderUid, this.userId, chattingWindow.participant.id, status,
+                  chattingWindow.participant.displayName, chattingWindow.participant.avatar);
               }
             }
 
@@ -83,34 +86,46 @@ export class AppComponent implements AfterViewChecked {
     });
   }
 
-  private openReportDialog(buyerId: string, sellerId: string, currentStatus: string) {
+  private openReportDialog(orderUid: string, buyerId: string, sellerId: string, currentStatus: string, participantNickname: string,
+                           participantAvatar: string) {
     let status;
     if (currentStatus === 'ongoing') {
       status = 'reported';
     } else {
       status = 'finished-and-reported';
     }
+    const requestType = 'report';
     const dialogRef = this.matDialog.open(OrderUpdateDialogComponent, {
       data: {
+        requestType,
+        orderUid,
         buyerId,
         sellerId,
-        status
+        status,
+        participantNickname,
+        participantAvatar
       }
     });
   }
 
-  private openFinishDialog(sellerId: string, buyerId: string, currentStatus: string) {
+  private openFinishDialog(orderUid: string, sellerId: string, buyerId: string, currentStatus: string, participantNickname: string,
+                           participantAvatar: string) {
     let status;
     if (currentStatus === 'ongoing') {
       status = 'finished';
     } else {
       status = 'finished-and-reported';
     }
+    const requestType = 'finish';
     const dialogRef = this.matDialog.open(OrderUpdateDialogComponent, {
       data: {
+        requestType,
+        orderUid,
         buyerId,
         sellerId,
-        status
+        status,
+        participantNickname,
+        participantAvatar
       }
     });
   }

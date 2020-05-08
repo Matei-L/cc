@@ -34,7 +34,7 @@
           <h2 class="center">Price: {{user.price}}$/Game</h2>
         </div>
       </div>
-      <button *ngIf="currentUser" class="center" (click)="onPlay()" mat-raised-button>Play!</button>
+      <button *ngIf="currentUser && currentUser.uid !== user.uid" class="center" (click)="onPlay()" mat-raised-button>Play!</button>
     </mat-card>
     <div class="col-2">
     </div>

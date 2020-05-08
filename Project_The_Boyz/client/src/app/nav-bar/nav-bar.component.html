@@ -11,6 +11,9 @@
         {{profileNickname}}
 
       </button>
+      <button *ngIf="currentUser && currentUser.isAdmin" mat-button (click)="goTo('/admin/reportedOrders')">
+        Admin
+      </button>
       <button mat-button (click)="logOut()">Log Out</button>
     </div>
   </ng-template>

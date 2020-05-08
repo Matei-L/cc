@@ -32,6 +32,7 @@
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "ng-chat": "^3.0.0",
+    "ngx-file-drop": "^9.0.1",
     "recordrtc": "^5.5.9",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
