@@ -19,4 +19,8 @@ export interface ReportedOrder {
   status: string;
   nrOfGames: number;
   messages: Array<Message>;
+  reportedUrls: Array<string>;
+  reportedMessage: string;
+  finishedUrls: Array<string>;
+  finishedMessage: string;
 }

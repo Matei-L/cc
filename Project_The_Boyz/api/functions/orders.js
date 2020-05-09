@@ -20,7 +20,7 @@ app.get('/', checkToken, async (req, res) => {
     res.send(validOrders);
 });
 
-app.get('/reported', async (req, res) => {
+app.get('/reported', checkToken, checkAdmin, async (req, res) => {
     const ordersRef = admin.database().ref('orders');
     let orders = await ordersRef.once('value');
     orders = orders.val();
@@ -168,7 +168,7 @@ app.get('/byUser/:userId', checkToken, async (req, res) => {
     }
 });
 
-app.get('/:uid', async (req, res) => {
+app.get('/:uid', checkToken, checkAdmin, async (req, res) => {
     let orderUid = req.params.uid;
     let order = await admin.database().ref(`orders/${orderUid}`).once('value');
     order = order.val();
@@ -188,6 +188,7 @@ async function getReportedOrder(order, uid) {
             seller = values[1].val();
             order.buyer = buyer;
             order.buyer.uid = order.buyerUid;
+            order.messages = Object.values(order.messages);
             order.seller = seller;
             order.seller.uid = order.sellerUid;
             order.uid = uid;

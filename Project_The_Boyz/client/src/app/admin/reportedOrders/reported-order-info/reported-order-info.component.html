@@ -1,3 +1,60 @@
-<div *ngIf="currentUser && currentUser">
-  <p>reported-order-info works!</p>
+<div *ngIf="currentUser && currentUser &&order">
+  <mat-card class="order">
+    <mat-list>
+      <div class="title">
+        {{capitalize(order.status)}}
+      </div>
+      <div class="people">
+        <div class="seller">
+          <div>Seller</div>
+          <img src="{{order.seller.photoUrl}}">
+          <button mat-raised-button (click)="sendMailTo(order.seller.email)">{{order.seller.email}}</button>
+        </div>
+        <div class="buyer">
+          <div>Buyer</div>
+          <img src="{{order.buyer.photoUrl}}">
+          <button mat-raised-button (click)="sendMailTo(order.buyer.email)">{{order.buyer.email}}</button>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+
+
+      <div class="title" *ngIf="order.reportedMessage">Buyer proof</div>
+      <div class="images" *ngIf="order.reportedMessage">
+        <div class="image" *ngFor="let imageUrl of order.reportedUrls"
+             style="background-image: url({{imageUrl}});"></div>
+      </div>
+      <div class="proof-message" *ngIf="order.reportedMessage">
+        <div class="buyer-message">
+          {{order.buyer.nickname}}
+        </div>
+        &nbsp;: {{order.reportedMessage}}</div>
+      <mat-divider *ngIf="order.reportedMessage"></mat-divider>
+
+
+      <div class="title" *ngIf="order.finishedMessage">Seller proof</div>
+      <div class="images" *ngIf="order.finishedMessage">
+        <div class="image" *ngFor="let imageUrl of order.finishedUrls"
+             style="background-image: url({{imageUrl}});"></div>
+      </div>
+      <div class="proof-message" *ngIf="order.finishedMessage">
+        <div class="seller-message">
+          {{order.seller.nickname}}
+        </div>
+        &nbsp;: {{order.finishedMessage}}</div>
+      <mat-divider *ngIf="order.finishedMessage"></mat-divider>
+
+
+      <div class="title">Messages</div>
+      <div class="message" *ngFor="let message of messages">
+        <div *ngIf="message.fromId===order.seller.uid" class="seller-message">
+          {{order.seller.nickname}}
+        </div>
+        <div *ngIf="message.fromId===order.buyer.uid" class="buyer-message">
+          {{order.buyer.nickname}}
+        </div>
+        &nbsp;: {{message.message}}
+      </div>
+    </mat-list>
+  </mat-card>
 </div>

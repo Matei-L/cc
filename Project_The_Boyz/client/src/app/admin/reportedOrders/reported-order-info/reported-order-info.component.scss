@@ -1,0 +1,77 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90%;
+  margin: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.people {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.buyer, .seller {
+  text-align: center;
+  font-size: 18px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image{
+  margin: 10px;
+  align-self: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+
+.buyer > img, .seller > img {
+  align-self: center;
+  width: 300px;
+  height: 300px;
+}
+
+.seller > button, .buyer > button {
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+.message {
+  display: flex;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.seller-message {
+  color: red;
+}
+
+.buyer-message {
+  color: blueviolet;
+}
+
+.proof-message{
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
