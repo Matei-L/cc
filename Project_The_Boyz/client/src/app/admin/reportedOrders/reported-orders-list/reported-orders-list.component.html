@@ -1,4 +1,20 @@
 <div *ngIf="currentUser && currentUser.isAdmin">
-  <p>reported-orders-list works!</p>
+  <mat-card class="order" *ngFor="let order of orders" (click)="goTo('/admin/reportedOrders/'+order.uid)">
+    <div class="title">
+      {{capitalize(order.status)}}
+    </div>
+    <div class="people">
+      <div class="seller">
+        <div>Seller</div>
+        <img src="{{order.seller.photoUrl}}">
+        <div>{{order.seller.nickname}}</div>
+      </div>
+      <div class="buyer">
+        <div>Buyer</div>
+        <img src="{{order.buyer.photoUrl}}">
+        <div>{{order.buyer.nickname}}</div>
+      </div>
+    </div>
+  </mat-card>
 </div>
 

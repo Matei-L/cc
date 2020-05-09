@@ -1,4 +1,4 @@
-const {checkToken} = require("./expressWrapper");
+const {checkToken, checkAdmin} = require("./expressWrapper");
 const app = require("./expressWrapper").app();
 const admin = require('firebase-admin');
 
@@ -16,6 +16,20 @@ app.get('/', checkToken, async (req, res) => {
                 validOrders.push(order);
             }
         });
+    }
+    res.send(validOrders);
+});
+
+app.get('/reported', async (req, res) => {
+    const ordersRef = admin.database().ref('orders');
+    let orders = await ordersRef.once('value');
+    orders = orders.val();
+    let validOrders = [];
+    for (const key of Object.keys(orders)) {
+        let order = orders[key];
+        if (order['status'] === 'finished-and-reported' || order['status'] === 'reported') {
+            validOrders.push(await getReportedOrder(order, key))
+        }
     }
     res.send(validOrders);
 });
@@ -153,5 +167,35 @@ app.get('/byUser/:userId', checkToken, async (req, res) => {
         res.status(200).json([]).end();
     }
 });
+
+app.get('/:uid', async (req, res) => {
+    let orderUid = req.params.uid;
+    let order = await admin.database().ref(`orders/${orderUid}`).once('value');
+    order = order.val();
+    if (!order) {
+        res.status(404).send();
+        return null;
+    }
+    res.send(await getReportedOrder(order, orderUid));
+});
+
+async function getReportedOrder(order, uid) {
+    return new Promise(async resolve => {
+        let buyer = admin.database().ref(`users/${order.buyerUid}`).once('value');
+        let seller = admin.database().ref(`users/${order.sellerUid}`).once('value');
+        await Promise.all([buyer, seller]).then((values => {
+            buyer = values[0].val();
+            seller = values[1].val();
+            order.buyer = buyer;
+            order.buyer.uid = order.buyerUid;
+            order.seller = seller;
+            order.seller.uid = order.sellerUid;
+            order.uid = uid;
+            delete order.buyerUid;
+            delete order.sellerUid;
+            resolve(order);
+        }));
+    })
+}
 
 module.exports = app;

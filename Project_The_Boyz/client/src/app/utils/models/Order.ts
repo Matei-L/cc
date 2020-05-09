@@ -11,9 +11,12 @@ export interface OrderPostObject {
   messages: Array<Message>;
 }
 
-export interface Order {
+export interface ReportedOrder {
+  key: string;
   uid: string;
   buyer: User;
   seller: User;
   status: string;
+  nrOfGames: number;
+  messages: Array<Message>;
 }

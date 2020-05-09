@@ -1,0 +1,32 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90%;
+  margin: 10px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.people {
+  display: flex;
+}
+
+.buyer, .seller {
+  font-size: 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.buyer > img, .seller > img {
+  align-self: center;
+  width: 300px;
+  height: 300px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 22px;
+}

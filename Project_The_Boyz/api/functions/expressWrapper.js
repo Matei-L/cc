@@ -62,8 +62,31 @@ const checkToken = async (req, res, next) => {
     next();
 };
 
+const checkAdmin = async (req, res, next) => {
+    let uid = req.uid;
+    if (!uid) {
+        res.status(401)
+            .header("Access-Control-Allow-Origin", "*")
+            .json("Forbidden.")
+            .end();
+        return null;
+    }
+    let isAdmin = await admin.database().ref(`users/${uid}/isAdmin`).once('value');
+    isAdmin = isAdmin.val();
+    if (isAdmin) {
+        next();
+        return null;
+    }
+    res.status(401)
+        .header("Access-Control-Allow-Origin", "*")
+        .json("Forbidden.")
+        .end();
+    return null;
+};
+
 
 module.exports = {
     app: express,
-    checkToken: checkToken
+    checkToken: checkToken,
+    checkAdmin: checkAdmin
 };
