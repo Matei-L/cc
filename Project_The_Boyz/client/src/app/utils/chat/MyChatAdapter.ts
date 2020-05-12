@@ -31,13 +31,10 @@ export class MyChatAdapter extends ChatAdapter {
     this.fireDatabase.list('orders').snapshotChanges(['child_added']).subscribe((snap) => {
       for (const order of snap) {
         if (order.type === 'child_added') {
-          console.log('New order was added');
           const orderObject = order.payload.val() as OrderPostObject;
-          console.log(orderObject);
           if (orderObject.buyerUid === userId || orderObject.sellerUid === userId) {
             setTimeout(() => {
               this.listFriends().subscribe(participants => {
-                console.log(participants);
                 this.onFriendsListChanged(participants);
               });
             }, 1000);
@@ -58,9 +55,7 @@ export class MyChatAdapter extends ChatAdapter {
   addOrderChangeObserver(key: string) {
     this.observedOrders.push(key);
     this.fireDatabase.object('orders/' + key + '/status').snapshotChanges().subscribe((snap) => {
-      console.log(snap.payload.val());
       this.listFriends().subscribe(participants => {
-        console.log(participants);
         this.onFriendsListChanged(participants);
       });
     });
@@ -68,11 +63,9 @@ export class MyChatAdapter extends ChatAdapter {
 
   addMessagesObserver(key: string): void {
     this.fireDatabase.list('orders/' + key + '/messages').snapshotChanges(['child_added']).subscribe((snap) => {
-      console.log(snap);
       snap.forEach((message) => {
         if (message.type === 'child_added') {
           const newMessage = message.payload.val() as Message;
-          console.log(this.receivedMessages);
           let found = false;
           this.receivedMessages.forEach((msg) => {
             const x = msg as Message;
@@ -82,7 +75,6 @@ export class MyChatAdapter extends ChatAdapter {
             }
           });
           if (!found && newMessage.toId === this.userId) {
-            console.log('New message received');
             const user = this.participants.find(x => x.id === newMessage.fromId);
             this.onMessageReceived(user, newMessage);
             this.receivedMessages.push(newMessage);
@@ -94,7 +86,6 @@ export class MyChatAdapter extends ChatAdapter {
 
   listFriends(): Observable<ParticipantResponse[]> {
     return this.http.get<IChatParticipant[]>(this.api + '/byUser/' + this.userId).pipe(map(participants => {
-      console.log(participants);
       this.participants = participants;
       return participants.map(participant => {
         const participantResponse = new ParticipantResponse();
@@ -102,8 +93,8 @@ export class MyChatAdapter extends ChatAdapter {
         participantResponse.metadata = {
           totalUnreadMessages: 0
         };
-        if (!this.observedOrders.includes(participant.orderUid)) {
-          this.addOrderChangeObserver(participant.orderUid);
+        if (!this.observedOrders.includes((participant as MyChatParticipant).orderUid)) {
+          this.addOrderChangeObserver((participant as MyChatParticipant).orderUid);
         }
         return participantResponse;
       });
@@ -111,7 +102,6 @@ export class MyChatAdapter extends ChatAdapter {
   }
 
   getMessageHistory(destinataryId: any): Observable<Message[]> {
-    console.log('Message history called');
     return this.http.get<Array<Message>>(this.msgApi + '/' + destinataryId).pipe(map(messages => {
       return messages.sort((a, b) => {
         return new Date(a.dateSent).getTime() - new Date(b.dateSent).getTime();
@@ -121,7 +111,6 @@ export class MyChatAdapter extends ChatAdapter {
 
   sendMessage(message: Message): void {
     this.http.post<string>(this.msgApi + '/' + message.toId, message).subscribe(response => {
-      console.log('Posted');
     });
   }
 }

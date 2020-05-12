@@ -32,16 +32,12 @@ export class ConfirmOrderComponent implements OnInit {
       this.sellerUid = params.sellerUid;
       this.hash = params.hash;
       this.nrOfGames = params.nrOfGames;
-      console.log(this.baseUrl + '/check/' + this.buyerUid + '/' +
-        this.sellerUid + '/' + this.hash);
       this.http.get<HashCheckResponse>(this.baseUrl + '/hash/check/' + this.buyerUid + '/' +
         this.sellerUid + '/' + this.hash).subscribe(response => {
         this.ok = response.ok;
-        console.log(this.ok);
         if (this.ok) {
           const order = {} as OrderPostObject;
           order.uid = uuid.v4();
-          console.log(order.uid);
           order.buyerUid = this.buyerUid;
           order.sellerUid = this.sellerUid;
           order.status = 'ongoing';

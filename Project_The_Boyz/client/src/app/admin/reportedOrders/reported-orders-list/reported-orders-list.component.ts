@@ -23,7 +23,6 @@ export class ReportedOrdersListComponent implements OnInit {
 
   ngOnInit(): void {
     this.ordersService.getOrders().subscribe(orders => {
-      console.log(orders);
       this.orders = orders;
     });
   }
