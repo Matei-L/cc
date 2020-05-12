@@ -1,4 +1,7 @@
 <div *ngIf="currentUser && currentUser.isAdmin">
+  <div *ngIf="orders && orders.length===0" class="title" style="width: 100%; text-align: center;margin-top: 25px">
+    No reported orders...
+  </div>
   <mat-card class="order" *ngFor="let order of orders" (click)="goTo('/admin/reportedOrders/'+order.uid)">
     <div class="title">
       {{capitalize(order.status)}}
