@@ -24,6 +24,7 @@ export class MyChatAdapter extends ChatAdapter {
   private msgApi = environment.baseUrl + '/messages';
   private participants;
   private receivedMessages = [];
+  private observedOrders = [];
 
   constructor(private userId, private http: HttpClient, public fireDatabase: AngularFireDatabase) {
     super();
@@ -50,6 +51,17 @@ export class MyChatAdapter extends ChatAdapter {
         if (order.buyerUid === userId || order.sellerUid === userId) {
           this.addMessagesObserver(order.key);
         }
+      });
+    });
+  }
+
+  addOrderChangeObserver(key: string) {
+    this.observedOrders.push(key);
+    this.fireDatabase.object('orders/' + key + '/status').snapshotChanges().subscribe((snap) => {
+      console.log(snap.payload.val());
+      this.listFriends().subscribe(participants => {
+        console.log(participants);
+        this.onFriendsListChanged(participants);
       });
     });
   }
@@ -82,6 +94,7 @@ export class MyChatAdapter extends ChatAdapter {
 
   listFriends(): Observable<ParticipantResponse[]> {
     return this.http.get<IChatParticipant[]>(this.api + '/byUser/' + this.userId).pipe(map(participants => {
+      console.log(participants);
       this.participants = participants;
       return participants.map(participant => {
         const participantResponse = new ParticipantResponse();
@@ -89,6 +102,9 @@ export class MyChatAdapter extends ChatAdapter {
         participantResponse.metadata = {
           totalUnreadMessages: 0
         };
+        if (!this.observedOrders.includes(participant.orderUid)) {
+          this.addOrderChangeObserver(participant.orderUid);
+        }
         return participantResponse;
       });
     }));
