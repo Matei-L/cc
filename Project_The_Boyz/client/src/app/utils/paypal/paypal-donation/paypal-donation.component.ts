@@ -36,11 +36,10 @@ export class PaypalDonationComponent implements OnInit {
     this.http.get<HashResponse>(this.baseUrl + '/hash/' + this.buyer.uid + '/' + this.seller.uid)
       .subscribe(response => {
         this.hash = response.hash;
-        console.log('/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash);
-        // (document.getElementById('form') as HTMLFormElement).submit(); // -- uncomment to redirect to paypal
-        this.router.navigate(
-          ['/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash + '/' + this.nrOfGames]
-        );
+        (document.getElementById('form') as HTMLFormElement).submit(); // -- uncomment to redirect to paypal
+        // this.router.navigate(
+        //   ['/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash + '/' + this.nrOfGames]
+        // );
       });
   }
 }

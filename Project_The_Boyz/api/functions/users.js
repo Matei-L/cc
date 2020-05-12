@@ -11,7 +11,9 @@ app.get('/', async (req, res) => {
         Object.keys(users).forEach((uid) => {
             if (users[uid].paypalEmail && users[uid].paypalEmail.length > 0 && users[uid].price && users[uid].price > 0) {
                 users[uid].uid = uid;
-                users[uid].games = Object.values(users[uid].games);
+                if (users[uid].games) {
+                    users[uid].games = Object.values(users[uid].games);
+                }
                 validUsers.push(users[uid]);
             }
         });
