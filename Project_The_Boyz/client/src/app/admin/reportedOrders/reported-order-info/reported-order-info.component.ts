@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {User} from '../../../utils/models/User';
 import {AuthService} from '../../../utils/auth/auth.service';
 import {Subscription} from 'rxjs';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ReportedOrder} from '../../../utils/models/Order';
 import {ReportedOrderInfoService} from './reported-order-info.service';
 import {Message} from 'ng-chat';
@@ -19,7 +19,7 @@ export class ReportedOrderInfoComponent implements OnInit {
 
   order: ReportedOrder;
 
-  constructor(private route: ActivatedRoute, private authService: AuthService, private orderService: ReportedOrderInfoService) {
+  constructor(private route: ActivatedRoute, private authService: AuthService, private orderService: ReportedOrderInfoService, private router: Router) {
     this.authService.getCurrentUser().subscribe(user => {
       this.currentUser = user;
     });
@@ -42,7 +42,13 @@ export class ReportedOrderInfoComponent implements OnInit {
   }
 
   sendMailTo(email: string) {
-    window.open(`mailto:${email}`);
+    window.open(`mailto:${email}?subject=The Boyz Support - Reported order`);
+  }
+
+  markAsFinished(): void {
+    this.orderService.markAsFinished(this.order.uid).subscribe(res => {
+      this.router.navigate(['/admin/reportedOrders']);
+    });
   }
 
 }

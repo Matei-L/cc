@@ -15,4 +15,8 @@ export class ReportedOrderInfoService {
   getOrder(uid: string) {
     return this.http.get<ReportedOrder>(this.api + '/' + uid);
   }
+
+  markAsFinished(uid: string) {
+    return this.http.put(this.api + '/updateStatus', {status: 'finished', orderUid: uid});
+  }
 }
