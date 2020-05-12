@@ -29,7 +29,7 @@ export class ReportedOrdersListComponent implements OnInit {
   }
 
   capitalize(word: string): string {
-    return (word.charAt(0).toUpperCase() + word.slice(1)).replace('-', ' ');
+    return (word.charAt(0).toUpperCase() + word.slice(1)).replace(/-/g, ' ');
   }
 
   async goTo(location) {
