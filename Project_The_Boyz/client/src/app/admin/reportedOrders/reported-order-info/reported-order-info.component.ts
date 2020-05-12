@@ -38,7 +38,7 @@ export class ReportedOrderInfoComponent implements OnInit {
   }
 
   capitalize(word: string): string {
-    return (word.charAt(0).toUpperCase() + word.slice(1)).replace('-', ' ');
+    return (word.charAt(0).toUpperCase() + word.slice(1)).replace(/-/g, ' ');
   }
 
   sendMailTo(email: string) {
