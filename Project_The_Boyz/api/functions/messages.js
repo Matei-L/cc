@@ -23,6 +23,7 @@ app.get('/:uid', checkToken, async (req, res) => {
                     return null;
                 }
             }
+            return null;
         });
     }
     if (!found)
@@ -31,11 +32,8 @@ app.get('/:uid', checkToken, async (req, res) => {
 });
 
 app.post('/:uid', checkToken, async (req, res) => {
-    console.log("POST message");
     let uid = req.uid;
     let partnerUid = req.params.uid;
-    console.log(uid);
-    console.log(partnerUid);
     let orders = await admin.database().ref('orders').once('value');
     let message = req.body;
     orders = orders.val();
@@ -44,7 +42,7 @@ app.post('/:uid', checkToken, async (req, res) => {
         if ((order['buyerUid'] === uid && order['sellerUid'] === partnerUid)
             || (order['buyerUid'] === partnerUid && order['sellerUid'] === uid)) {
             console.log(key);
-            await admin.database().ref(`orders/${key}/messages`).push(message);
+            admin.database().ref(`orders/${key}/messages`).push(message);
             break;
         }
     }

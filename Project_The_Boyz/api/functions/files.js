@@ -107,6 +107,7 @@ app.post('/', (req, res, next) => {
         }
         await Promise.all(promises).then((values) => {
             urls = values;
+            return null;
         }).catch((error) => {
             console.error(error);
         });
