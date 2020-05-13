@@ -1,0 +1,652 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "description": "The Boyz",
+    "version": "1.0.0",
+    "title": "The Boyz"
+  },
+  "paths": {
+    "/files": {
+      "post": {
+        "tags": [
+          "files"
+        ],
+        "summary": "send one or more files to storage",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "type": "file",
+            "description": "The file to upload."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "list of urls",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "link to the file"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/games": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "returns a list of games",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "list of games",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Game"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hash/check/{uid1}/{uid2}/{hash}": {
+      "get": {
+        "tags": [
+          "hash"
+        ],
+        "summary": "checks if hash has been created over uid1 & uid2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uid1",
+            "type": "string",
+            "required": true,
+            "description": "first user's uid"
+          },
+          {
+            "in": "path",
+            "name": "uid2",
+            "type": "string",
+            "required": true,
+            "description": "second user's uid"
+          },
+          {
+            "in": "path",
+            "name": "hash",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK?",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ok": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hash/{uid1}/{uid2}": {
+      "get": {
+        "tags": [
+          "hash"
+        ],
+        "summary": "creates hash over uid1 & uid2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uid1",
+            "type": "string",
+            "required": true,
+            "description": "first user's uid"
+          },
+          {
+            "in": "path",
+            "name": "uid2",
+            "type": "string",
+            "required": true,
+            "description": "second user's uid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "resulting hash",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "hash": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/messages/{uid}": {
+      "get": {
+        "tags": [
+          "messages"
+        ],
+        "summary": "returns list of messages with {uid}",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uid",
+            "type": "string",
+            "required": true,
+            "description": "partner uid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "list of messages",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Message"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "messages"
+        ],
+        "summary": "send message to {uid}",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uid",
+            "type": "string",
+            "required": true,
+            "description": "partner uid"
+          },
+          {
+            "in": "body",
+            "name": "message",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "message sent"
+          }
+        }
+      }
+    },
+    "/orders": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "user's orders",
+        "responses": {
+          "200": {
+            "description": "list of orders",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Order"
+              }
+            }
+          },
+          "400": {
+            "description": "bad input parameter"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "create new order",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "message",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "order created"
+          }
+        }
+      }
+    },
+    "/orders/{uid}": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "order with user uid",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uid",
+            "type": "string",
+            "required": true,
+            "description": "partner uid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/orders/updateStatus": {
+      "put": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "update order",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "message",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "orderUid": {
+                  "type": "string"
+                },
+                "finishedMessage": {
+                  "type": "string"
+                },
+                "reportedMessage": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "finishedUrls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reportedUrls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/orders/byUser/{userUid}": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "list of participants for the userUid",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userUid",
+            "type": "string",
+            "required": true,
+            "description": "user uid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Participant"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/reported": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "list of reported/finished-and-reported orders",
+        "responses": {
+          "200": {
+            "description": "list of reported orders",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ReportedOrder"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{uid}": {
+      "get": {
+        "tags": [
+          "users"
+        ],
+        "summary": "user details",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uid",
+            "type": "string",
+            "required": true,
+            "description": "user uid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "user",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "users"
+        ],
+        "summary": "list of users having a paypal email",
+        "responses": {
+          "200": {
+            "description": "list of users",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "users"
+        ],
+        "summary": "create new user",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "message",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "users"
+        ],
+        "summary": "update user",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "message",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Game": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Overwatch"
+        },
+        "iconUrl": {
+          "type": "string",
+          "example": "https://cdn.iconscout.com/icon/free/png-512/overwatch-2-569226.png"
+        },
+        "checked": {
+          "type": "boolean",
+          "example": false
+        }
+      }
+    },
+    "Message": {
+      "type": "object",
+      "properties": {
+        "dateSent": {
+          "type": "string",
+          "example": "2020-05-12T16:04:31.740Z"
+        },
+        "fromId": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string",
+          "example": "Hello! I would like to play 1 game with you"
+        },
+        "toId": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "example": 1
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "audioUrl": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "games": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Game"
+          }
+        },
+        "isAdmin": {
+          "type": "boolean"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "paypalEmail": {
+          "type": "string"
+        },
+        "photoUrl": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer"
+        },
+        "uid": {
+          "type": "string"
+        }
+      }
+    },
+    "Order": {
+      "type": "object",
+      "properties": {
+        "buyerUid": {
+          "type": "string"
+        },
+        "finishedMessage": {
+          "type": "string"
+        },
+        "finishedUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Message"
+          }
+        },
+        "nrOfGames": {
+          "type": "integer"
+        },
+        "reportedMessage": {
+          "type": "string"
+        },
+        "reportedUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sellerUid": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "Participant": {
+      "type": "object",
+      "properties": {
+        "participantType": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusExplained": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "orderUid": {
+          "type": "string"
+        }
+      }
+    },
+    "ReportedOrder": {
+      "type": "object",
+      "properties": {
+        "buyer": {
+          "$ref": "#/definitions/User"
+        },
+        "finishedMessage": {
+          "type": "string"
+        },
+        "finishedUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Message"
+          }
+        },
+        "nrOfGames": {
+          "type": "integer"
+        },
+        "reportedMessage": {
+          "type": "string"
+        },
+        "reportedUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "seller": {
+          "$ref": "#/definitions/User"
+        },
+        "status": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
