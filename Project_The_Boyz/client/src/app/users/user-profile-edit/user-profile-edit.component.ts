@@ -48,14 +48,18 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
         }
         // after getting the user's preffered games, get all games and check them
         this.userProfileEditService.getGames().subscribe(games => {
-          this.games = games;
-          this.games.forEach(game => {
-            user.games.forEach(userGame => {
-              if (userGame.name === game.name) {
-                game.checked = userGame.checked;
+          if (games) {
+            this.games = games;
+            this.games.forEach(game => {
+              if (user.games) {
+                user.games.forEach(userGame => {
+                  if (userGame.name === game.name) {
+                    game.checked = userGame.checked;
+                  }
+                });
               }
             });
-          });
+          }
         });
       }
     });
@@ -87,7 +91,6 @@ export class UserProfileEditComponent implements OnInit, OnDestroy {
   }
 
   private errorSnackBar(err) {
-    console.log(err);
     this.createSnackBar('Something bad happened!');
   }
 

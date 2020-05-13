@@ -22,7 +22,6 @@ export class OrderUpdateDialogService {
     for (const fileIndex in files) {
       fd.append(fileNames[fileIndex], files[fileIndex], fileNames[fileIndex]);
     }
-    console.log(fd);
     return this.http.post<PostFileResponseObject>(this.filesApi, fd);
   }
 

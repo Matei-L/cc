@@ -62,7 +62,6 @@ export class OrderUpdateDialogComponent implements OnInit {
         }
         this.orderUpdateDialogService.postFiles(files, fileNames).subscribe(response => {
           let urls;
-          console.log(response);
           if (response.url) {
             urls = [response.url];
           } else {
@@ -88,7 +87,6 @@ export class OrderUpdateDialogComponent implements OnInit {
             orderUpdate.reportedMessage = this.message;
           }
           this.orderUpdateDialogService.putOrderUpdate(orderUpdate).subscribe(orderResponse => {
-            console.log(orderResponse);
             this.dialogRef.close();
           });
         });

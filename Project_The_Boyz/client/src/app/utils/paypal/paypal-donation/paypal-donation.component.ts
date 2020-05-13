@@ -35,12 +35,25 @@ export class PaypalDonationComponent implements OnInit {
   onSubmit() {
     this.http.get<HashResponse>(this.baseUrl + '/hash/' + this.buyer.uid + '/' + this.seller.uid)
       .subscribe(response => {
-        this.hash = response.hash;
-        console.log('/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash);
-        // (document.getElementById('form') as HTMLFormElement).submit(); // -- uncomment to redirect to paypal
-        this.router.navigate(
-          ['/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash + '/' + this.nrOfGames]
-        );
+        if (response) {
+          if (response.hash) {
+            this.hash = response.hash;
+            const els = document.getElementsByName('return');
+            // tslint:disable-next-line:prefer-for-of
+            for (let i = 0; i < els.length; i++) {
+              // console.log('Before: ' + (els[i] as HTMLInputElement).value);
+              (els[i] as HTMLInputElement).value =
+                `${this.clientUrl}/confirmOrder/${this.buyer.uid}/${this.seller.uid}/${this.hash}/${this.nrOfGames}`;
+              // console.log('After: ' + (els[i] as HTMLInputElement).value);
+            }
+            setTimeout(() => {
+              (document.getElementById('form') as HTMLFormElement).submit(); // -- uncomment to redirect to paypal}
+            }, 2500);
+            // this.router.navigate(
+            //   ['/confirmOrder/' + this.buyer.uid + '/' + this.seller.uid + '/' + this.hash + '/' + this.nrOfGames]
+            // );
+          }
+        }
       });
   }
 }
